@@ -30,7 +30,7 @@ Leetcode 89. Gray Code
 
    给定一个代表编码总位数的非负整数 n，打印格雷码序列。格雷码序列必须以 0 开头。
 
-   例如，给定 *n* = 2，返回 <font color=blue>[0,1,3,2]</font>。其格雷编码是：
+   例如，给定 *n* = 2，返回 **[0,1,3,2]**。其格雷编码是：
 ```
 　00 - 0
 　01 - 1
@@ -44,12 +44,13 @@ Leetcode 89. Gray Code
 
    对于给定的 *n*，其格雷编码的顺序并不唯一(因此返回结果的顺序不重要，可使用Vector或List)。
 
-   例如 <font color=blue>[0,2,3,1]</font>也是一个有效的格雷编码顺序。
+   例如 [0,2,3,1]也是一个有效的格雷编码顺序。
 
 ------
-<table>    <tr>     <td bgcolor=white>&nbsp; ● &nbsp;题目难度: </td>    <td bgcolor=#F0AD4E width=8.5%><font color=white>Medium</font></td> <td bgcolor=white></td>  </tr></table>
+&nbsp; ● &nbsp;题目难度:  **Medium**
 
    - 相关话题 [回溯算法](https://leetcode-cn.com/tag/backtracking)
+
      相似题目 [1比特与2比特字符](https://leetcode-cn.com/problems/1-bit-and-2-bit-characters)
 
 ------
@@ -57,11 +58,12 @@ Leetcode 89. Gray Code
 
 
 **解题思路:**
-格雷码有个相应的数学公式，整数 <font color=blue>*i* </font>的格雷码是i^(i/2)。而此题并没要求返回结果中的值的严格顺序。
+
+格雷码有个相应的数学公式，整数 *i*  的格雷码是i^(i/2)。而此题并没要求返回结果中的值的严格顺序。
 
 ![grayCode](https://dev.tencent.com/u/legege007/p/leetcode-pySol/git/raw/master/images/grayCode.png)
 
-于是只需遍历从 0 到 2^n - 1的所有整数<font color=blue>*i* </font>，使用公式将其转换为格雷码，添加到List中即可。
+于是只需遍历从 0 到 2^n - 1的所有整数 *i*，使用公式将其转换为格雷码，添加到List中即可。
 
 
 
@@ -94,7 +96,7 @@ class Solution:
             res.append((i >> 1) ^ i) 
         return res
         
-# Below is testing
+# 以下是测试代码
 obj = Solution()
 print(obj.grayCode(2))
 ```
@@ -109,4 +111,5 @@ print(obj.grayCode(2))
 **参考:**
 
 [LeetCode] Gray Code - 穆穆兔兔 - 博客园
+
 https://www.cnblogs.com/diegodu/p/4371807.html
