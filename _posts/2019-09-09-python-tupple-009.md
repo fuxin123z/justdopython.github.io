@@ -1,13 +1,17 @@
 ---
 layout: post
-title:  第9天：Python tupple
 category: python
-copyright: python
-excerpt: 规范使用
+title: 第9天：Python tupple
+tagline: by 沉默王二
+tags: 
+  - python100
 ---
 
- Python 中的数据结构是通过某种方式组织在一起的数据元素的集合，这些数据元素可以是数字、字符、甚至可以是其他数据结构
+Python 中的数据结构是通过某种方式组织在一起的数据元素的集合，这些数据元素可以是数字、字符、甚至可以是其他数据结构
 在 Python 中，最基本的数据结构是序列（列表和元组），序列中的每个元素都有一个序号（元素的具体位置），这个序号叫索引，索引下标从0开始，以此类推...... 
+
+<!--more-->
+
 - Python 的元组与列表类似，不同之处在于元组的元素不能修改。
 
 - 元组使用小括号()，列表使用方括号[]。
