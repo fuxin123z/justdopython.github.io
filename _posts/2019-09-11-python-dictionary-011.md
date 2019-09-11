@@ -1,6 +1,6 @@
 ---
 layout: post     
-title:  第10天：Python dictionary                                                    
+title:  第11天：Python dictionary                                                    
 category: python 数据结构--Dictionary         
 copyright: python                           
 tagline: by 潮汐           
