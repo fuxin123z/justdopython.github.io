@@ -15,10 +15,8 @@ LeetCode面试题题系列的上一篇文章，我们介绍了**位操作**的�
 
 ![Leetcode](http://www.justdopython.com/assets/images/2019/python/LeetCode.png)
 
-![LeetCode](C:\Users\Bruce\Desktop\LeetCode.png)
 
-
-比较典型的一个问题是 Leetcode 上第 136 号问题，
+比较典型的一个问题是 Leetcode 上第 **136** 号问题，
 
 Leetcode 136. single number
 
