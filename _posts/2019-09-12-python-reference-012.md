@@ -1,10 +1,10 @@
 ---
 layout: post
 category: python
-title: Python 之引用
+title: 第12天：Python 之引用
 tagline: by 轩辕御龙
 tags:
-	- python
+  - python100
 ---
 
 # Python 之引用
