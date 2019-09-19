@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第17天: Python 函数之参数
+title: 第17天：Python 函数之参数 
 tagline: by 小小摸虾
 tags: 
   - python100
