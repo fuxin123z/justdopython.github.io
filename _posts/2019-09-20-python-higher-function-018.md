@@ -24,7 +24,7 @@ def high_func(f, arr):
     return [f(x) for x in arr]
 ```
 
-上面的例子中，<font color=#FF0000 >`high_func`</font> 就是一个高阶函数。其中第一个参数 <font color=#FF0000 >`f`</font> 是一个函数，第二个参数 <font color=#FF0000 >`arr`</font> 是一个数组，返回的值是数组中的所有的值在经过 <font color=#FF0000 >`f`</font> 函数计算后得到的一个列表。例如：
+上面的例子中， `high_func`  就是一个高阶函数。其中第一个参数  `f`  是一个函数，第二个参数  `arr`  是一个数组，返回的值是数组中的所有的值在经过  `f`  函数计算后得到的一个列表。例如：
 
 ```python
 from math import factorial
@@ -58,10 +58,10 @@ print(high_func(square, list(range(10))))
 map(func, *iterables) --> map object
 ```
 
-- <font color=#FF0000 >`function`</font> # 序列中的每个元素需要执行的操作, 可以是匿名函数
-- <font color=#FF0000 >`*iterables`</font> # 一个或多个序列
+-  `function`  # 序列中的每个元素需要执行的操作, 可以是匿名函数
+-  `*iterables`  # 一个或多个序列
 
-正如前面所举的例子 <font color=#FF0000 >`high_func`</font>函数，<font color=#FF0000 >`map`</font> 函数是 <font color=#FF0000 >`high_func`</font>函数高阶版，可以传入一个函数和多个序列。
+正如前面所举的例子  `high_func` 函数， `map`  函数是  `high_func` 函数高阶版，可以传入一个函数和多个序列。
 
 ```python
 from math import factorial
@@ -80,7 +80,7 @@ print(list(squareMap))
 # print out: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
-可以看到输出了同样的结果，只是与 <font color=#FF0000 >`python2.X`</font> 不用的是， <font color=#FF0000 >`python3.X`</font> 中返回 <font color=#FF0000 >`map`</font>类
+可以看到输出了同样的结果，只是与  `python2.X`  不用的是，  `python3.X`  中返回  `map` 类
 ，而前者直接返回一个列表。
 
 我们使用匿名函数，也可以传入多个序列，如下
@@ -101,14 +101,14 @@ print(list(mutiMap))
 
 > *Apply a function of two arguments cumulatively to the items of a sequence,from left to right, so as to reduce the sequence to a single value*.
 
-大致上来讲，<font color=#FF0000 >`reduce`</font> 函数需要传入一个有两个参数的函数，然后用这个函数从左至右顺序遍历序列并生成结果，定义如下：
+大致上来讲， `reduce`  函数需要传入一个有两个参数的函数，然后用这个函数从左至右顺序遍历序列并生成结果，定义如下：
 
 ```python
 reduce(function, sequence[, initial]) -> value
 ```
-- <font color=#FF0000 >`function`</font> # 函数, 序列中的每个元素需要执行的操作, 可以是匿名函数
-- <font color=#FF0000 >`sequence`</font> # 需要执行操作的序列
-- <font color=#FF0000 >`initial`</font> # 可选，初始参数
+-  `function`  # 函数, 序列中的每个元素需要执行的操作, 可以是匿名函数
+-  `sequence`  # 需要执行操作的序列
+-  `initial`  # 可选，初始参数
 
 最后返回函数的计算结果, 和初始参数类型相同
 
@@ -124,7 +124,7 @@ print(result)
 # print out 15
 ```
 
-我们可以看到，序列 <font color=#FF0000 >`[1, 2, 3, 4, 5]`</font> 通过匿名函数进行了累加。
+我们可以看到，序列  `[1, 2, 3, 4, 5]`  通过匿名函数进行了累加。
     
 设定初始值：
 
@@ -142,14 +142,14 @@ print(s)
 
 > Return an iterator yielding those items of iterable for which function(item) is true. If function is None, return the items that are true.
 
-<font color=#FF0000 >`filter()`</font> 函数用来过滤序列中不符合条件的值，返回一个迭代器，该迭代器生成那些函数(项)为true的iterable项。如果函数为None，则返回为true的项。定义如下：
+ `filter()`  函数用来过滤序列中不符合条件的值，返回一个迭代器，该迭代器生成那些函数(项)为true的iterable项。如果函数为None，则返回为true的项。定义如下：
 
 ```python
 filter(function or None, iterable) --> filter object
 ```
 
-- <font color=#FF0000 >`function or None`</font> # 过滤操作执行的函数
-- <font color=#FF0000 >`iterable`</font> # 需要过滤的序列
+-  `function or None`  # 过滤操作执行的函数
+-  `iterable`  # 需要过滤的序列
 
 举个例子：
 
@@ -172,7 +172,7 @@ print(list(filterList2))
 # print out: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
 ```
 
-上面我们可以看到，列表中不能被 <font color=#FF0000 >`2`</font> 整除的数据都被排除了。
+上面我们可以看到，列表中不能被  `2`  整除的数据都被排除了。
 
 
 ### sorted
@@ -181,7 +181,7 @@ print(list(filterList2))
 
 > A custom key function can be supplied to customize the sort order, and the reverse flag can be set to request the result in descending order.
 
- <font color=#FF0000 >`sorted`</font> 函数默认将序列升序排列后返回一个新的 list，还可以自定义键函数来进行排序，也可以设置 <font color=#FF0000 >`reverse`</font> 参数确定是升序还是降序，如果 <font color=#FF0000 >`reverse = True`</font> 则为降序。函数定义如下：
+  `sorted`  函数默认将序列升序排列后返回一个新的 list，还可以自定义键函数来进行排序，也可以设置  `reverse`  参数确定是升序还是降序，如果  `reverse = True`  则为降序。函数定义如下：
  
 ```python
 def sorted(iterable: Iterable[_T], *,
@@ -189,9 +189,9 @@ def sorted(iterable: Iterable[_T], *,
            reverse: bool = ...) -> List[_T]: ...
 ```
 
-- <font color=#FF0000 >`iterable`</font> # 序列
-- <font color=#FF0000 >`key`</font> # 可以用来计算的排序函数。
-- <font color=#FF0000 >`reverse`</font> # 排序规则，reverse = True降序，reverse = False 升序(默认）。
+-  `iterable`  # 序列
+-  `key`  # 可以用来计算的排序函数。
+-  `reverse`  # 排序规则，reverse = True降序，reverse = False 升序(默认）。
 
 举个简单例子：
 
@@ -219,7 +219,7 @@ print(sorted(list02, key=lambda x: len(x), reverse=True))
 ```
 
 ## 总结
-以上我们简单的介绍了几个常用的高阶函数的使用，当然还有很多的高阶函数我们可以去研究，比如 <font color=#FF0000 >`zip`</font> 函数等，希望此节的介绍对大家有所帮助。
+以上我们简单的介绍了几个常用的高阶函数的使用，当然还有很多的高阶函数我们可以去研究，比如  `zip`  函数等，希望此节的介绍对大家有所帮助。
 
 ## 代码地址
 [python 高阶函数](https://github.com/JustDoPython/python-100-day/tree/master/day-005)
