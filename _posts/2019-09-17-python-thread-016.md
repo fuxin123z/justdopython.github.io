@@ -29,25 +29,47 @@ tags:
 
 只需 15 秒就可完成。
 
-## 1 GIL
+## 1 线程与进程
 
-### 1.1 什么是 GIL ？
+### 1.1 基本概念
 
-GIL 全称 Global Interpreter Lock（全局解释器锁），是 Python 解释器 CPython 中引入的一个概念，下面看一下官方解释：
+说到线程就不得不提与之相关的另一概念：进程，那么什么是进程？与线程有什么关系呢？简单来说一个运行着的应用程序就是一个进程，比如：我启动了自己手机上的酷猫音乐播放器，这就是一个进程，然后我随意点了一首歌曲进行播放，此时酷猫启动了一条线程进行音乐播放，听了一部分，我感觉歌曲还不错，于是我按下了下载按钮，此时酷猫又启动了一条线程进行音乐下载，现在酷猫同时进行着音乐播放和音乐下载，此时就出现了多线程，音乐播放线程与音乐下载线程并行运行，说到并行，你一定想到了并发吧，那并行与并发有什么区别呢？并行强调的是同一时刻，并发强调的是一段时间内。线程是进程的一个执行单元，一个进程中至少有一条线程，进程是资源分配的最小单位，线程是 CPU 调度的最小单位。
 
+### 1.2 Python 中的线程与进程
 
-In CPython, the global interpreter lock, or GIL, is a mutex that prevents multiple native threads from executing
-Python bytecodes at once. This lock is necessary mainly because CPython’s memory management is not thread-safe.
-(However, since the GIL exists, other features have grown to depend on the guarantees that it enforces.)
+Python 提供了 _thread（Python3 之前名为 thread ） 和 threading 两个线程模块。_thread 是低级、原始的模块，threading 是高级模块，对 _thread 进行了封装，增强了其功能与易用性，绝大多数时候，我们只需使用 threading 模块即可。下一节我们会对 threading 模块进行详细介绍。
 
+Python 提供了 multiprocessing 模块对多进程进行支持，它使用了与 threading 模块相似的 API 产生进程，除此之外，还增加了新的 API，用于支持跨多个输入值并行化函数的执行及跨进程分配输入数据，详细用法可以参考官方文档[https://docs.python.org/zh-cn/3/library/multiprocessing.html](https://docs.python.org/zh-cn/3/library/multiprocessing.html)。
 
-从上面解释中，我们了解到：GIL 是一个防止解释器多线程并发执行机器码的一个全局互斥锁，其存在主要是因为在代码执行过程中，CPython 的内存管理不是线程安全的。
+## 2 GIL
 
-什么是 CPython 呢？我们从 Python 官方网站下载安装 Python 后，获得的官方解释器就是 CPython ，因其是 C 开发的，故名为 CPython ，是使用最广泛的 Python 解释器。然而因为 CPython 是大部分环境下的默认解释器，有些人会认为 CPython 就是 Python ，从而误以为 GIL 是 Python 的特性，在这里我们要明确一个概念：GIL 不是 Python 特性，Python 可以完全不依赖 GIL 。除了 CPython 解释器，还有：PyPy、Psyco、JPython 等解释器，像 JPython 解释器就没有 GIL。
+要说 Python 的多线程，必然绕不开 GIL，可谓成也 GIL 败也 GIL，到底什么是 GIL 是啥？怎么来的？为什么说成也 GIL 败也 GIL 呢？下面就带着这几个问题，给大家介绍一下 GIL。
 
-### 1.2 GIL 带来哪些影响？
+### 2.1 GIL 相关概念
 
-通过上面的介绍我们了解到 GIL 是一个全局互斥锁，很明显 GIL 的存在会对多线程的效率有很大影响，甚至在 CPython 下，Python 的多线程几乎等于单线程。到底实际效果如何呢？我们通过下面的示例来看一下：
+GIL 全称 Global Interpreter Lock（全局解释器锁），是 Python 解释器 CPython 采用的一种机制，通过该机制来控制同一时刻只有一条线程执行 Python 字节码，本质是一把全局互斥锁，将并行运行变成串行运行。
+
+什么是 CPython 呢？我们从 Python 官方网站下载安装 Python 后，获得的官方解释器就是 CPython，因其是 C 语言开发的，故名为 CPython，是目前使用最广泛的 Python 解释器；因为我们大部分环境下使用的默认解释器就是 CPython，有些人会认为 CPython 就是 Python，进而以为 GIL 是 Python 的特性，其实 CPython 只是一种 Python 解释器，除了 CPython 解释器还有：PyPy、Psyco、Jython （也称 JPython）、IronPython 等解释器，其中 Jython 与 IronPython 分别采用 Java 与 C# 语言实现，就没有采用 GIL 机制；而 GIL 也不是 Python 特性，Python 可以完全独立于 GIL 运行。
+
+### 2.2 GIL 起源与发展
+
+我们已经知道了 GIL 是 CPython 解释器中引入的机制，那为什么 CPython 解释器中要引入 GIL 呢？GIL 一开始出现是因为 CPython 解释器的内存管理不是线程安全的，也就是采用 GIL 这把锁解决 CPython 的线程安全问题。
+
+随着时间的推移，计算机硬件逐渐向多核多线程方向发展，为了更加充分的利用多核 CPU 资源，各种编程语言开始对多线程进行支持，Python 也加入了其中，尽管多线程的编程方式可以提高程序的运行效率，但与此同时也带来了线程间数据一致性和状态同步的问题，解决这个问题最简单的方式就是加锁，于是 GIL 这把锁再次登场，很容易便解决了这个问题。
+
+慢慢的越来越多的代码库开发者开始接受了这种设定，进而开始大量依赖这种特性，因为默认加了 GIL 后，Python 的多线程便是线程安全的了，开发者在实际开发无需再考虑线程安全问题，省掉了不少麻烦。
+
+对于 CPython 解释器中的多线程程序，为了保证多线程操作安全，默认使用了 GIL 锁，保证任意时刻只有一个线程在执行，其他线程处于等待状态。
+
+### 2.3 成也 GIL，败也 GIL
+
+以前为了解决多线程的线程操作安全问题，CPython 采用了 GIL 锁的方式，这种方式虽然解决了线程操作安全问题，但由于同一时刻只能有一条线程执行，主动放弃了线程并行执行的机会，因此在目前 CPython 下的多线程并不是真正意义上的多线程。
+
+现在这种情况，我们可能会想要实现真正意义上的多线程，可不可以去掉 GIL 呢？答案是可以的，但是有一个问题：依赖这个特性的代码库太多了，现在已经是尾大不掉了，使去除 GIL 的工作变得举步维艰。
+
+当初为了解决多线程带来的线程操作安全问题使用了 GIL，现在又发现 GIL 方式下的多线程比较低效，想要去掉 GIL，但已经到了尾大不掉的地步了，真是成也 GIL，败也 GIL。
+
+说了这么多，到底在 CPython 下的多线程的实际效果如何呢？为了效果更加的直观，我们用单线程与之对比，来一起看个例子：
 
 ```
 # 单线程
@@ -102,27 +124,17 @@ if __name__ == '__main__':
 '''
 ```
 
-通过实际测试结果，我们发现在 CPython 环境下，多线程比单线程花费的时间还要多。
+通过实际测试结果，我们发现在 CPython 环境下，多线程比单线程花费的时间还要多，进而直观的说明在 CPython 下的多线程是比较低效的。
 
-### 1.3 如何解决 GIL 带来的影响？
+对于 CPython 下多线程的低效问题，除了去掉 GIL，还有什么其他解决方案吗？我们来简单了解下：
 
-现在，我们已经了解了在 CPython 环境下，Python 多线程几乎发挥不出多核 CPU 的优势？GIL 是 CPython 的设计缺陷，简直如 bug 一般的存在；那如何解决 GIL 带来的影响呢？有没有现成的解决方案呢？我们来具体看一下：
+1）使用无 GIL 机制的解释器；如：Jython 与 IronPython，但使用这两个解释器失去了利用 C 语言模块一些优秀特性的机会，因此这种方式还是比较小众。
 
-1）multiprocess 代替 thread
+2）使用 multiprocess 代替 threading；multiprocess 使用了与 threading 模块相似的 API 产生进程，不同之处是它使用了多进程而不是多线程，每个进程有自己独立的 GIL，因此不会出现进程之间的 GIL 争抢，但这种方式只对计算密集型任务有效，通过后面的示例我们也能得出这个结论。
 
-multiprocess 库的出现很大程度上是为了弥补 thread 库因为 GIL 而低效的缺陷；它完整的复制了一套 thread 所提供的接口方便迁移，唯一的不同就是它使用了多进程而不是多线程，每个进程有自己的独立的 GIL ，因此不会出现进程之间的 GIL 争抢。
+## 3 任务类型
 
-2）使用其他解释器
-
-上面我们说了 GIL 是 CPython 解释器中引入的，那么，我们使用没有 GIL 的解释器不就可以了，如：之前提到的 JPython ，还有 IronPython ；然而这两个解释器使用 Java/C# 实现，也就失去了利用社区众多 C 语言模块有用特性的机会，导致这种方式还是比较小众。
-
-3）等待官方解决
-
-对于 CPython 的 GIL 问题，Python 社区也一直在不断努力的去尝试改进 GIL 。
-
-## 2 任务类型
-
-### 2.1 计算密集型任务
+### 3.1 计算密集型任务
 
 计算密集型任务的特点是要进行大量的计算，消耗 CPU 资源，比如：计算圆周率、对视频进行解码 ... 全靠 CPU 的运算能力。上面单线程与多线程对比的例子就是计算密集型任务，我们看下通过使用 Python 多进程的耗时情况：
 
@@ -155,7 +167,7 @@ if __name__ == '__main__':
 '''
 ```
 
-### 2.2 I/O 密集型任务
+### 3.2 I/O 密集型任务
 
 涉及到网络、磁盘 I/O 的任务都是 I/O 密集型任务，这类任务的特点是 CPU 消耗很少，任务的大部分时间都在等待 I/O 操作完成（因为 I/O 的速度远远低于 CPU 和内存的速度）。通过下面例子看一下耗时情况：
 
@@ -238,7 +250,7 @@ I/O 密集型任务，单线程耗时 0.2964005470275879
 
 通过上面的测试结果我们发现：对于计算密集型任务，多进程耗时更短；对于 I/O 密集型任务，多线程耗时更短（单线程耗时与多线程耗时接近）。
 
-对于一个运行的程序来说，随着 CPU 的增加执行效率必然会有所提高，因此大多数时候，一个程序不会是纯计算或纯 I/O ，所以我们只能相对的去看一个程序是计算密集型还是 I/O 密集型。
+对于一个运行的程序来说，随着 CPU 的增加执行效率必然会有所提高，因此大多数时候，一个程序不会是纯计算或纯 I/O，所以我们只能相对的去看一个程序是计算密集型还是 I/O 密集型。
 
 ## 总结
 
@@ -246,5 +258,7 @@ I/O 密集型任务，单线程耗时 0.2964005470275879
 
 参考：
 
-[https://www.cnblogs.com/SuKiWX/p/8804974.html](https://www.cnblogs.com/SuKiWX/p/8804974.html)
+[1] [https://www.cnblogs.com/SuKiWX/p/8804974.html](https://www.cnblogs.com/SuKiWX/p/8804974.html)
+
+[2] [https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock](https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock)
 
