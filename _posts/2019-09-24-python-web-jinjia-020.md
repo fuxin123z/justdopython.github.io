@@ -242,9 +242,11 @@ def hello2(name, gender):
 mymacro.html
 
 ```Jinja
+{% raw %}
 {% macro render_name(name) %}
     <li>{{ name }}</li>
 {% endmacro %}
+{% endraw %}
 ```
 
 然后使用宏, 例如将循环结构的例子中，显示名称的地方，改为调用宏
