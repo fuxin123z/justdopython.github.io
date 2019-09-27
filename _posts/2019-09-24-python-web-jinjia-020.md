@@ -263,12 +263,14 @@ mymacro.html
 一般我们会将宏存在单独的文件中，以便复用，在需要用到宏的地方，引用就好了
 
 ```Jinja
+{% raw %}
 {% import 'mymarco.html' as macros %}
 <ul>
     {% for name in names %}
         {{ macros.render_name(name) }}
     {% endfor%}
 </ul>
+{% endraw %}
 ```
 
 如上所述，用improt引入宏定义文件，通过as指定别名，和python的模块引入一样。指定别名是一个良好的编程习惯，可以将一个复杂的东西形象化，同时像一个命名空间一样，有效的避免冲突。
@@ -278,7 +280,9 @@ mymacro.html
 另外可以将多个模板片段写入一个单独文件，再包含(`include`)在所有模板中，以提高开发效率:
 
 ```Jinja
+{% raw %}
 {% include 'common.html' %}
+{% endraw %}
 ```
 
 `include`进来的文件，相当于将文件中的内容复制到`include`的位置，所以自使用之前需要考虑仔细
@@ -289,6 +293,7 @@ mymacro.html
 首先定义一个基类, base.html:
 
 ```Jinja
+{% raw %}
 <html>
 <head>
     {% block head %}
@@ -301,12 +306,14 @@ mymacro.html
     {% endblock %}
 </body>
 </html>
+{% endraw %}
 ```
 
 其中的`block`标签，定义了可以被子类重构（替换）的部分，每个`blcok`标签，需要指定一个特殊的名称，例如`head`、`title`等，以便子类用特定的名称来重构。另外`block`标签需要有结束标签`endblock`,类似于类C语言中的大括号，当然`block`标签也可以嵌套。
 接下来，定义一个子类模板 hello3.html：
 
 ```Jinja
+{% raw %}
 {% extends "base.html" %}
 {% block title %}Index{% endblock %}
 {% block head %}
@@ -317,6 +324,7 @@ mymacro.html
     {{ super() }}
     <h3>这是子类的内容 Hello world!</h>
 {% endblock %}
+{% endraw %}
 ```
 
 效果如图所示:
