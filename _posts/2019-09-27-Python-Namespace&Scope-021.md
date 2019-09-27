@@ -1,6 +1,6 @@
 ---
 layout: post     
-title:  第20天：Python NameSpace&Scope                                                  
+title:  第21天：Python NameSpace&Scope                                                  
 category: python 命名空间和作用域         
 copyright: python                           
 tagline: by 潮汐           
