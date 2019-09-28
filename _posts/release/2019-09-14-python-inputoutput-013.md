@@ -13,7 +13,7 @@ tags:
 
 ## 1 格式化输出
 
-Python 输出值的方式有两种：表达式语句和 print 函数（文件对象的输出使用 write 方法，标椎文件输出可以参考 sys.stdout ，[详细文档](https://docs.python.org/zh-cn/3/faq/extending.html#how-do-i-catch-the-output-from-pyerr-print-or-anything-that-prints-to-stdout-stderr)）。
+Python 输出值的方式有两种：表达式语句和 print 函数（文件对象的输出使用 write 方法，标准文件输出可以参考 sys.stdout ，[详细文档](https://docs.python.org/zh-cn/3/faq/extending.html#how-do-i-catch-the-output-from-pyerr-print-or-anything-that-prints-to-stdout-stderr)）。
 
 如果我们想要将输出的值转成字符串，可以使用 repr() 或 str() 函数来实现，其中 repr() 函数产生一个解释器易读的表达形式，str() 函数返回一个用户易读的表达形式。
 
