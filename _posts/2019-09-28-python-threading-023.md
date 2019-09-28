@@ -9,6 +9,8 @@ tags:
 
 在之前的文章中，我们已经介绍了 Python 通过 _thread 和 threading 模块提供了对多线程的支持，threading 模块兼具了 _thread 模块的现有功能，又扩展了一些新的功能，具有十分丰富的线程操作功能，本节我们就来详细学习一下 threading 模块。
 
+<!--more-->
+
 ## 1 创建线程
 
 使用 threading 模块创建线程通常有两种方式：1）使用 threading 模块中 Thread 类的构造器创建线程，即直接对类 threading.Thread 进行实例化，并调用实例化对象的 `start` 方法创建线程；2）继承 threading 模块中的 Thread 类创建线程类，即用 threading.Thread 派生出一个新的子类，将新建类实例化，并调用其 start 方法创建线程。
