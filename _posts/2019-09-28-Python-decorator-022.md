@@ -298,6 +298,6 @@ func = f1(arg)(f2(func))
 
 [3] [Python3 文档-复合语句-类定义](https://docs.python.org/3/reference/compound_stmts.html#class-definitions)
 
-[4] [语法糖]([https://baike.baidu.com/item/%E8%AF%AD%E6%B3%95%E7%B3%96/5247005?fr=aladdin](https://baike.baidu.com/item/语法糖/5247005?fr=aladdin))
+[4] [语法糖](https://baike.baidu.com/item/语法糖/5247005?fr=aladdin)
 
 [5] [廖雪峰的官方网站-Python 教程-函数式编程-装饰器](https://www.liaoxuefeng.com/wiki/1016959663602400/1017451662295584)
