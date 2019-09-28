@@ -41,8 +41,11 @@ LeetCode - 202. 快乐数
 **解释:** 
 
 1<sup>2</sup> + 9<sup>2</sup> = 82
+
 8<sup>2</sup> + 2<sup>2</sup> = 68
+
 6<sup>2</sup> + 8<sup>2</sup> = 100
+
 1<sup>2</sup> + 0<sup>2</sup> + 0<sup>2</sup> = 1
 
 
