@@ -38,7 +38,7 @@ tags:
 线程一般会经历新建（New）、就绪（Runnable）、运行（Running）、阻塞（Blocked）、死亡（Dead）5 种状态，当线程被创建并启动后，并不会直接进入运行状态，也不会一直处于运行状态，CPU 可能会在多个线程之间切换，线程的状态也会在就绪和运行之间转换。
 
 
-### 1.3 Python 中的线程与进程
+### 1.2 Python 中的线程与进程
 
 Python 提供了 _thread（Python3 之前名为 thread ） 和 threading 两个线程模块。_thread 是低级、原始的模块，threading 是高级模块，对 _thread 进行了封装，增强了其功能与易用性，绝大多数时候，我们只需使用 threading 模块即可。下一节我们会对 threading 模块进行详细介绍。
 
