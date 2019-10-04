@@ -72,11 +72,11 @@ LeetCode - 204. 统计质数
 1. 遍历每个数，判断它是否为素数。
 
 基于传统教科书中的算法 `IsPrime`(其流程见下图)来做，即在 `IsPrime`算法外套一个循环来做，由于下面流程的时间复杂度 T(n) = O(n*log n)，于是整体算下来整个算法最后的时间复杂度为 O(n * n * log n)，这个算法的时间复杂度是不达标的。
-  ![check_prime](C:\Users\Bruce\Desktop\pyLeetcode\check_prime.png)
+  ![check_prime](http://www.justdopython.com/assets/images/2019/python/check_prime.png)
 
 2. 使用一个筛子，把每一个是合数的数干掉，记录其状态 isDelete，用isDelete=true表示不是质数，已被删掉，而fasle表示留下了，是质数。这个方法被称为**筛法**(Sieve Method)。
 
-![Sieve_of_Eratosthenes_animation](C:\Users\Bruce\Desktop\pyLeetcode\Sieve_of_Eratosthenes_animation.gif)
+![Sieve_of_Eratosthenes_animation](http://www.justdopython.com/assets/images/2019/python/sieve_of_eratosthenes_animation.gif)
 
 **筛法**又分为**埃拉托斯特尼筛法（埃筛）**和**欧拉筛（线性筛）两种**。**埃筛**是用一个数组标记是否为素数，然后依次筛去这个素数的倍数，其时间复杂度是O(n*log n)。而**欧拉筛**是在埃筛的基础上，让每一个合数都只被他的最小质因子筛去，从而减小时间。**欧拉筛**的复杂度几乎是O(n)，由于其代码相对比较难理解，就不详细介绍了。
 
@@ -139,7 +139,7 @@ print(sol.countPrimes(5566))
 
 
 
-![sol1](C:\Users\Bruce\Desktop\pyLeetcode\sol1.png)
+![sol1](http://www.justdopython.com/assets/images/2019/python/sol1.png)
 
 执行用时 : `492 ms`, 在所有 Python3 提交中击败了`47.44 %`的用户.
 
@@ -165,7 +165,7 @@ class Solution:
 
 
 
-![sol2](C:\Users\Bruce\Desktop\pyLeetcode\sol2.png)
+![sol2](http://www.justdopython.com/assets/images/2019/python/sol2.png)
 
 
 
@@ -176,5 +176,5 @@ class Solution:
 **参考资料:**
 
 Eratosthenes筛法(埃式筛法)时间复杂度分析 - Gavin_Nicholas的博客 - CSDN博客
-https://blog.csdn.net/Gavin_Nicholas/article/details/88974079
+<https://blog.csdn.net/Gavin_Nicholas/article/details/88974079>
 
