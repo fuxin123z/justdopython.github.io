@@ -31,19 +31,22 @@ tags:
 
 ## 1 线程与进程
 
-### 1.1 基本概念
+### 1.1 简介
 
 说到线程就不得不提与之相关的另一概念：进程，那么什么是进程？与线程有什么关系呢？简单来说一个运行着的应用程序就是一个进程，比如：我启动了自己手机上的酷猫音乐播放器，这就是一个进程，然后我随意点了一首歌曲进行播放，此时酷猫启动了一条线程进行音乐播放，听了一部分，我感觉歌曲还不错，于是我按下了下载按钮，此时酷猫又启动了一条线程进行音乐下载，现在酷猫同时进行着音乐播放和音乐下载，此时就出现了多线程，音乐播放线程与音乐下载线程并行运行，说到并行，你一定想到了并发吧，那并行与并发有什么区别呢？并行强调的是同一时刻，并发强调的是一段时间内。线程是进程的一个执行单元，一个进程中至少有一条线程，进程是资源分配的最小单位，线程是 CPU 调度的最小单位。
+
+线程一般会经历新建（New）、就绪（Runnable）、运行（Running）、阻塞（Blocked）、死亡（Dead）5 种状态，当线程被创建并启动后，并不会直接进入运行状态，也不会一直处于运行状态，CPU 可能会在多个线程之间切换，线程的状态也会在就绪和运行之间转换。
+
 
 ### 1.2 Python 中的线程与进程
 
 Python 提供了 _thread（Python3 之前名为 thread ） 和 threading 两个线程模块。_thread 是低级、原始的模块，threading 是高级模块，对 _thread 进行了封装，增强了其功能与易用性，绝大多数时候，我们只需使用 threading 模块即可。下一节我们会对 threading 模块进行详细介绍。
 
-Python 提供了 multiprocessing 模块对多进程进行支持，它使用了与 threading 模块相似的 API 产生进程，除此之外，还增加了新的 API，用于支持跨多个输入值并行化函数的执行及跨进程分配输入数据，详细用法可以参考官方文档[https://docs.python.org/zh-cn/3/library/multiprocessing.html](https://docs.python.org/zh-cn/3/library/multiprocessing.html)。
+Python 提供了 multiprocessing 模块对多进程进行支持，它使用了与 threading 模块相似的 API 产生进程，除此之外，还增加了新的 API，用于支持跨多个输入值并行化函数的执行及跨进程分配输入数据，详细用法可以参考官方文档 [https://docs.python.org/zh-cn/3/library/multiprocessing.html](https://docs.python.org/zh-cn/3/library/multiprocessing.html)。
 
 ## 2 GIL
 
-要说 Python 的多线程，必然绕不开 GIL，可谓成也 GIL 败也 GIL，到底什么是 GIL 是啥？怎么来的？为什么说成也 GIL 败也 GIL 呢？下面就带着这几个问题，给大家介绍一下 GIL。
+要说 Python 的多线程，必然绕不开 GIL，可谓成也 GIL 败也 GIL，到底 GIL 是啥？怎么来的？为什么说成也 GIL 败也 GIL 呢？下面就带着这几个问题，给大家介绍一下 GIL。
 
 ### 2.1 GIL 相关概念
 
@@ -63,7 +66,7 @@ GIL 全称 Global Interpreter Lock（全局解释器锁），是 Python 解释�
 
 ### 2.3 成也 GIL，败也 GIL
 
-以前为了解决多线程的线程操作安全问题，CPython 采用了 GIL 锁的方式，这种方式虽然解决了线程操作安全问题，但由于同一时刻只能有一条线程执行，主动放弃了线程并行执行的机会，因此在目前 CPython 下的多线程并不是真正意义上的多线程。
+以前为了解决多线程的线程操作安全问题，CPython 采用了 GIL 锁的方式，这种方式虽然解决了线程操作安全问题，但由于同一时刻只能有一条线程执行，等于主动放弃了线程并行执行的机会，因此在目前 CPython 下的多线程并不是真正意义上的多线程。
 
 现在这种情况，我们可能会想要实现真正意义上的多线程，可不可以去掉 GIL 呢？答案是可以的，但是有一个问题：依赖这个特性的代码库太多了，现在已经是尾大不掉了，使去除 GIL 的工作变得举步维艰。
 
@@ -73,7 +76,6 @@ GIL 全称 Global Interpreter Lock（全局解释器锁），是 Python 解释�
 
 ```
 # 单线程
-from threading import Thread
 import os,time
 
 def task():
@@ -227,7 +229,6 @@ I/O 密集型任务，多线程耗时 0.24960064888000488
 
 ```
 # I/O 密集型任务-单线程
-from threading import Thread
 import os,time
 
 def task():
