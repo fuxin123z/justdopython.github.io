@@ -72,7 +72,7 @@ printf("second address: %p\n", &a); // second address: 0060FEFC
 
 对于有 C 语言编程经验的人来说，上述结果是显而易见的：变量`a`的地址并不会因为赋给它的值有变化而发生变化。对于 C 编译器来说，变量`a`只是协助它区别各个内存地址的标识，是直接与特定的内存地址绑定的，如图所示：
 
-![C 语言中的变量赋值](https://ws1.sinaimg.cn/large/006cMbyIly1g6wx9mqrqvj30f707o3yf.jpg)
+![C 语言中的变量赋值](http://www.justdopython.com/assets/images/2019/09/2019-09-12-python-reference-012-C.png)
 
 但 Python 就不一样的。考虑如下代码：
 
@@ -111,7 +111,7 @@ printf("second address: %p\n", &a); // second address: 0060FEFC
 
 正如前文所述，在 Python 中，变量就是一块砖，哪里需要哪里搬。每次将一个新的对象赋值给一个变量，都在内存中**重新创建**了一个对象，这个对象就具有新的引用值。作为一个“标签”，变量也是哪里需要哪里贴，毫无节操可言。
 
-![Snipaste_2019-09-12_18-50-30.png](https://ws1.sinaimg.cn/large/006cMbyIly1g6wxgtfe84j30vh0cjdfx.jpg)
+![Python 中的变量赋值](https://www.justdopython.com/assets/images/2019/09/2019-09-12-python-reference-012-python-assignment.png)
 
 > 但要注意的是，这里还有一个问题：之所以说“即使赋给变量同一个常数，其得到的`id`也**可能**不同”，实际上是因为并不是对所有的常数都存在这种情况。以常数`1`为例，就有如下结果：
 >
