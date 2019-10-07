@@ -57,7 +57,7 @@ tobeDecorated = IAmDecorator(tobeDecorated)
 
 而装饰函数就好像为原来的函数套了一层壳。如图所示，最后得到的组合函数即为应用装饰器产生的新函数：
 
-![2019-09-23-装饰器_03.gif](http://www.justdopython.com/assets/images/2019/09/23/2019-09-23-装饰器_03.gif)
+![2019-09-23-装饰器_03.gif](http://www.justdopython.com/assets/images/2019/09/23/2019-09-23-decorator_03.gif)
 
 这里要注意一点，上述两段代码在具体执行上还是存在些微的差异。在第二段代码中，函数名`tobeDecorated`实际上是先指向了原函数，在经过装饰器修饰之后，才指向了新的函数；但第一段代码的执行就没有这个中间过程，直接得到的就是名为`tobeDecorated`的新函数。
 
@@ -73,7 +73,7 @@ Python 中，装饰器分为两种，分别是“函数装饰器”和“类装�
 
 对装饰函数的定义大致可以总结为如图所示的模板，即：
 
-![装饰函数模板示意图.png](http://www.justdopython.com/assets/images/2019/09/23/装饰函数模板示意图.png)
+![装饰函数模板示意图.png](http://www.justdopython.com/assets/images/2019/09/23/template_of_decoratorFunction.png)
 
 由于要求装饰函数返回值也为一个函数的缘故，为了在原函数的基础上对功能进行扩充，并且使得扩充的功能能够以函数的形式返回，因此需要在装饰函数的定义中再定义一个内部函数，在这个内部函数中进一步操作。最后`return`的对象就应该是这个内部函数对象，也只有这样才能够正确地返回一个附加了新功能的函数。
 
