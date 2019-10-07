@@ -7,6 +7,10 @@ tags:
   - python100
 ---
 
+
+> 示例代码：[Python-100-days-day013](https://github.com/JustDoPython/python-100-day/tree/master/day-013)
+
+
 在前几篇文章中，我们其实已经接触了 Python 的输入输出功能，本篇文章中我们再来详细学习一下。
 
 <!--more-->

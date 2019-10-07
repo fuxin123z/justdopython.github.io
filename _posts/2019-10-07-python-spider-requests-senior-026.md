@@ -7,6 +7,10 @@ tags:
   - python
 ---
 
+
+> 示例代码：[Python-100-days-day026](https://github.com/JustDoPython/python-100-day/tree/master/day-026)
+
+
 上一篇我们介绍了 Requests 库的基本用法，学会之后大家就可以应付一般的请求了。这一篇我们接着介绍 Requests 的高级用法，以便应付一些棘手的问题。
 <!--more-->
 

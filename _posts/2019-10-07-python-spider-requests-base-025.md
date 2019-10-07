@@ -7,6 +7,10 @@ tags:
   - python
 ---
 
+
+> 示例代码：[Python-100-days-day025](https://github.com/JustDoPython/python-100-day/tree/master/day-025)
+
+
 之前我们用了 urllib 库，这个作为入门的工具还是不错的，对了解一些爬虫的基本理念，掌握爬虫爬取的流程有所帮助。入门之后，我们就需要学习一些更加高级的内容和工具来方便我们的爬取。那么这一节来简单介绍一下 requests 库的基本用法。
 <!--more-->
 
