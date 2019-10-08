@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第20天： Web开发 Jinja2模板引擎
+title: 第20天： Web 开发 Jinja2 模板引擎
 tagline: by 太阳雪
 tags:
   - python100
@@ -34,7 +34,7 @@ tags:
 >上面提到的**展现逻辑**和**业务逻辑**，为什么不直接说成**前台**和**后台**呢?
 >如果你有答案和想法，欢迎留言讨论。
 
-### Jinja2模板引擎
+### Jinja2 模板引擎
 
 Jinja2 是 Flask 框架默认支持的模板引擎，并不是唯一也不是最好（因人而异，没有最好）模板引擎，不同的 Web 框架，比如 Django、Nodejs 等都有自己的模板引擎，甚至一些程序员自己实现的模板引擎（我就这么干过），但大体思路是一样的，都是要将数据替换或者转换到，用特殊格式标记了位置的模板中，以合成动态的 html，这种技术不新鲜，在之前的打印模板，如水晶报表里就有，无非就是标记和语法不同而已，所以要举一反三。
 
@@ -383,10 +383,10 @@ mymacro.html
 今天介绍了 Jinja2 模板引擎的基本用法和特点，期望通过不同的特点，让你了解到模板的基本用法，以便更快的使用和进一步学习更深入的内容。另外，想通过 Jinja2 模板引擎，说明模板的基本特征，以便触类旁通、举一反三，更快的学习其他优秀的模板, 同时也想说明，模板不仅仅可以用在 Web 的开发中，还可以用在自动化编码、测试等众多领域。
 最后在本章开头，留了个思考题，为什么不将**展现逻辑**和**业务逻辑**说成是**前台**和**后台**呢？如果你有答案，欢迎留言交流。
 
+[参考代码](https://github.com/JustDoPython/python-100-day/tree/master/day-020)
+
 参考
 
 + [图书: Flask Web开发　https://item.jd.com/12418677.html](https://item.jd.com/12418677.html)
 + [API-Jinja Documentation(2,10.x)　https://jinja.palletsprojects.com/en/2.10.x/api/#the-context](https://jinja.palletsprojects.com/en/2.10.x/api/#the-context)
 + [ansible基础-Jinjia2模板——过滤器　https://www.cnblogs.com/mauricewei/p/10056379.html](https://www.cnblogs.com/mauricewei/p/10056379.html)
-
-[参考代码](https://github.com/JustDoPython/python-100-day/tree/master/day-020)
