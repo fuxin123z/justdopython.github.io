@@ -275,7 +275,8 @@ quote 函数返回一个编码后的字符串。
 
 #### 3.5.3 应用举例
 
-```采用 quote 对 url 中的汉字进行编码，输出编码后的结果
+```
+# 采用 quote 对 url 中的汉字进行编码，输出编码后的结果
 import urllib
 url = 'http://www.baidu.com/爬虫'
 result = urllib.parse.quote(url)
