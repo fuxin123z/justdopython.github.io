@@ -251,3 +251,7 @@ threading 模块提供了十分丰富的线程操作功能，它的 API 方法�
 
 [https://docs.python.org/zh-cn/3/library/threading.html](https://docs.python.org/zh-cn/3/library/threading.html)
 
+
+
+> 示例代码：[Python-100-days-day023](https://github.com/JustDoPython/python-100-day/tree/master/day-023)
+

@@ -226,3 +226,6 @@ True
 [1] [https://docs.python.org/zh-cn/3/library/string.html#formatspec](https://docs.python.org/zh-cn/3/library/string.html#formatspec)
 
 [2] [https://docs.pythontab.com/python/python3.5/inputoutput.html#tut-files](https://docs.pythontab.com/python/python3.5/inputoutput.html#tut-files)
+
+> 示例代码：[Python-100-days-day013](https://github.com/JustDoPython/python-100-day/tree/master/day-013)
+
