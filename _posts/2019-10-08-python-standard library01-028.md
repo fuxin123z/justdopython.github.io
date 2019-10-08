@@ -1,3 +1,12 @@
+---
+layout: post     
+title:  第28天：Python 标准库概览1                                                 
+category: python 标准库概览1    
+copyright: python                           
+tagline: by 潮汐           
+tags: 
+  - python100
+---
 
 - Python 的标准库非常广泛，提供了各种各样的工具。该库包含内置模块（用C编写），可以访问系统功能，例如 Python 程序员无法访问的文件 I / O，以及用 Python 编写的模块，这些模块为许多问题提供标准化解决方案。其中一些模块明确地旨在通过将平台特定的内容抽象为平台中立的 API 来鼓励和增强 Python 程序的可移植性。
 - Python 的标准库(standard library) 是 Python 的一个组成部分，也是 Python 的利器，它可以让编程事半功倍。
