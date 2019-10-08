@@ -222,8 +222,6 @@ print(sorted(list02, key=lambda x: len(x), reverse=True))
 以上我们简单的介绍了几个常用的高阶函数的使用，当然还有很多的高阶函数我们可以去研究，比如  `zip`  函数等，希望此节的介绍对大家有所帮助。
 
 ## 代码地址
-[python 高阶函数](https://github.com/JustDoPython/python-100-day/tree/master/day-005)
-
 
 > 示例代码：[Python-100-days-day018](https://github.com/JustDoPython/python-100-day/tree/master/day-018)
 
