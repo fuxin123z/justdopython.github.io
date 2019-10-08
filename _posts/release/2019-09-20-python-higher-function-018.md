@@ -46,7 +46,7 @@ print(high_func(square, list(range(10))))
 
 ## Python 常用高阶函数
 
-如同java、scala等语言，我们很多常用的高阶函数基本都一致。在开发中我们经常使用的最基本的高阶函数其实就几个，而我们也可以基于这些函数去进行适当的扩展，那么下面开始介绍几种常用的高阶函数。
+如同 java、scala 等语言，我们很多常用的高阶函数基本都一致。在开发中我们经常使用的最基本的高阶函数其实就几个，而我们也可以基于这些函数去进行适当的扩展，那么下面开始介绍几种常用的高阶函数。
 
 ### map
 
@@ -108,7 +108,7 @@ reduce(function, sequence[, initial]) -> value
 ```
 -  `function`  # 函数, 序列中的每个元素需要执行的操作, 可以是匿名函数
 -  `sequence`  # 需要执行操作的序列
--  `initial`  # 可选，初始参数
+-  `initial`   # 可选，初始参数
 
 最后返回函数的计算结果, 和初始参数类型相同
 
@@ -142,7 +142,7 @@ print(s)
 
 > Return an iterator yielding those items of iterable for which function(item) is true. If function is None, return the items that are true.
 
- `filter()`  函数用来过滤序列中不符合条件的值，返回一个迭代器，该迭代器生成那些函数(项)为true的iterable项。如果函数为None，则返回为true的项。定义如下：
+ `filter()`  函数用来过滤序列中不符合条件的值，返回一个迭代器，该迭代器生成那些函数(项)为 true 的 iterable 项。如果函数为 None，则返回为 true 的项。定义如下：
 
 ```python
 filter(function or None, iterable) --> filter object
@@ -191,7 +191,7 @@ def sorted(iterable: Iterable[_T], *,
 
 -  `iterable`  # 序列
 -  `key`  # 可以用来计算的排序函数。
--  `reverse`  # 排序规则，reverse = True降序，reverse = False 升序(默认）。
+-  `reverse`  # 排序规则，reverse = True 降序，reverse = False 升序(默认）。
 
 举个简单例子：
 
