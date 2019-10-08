@@ -7,10 +7,6 @@ tags:
   - python100
 ---
 
-
-> 示例代码：[Python-100-days-day016](https://github.com/JustDoPython/python-100-day/tree/master/day-016)
-
-
 我们知道，多线程与单线程相比，可以提高 CPU 利用率，加快程序的响应速度。
 
 <!--more-->
