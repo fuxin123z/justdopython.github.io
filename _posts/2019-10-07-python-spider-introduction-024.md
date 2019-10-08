@@ -7,10 +7,6 @@ tags:
   - python
 ---
 
-
-> 示例代码：[Python-100-days-day024](https://github.com/JustDoPython/python-100-day/tree/master/day-024)
-
-
 作为程序员，相信大家对“爬虫”这个词并不陌生，身边常常会有人提这个词，在不了解它的人眼中，会觉得这个技术很高端很神秘。不用着急，我们的爬虫系列就是带你去揭开它的神秘面纱，探寻它真实的面目。
 <!--more-->
 
@@ -66,3 +62,6 @@ URL 的格式由三部分组成：
 
 ## 总结
 本节给大家介绍了爬虫的基本概念，让大家对爬虫有一个大致的了解，以便后续章节的学习。开胃菜吃完了，下一节我们就要开始吃大餐了哟，你准备好了吗？
+
+> 示例代码：[Python-100-days-day024](https://github.com/JustDoPython/python-100-day/tree/master/day-024)
+

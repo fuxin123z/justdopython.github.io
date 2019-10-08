@@ -7,10 +7,6 @@ tags:
   - python100
 ---
 
-
-> 示例代码：[Python-100-days-day009](https://github.com/JustDoPython/python-100-day/tree/master/day-009)
-
-
 Python 中的数据结构是通过某种方式组织在一起的数据元素的集合，这些数据元素可以是数字、字符、甚至可以是其他数据结构
 在 Python 中，最基本的数据结构是序列（列表和元组），序列中的每个元素都有一个序号（元素的具体位置），这个序号叫索引，索引下标从0开始，以此类推...... 
 
@@ -174,4 +170,8 @@ max(tuple)
 ## 总结
 
 本节给大家介绍了 Python 数据结构之元组的操作与使用，对 Python 工程师使用列表提供了支撑。
+
+
+
+> 示例代码：[Python-100-days-day009](https://github.com/JustDoPython/python-100-day/tree/master/day-009)
 

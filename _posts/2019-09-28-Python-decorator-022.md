@@ -8,10 +8,6 @@ tags:
 ---
 
 
-> 示例代码：[Python-100-days-day022](https://github.com/JustDoPython/python-100-day/tree/master/day-022)
-
-
-
 
 # Python 之装饰器
 
@@ -305,3 +301,6 @@ func = f1(arg)(f2(func))
 [4] [语法糖](https://baike.baidu.com/item/语法糖/5247005?fr=aladdin)
 
 [5] [廖雪峰的官方网站-Python 教程-函数式编程-装饰器](https://www.liaoxuefeng.com/wiki/1016959663602400/1017451662295584)
+
+> 示例代码：[Python-100-days-day022](https://github.com/JustDoPython/python-100-day/tree/master/day-022)
+

@@ -7,10 +7,6 @@ tags:
   - python100
 ---
 
-
-> 示例代码：[Python-100-days-day018](https://github.com/JustDoPython/python-100-day/tree/master/day-018)
-
-
 函数式编程现在逐渐被广大开发群体接受，越来越多的开发者门开始使用这种优雅的开发模式，而我们使用函数式编程最主要的是需要清楚：
 1. 什么是高阶函数（**Higher-order Functions**）？
 2. Python 中高阶函数有哪些？要怎么用？
@@ -227,3 +223,7 @@ print(sorted(list02, key=lambda x: len(x), reverse=True))
 
 ## 代码地址
 [python 高阶函数](https://github.com/JustDoPython/python-100-day/tree/master/day-005)
+
+
+> 示例代码：[Python-100-days-day018](https://github.com/JustDoPython/python-100-day/tree/master/day-018)
+

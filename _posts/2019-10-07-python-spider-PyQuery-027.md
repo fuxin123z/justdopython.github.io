@@ -7,10 +7,6 @@ tags:
   - python
 ---
 
-
-> 示例代码：[Python-100-days-day027](https://github.com/JustDoPython/python-100-day/tree/master/day-027)
-
-
 PyQuery 库是一个非常强大又灵活的网页解析库，如果你有前端开发经验，那么你应该接触过 jQuery ,那么PyQuery就是你非常绝佳的选择，PyQuery 是 Python 仿照 jQuery 的严格实现，语法与 jQuery 几乎完全相同。
 <!--more-->
 
@@ -374,4 +370,8 @@ print(response)
 
 
 
+
+
+
+> 示例代码：[Python-100-days-day027](https://github.com/JustDoPython/python-100-day/tree/master/day-027)
 

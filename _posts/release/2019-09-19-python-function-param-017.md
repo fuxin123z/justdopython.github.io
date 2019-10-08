@@ -7,10 +7,6 @@ tags:
   - python100
 ---
 
-
-> 示例代码：[Python-100-days-day017](https://github.com/JustDoPython/python-100-day/tree/master/day-017)
-
-
 定义一个函数非常简单，但是怎么定义一个函数，需要什么参数，怎么去调用却是我们需要去思考的问题。
 
 如同大多数语言一样（如 Java），Python 也提供了多种参数的设定（如：默认值参数、关键字参数、形参等）。使用这些参数定义出来的代码，可以让我们适应不同的开放场景，也能简化我们的代码开发工作。
@@ -159,4 +155,8 @@ key_fun(100, voltage=1000)                             # error
 [python中函数的参数设定](https://github.com/JustDoPython/python-100-day/tree/master/day-005)
 
 
+
+
+
+> 示例代码：[Python-100-days-day017](https://github.com/JustDoPython/python-100-day/tree/master/day-017)
 

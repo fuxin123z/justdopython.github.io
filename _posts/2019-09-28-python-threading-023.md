@@ -7,10 +7,6 @@ tags:
   - python100
 ---
 
-
-> 示例代码：[Python-100-days-day023](https://github.com/JustDoPython/python-100-day/tree/master/day-023)
-
-
 在之前的文章中，我们已经介绍了 Python 通过 _thread 和 threading 模块提供了对多线程的支持，threading 模块兼具了 _thread 模块的现有功能，又扩展了一些新的功能，具有十分丰富的线程操作功能，本节我们就来详细学习一下 threading 模块。
 
 <!--more-->
@@ -254,4 +250,8 @@ threading 模块提供了十分丰富的线程操作功能，它的 API 方法�
 参考：
 
 [https://docs.python.org/zh-cn/3/library/threading.html](https://docs.python.org/zh-cn/3/library/threading.html)
+
+
+
+> 示例代码：[Python-100-days-day023](https://github.com/JustDoPython/python-100-day/tree/master/day-023)
 

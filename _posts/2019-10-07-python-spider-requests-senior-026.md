@@ -7,10 +7,6 @@ tags:
   - python
 ---
 
-
-> 示例代码：[Python-100-days-day026](https://github.com/JustDoPython/python-100-day/tree/master/day-026)
-
-
 上一篇我们介绍了 Requests 库的基本用法，学会之后大家就可以应付一般的请求了。这一篇我们接着介绍 Requests 的高级用法，以便应付一些棘手的问题。
 <!--more-->
 
@@ -120,4 +116,8 @@ r = requests.get('https://github.com', timeout=None)
 
 ## 总结
 本文为大家讲述了几个 Requests 的高级特性，通过掌握这些特性，我们就基本上掌握了 Requests 的常用功能，也可以运用 Requests 去解决实际问题了。我们的 Requests 介绍也就告一段落了，剩下的靠大家去实践出真知了。
+
+
+
+> 示例代码：[Python-100-days-day026](https://github.com/JustDoPython/python-100-day/tree/master/day-026)
 

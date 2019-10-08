@@ -9,10 +9,6 @@ tags:
 ---
 
 
-> 示例代码：[Python-100-days-day021](https://github.com/JustDoPython/python-100-day/tree/master/day-021)
-
-
-
 命名空间定义了在某个作用域内变量名和绑定值之间的对应关系，命名空间是键值对的集合，变量名与值是一一对应关系。作用域定义了命名空间中的变量能够在多大范围内起作用。
 
 命名空间在python解释器中是以字典的形式存在的，是以一种可以看得见摸得着的实体存在的。作用域是python解释器定义的一种规则，该规则确定了运行时变量查找的顺序，是一种形而上的虚的规定。
@@ -354,3 +350,6 @@ test()
 参考：
 
 https://www.runoob.com/python3/python3-namespace-scope.html
+
+> 示例代码：[Python-100-days-day021](https://github.com/JustDoPython/python-100-day/tree/master/day-021)
+

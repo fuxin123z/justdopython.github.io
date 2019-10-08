@@ -8,10 +8,6 @@ tags:
   - python100
 ---
 
-
-> 示例代码：[Python-100-days-day011](https://github.com/JustDoPython/python-100-day/tree/master/day-011)
-
-
  Python 中的字典提供了一种灵活的访问和组织数据的方式
 - 字典是由很多值组成的集合
 - 字典的索引可以是不同的数据类型，同样也不止是整数，也有字符串
@@ -560,3 +556,6 @@ True
 
 http://www.pythondoc.com/pythontutorial3
 https://www.runoob.com/python3/python3-dictionary.html
+
+> 示例代码：[Python-100-days-day011](https://github.com/JustDoPython/python-100-day/tree/master/day-011)
+

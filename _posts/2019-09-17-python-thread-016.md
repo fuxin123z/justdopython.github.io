@@ -7,10 +7,6 @@ tags:
   - python100
 ---
 
-
-> 示例代码：[Python-100-days-day016](https://github.com/JustDoPython/python-100-day/tree/master/day-016)
-
-
 我们知道，多线程与单线程相比，可以提高 CPU 利用率，加快程序的响应速度。
 
 <!--more-->
@@ -266,4 +262,8 @@ I/O 密集型任务，单线程耗时 0.2964005470275879
 [1] [https://www.cnblogs.com/SuKiWX/p/8804974.html](https://www.cnblogs.com/SuKiWX/p/8804974.html)
 
 [2] [https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock](https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock)
+
+
+
+> 示例代码：[Python-100-days-day016](https://github.com/JustDoPython/python-100-day/tree/master/day-016)
 
