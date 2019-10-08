@@ -152,7 +152,7 @@ key_fun(100, voltage=1000)                             # error
 本节主要简单的介绍了python中函数参数的使用，设定的方式可以配合使用，但是也不要过多的去设计，否则会造成函数的可读性变的很差。
 
 ## 代码地址
-[python中函数的参数设定](https://github.com/JustDoPython/python-100-day/tree/master/day-005)
+[python中函数的参数设定](https://github.com/JustDoPython/python-100-day/tree/master/day-017)
 
 
 
