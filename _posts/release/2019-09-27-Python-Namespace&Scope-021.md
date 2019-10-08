@@ -52,7 +52,7 @@ tags:
  
   **生命周期：**
 
-对于一个 Python 模块的 global namespace，它在这个 module 被 import 的时候创建，在解释器退出的时候退出；
+对于一个 Python 模块的 global namespace，它在这个 module 被  import  的时候创建，在解释器退出的时候退出；
 
 **3）局部名称（local names）**
 
@@ -234,7 +234,7 @@ print("函数外是全局变量 : ", total)
 函数外是全局变量 :  0
 ```
 
-## 6、global 和 nonlocal关键字 
+## 6、global 和 nonlocal 关键字 
 
 当内部作用域想修改外部作用域的变量时，就要用到 global 和 nonlocal 关键字了。
 
@@ -243,7 +243,7 @@ print("函数外是全局变量 : ", total)
 当前作用域局部变量->外层作用域变量->再外层作用域变量->......->当前模块全局变量->pyhton内置变量
 
 - global: 全局变量,当局部作用域改变全局变量用 global，同时 global 还可以定义新的全局变量
-- nonlocal: 外层嵌套函数的变量,nonlocal 不能定义新的外层函数变量，只能改变已有的外层函数变量,同时 nonlocal 不能改变全局变量
+- nonlocal: 外层嵌套函数的变量, nonlocal 不能定义新的外层函数变量，只能改变已有的外层函数变量,同时 nonlocal 不能改变全局变量
 
 ### 6.1 修改全局变量
 
