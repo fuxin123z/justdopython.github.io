@@ -207,7 +207,7 @@ Traceback (most recent call last):
 NameError: name 'name2' is not defined
 ```
 
-从以上报错信息看出，name2 未定义，因为name2 是函数 names() 中的局部变量，只能在函数内部调用，外部不能调用函数中的局部变量。
+从以上报错信息看出，name2 未定义，因为 name2 是函数 names() 中的局部变量，只能在函数内部调用，外部不能调用函数中的局部变量。
 
 ## 5、全局变量和局部变量
 
