@@ -213,4 +213,4 @@ print(shutil.get_terminal_size())
 
 
 
-> 示例代码：[Python-100-days-day037](https://github.com/JustDoPython/python-100-day/tree/master/day-016)
+> 示例代码：[Python-100-days-day037](https://github.com/JustDoPython/python-100-day/tree/master/day-037)
