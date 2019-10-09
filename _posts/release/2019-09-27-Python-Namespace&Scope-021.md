@@ -8,7 +8,6 @@ tags:
   - python100
 ---
 
-
 命名空间定义了在某个作用域内变量名和绑定值之间的对应关系，命名空间是键值对的集合，变量名与值是一一对应关系。作用域定义了命名空间中的变量能够在多大范围内起作用。
 
 命名空间在 Python 解释器中是以字典的形式存在的，是以一种可以看得见摸得着的实体存在的。作用域是 Python 解释器定义的一种规则，该规则确定了运行时变量查找的顺序，是一种形而上的虚的规定。
@@ -63,6 +62,7 @@ tags:
  对于一个函数的 local namespace，它在函数每次被调用的时候创建，函数返回的时候被删除。
 
 **注意：**
+
 命名空间的生命周期取决于对象的作用域，如果对象执行完成，则该命名空间的生命周期就结束。
 因此，我们无法从外部命名空间访问内部命名空间的对象。例如：
 
@@ -87,8 +87,8 @@ def some_func():
 
 ###  3.1 查找变量  
 
- 如果程序执行时去使用一个变量 hello ，那么 Python，
- 查找变量顺序为： 
+如果程序执行时去使用一个变量 hello ，那么 Python，
+查找变量顺序为： 
  
 **局部的命名空间 -> 全局命名空间 -> 内置命名空间**
 
@@ -115,9 +115,9 @@ Python 解释器启动 ->创建内建命名空间 -> 加载模块 -> 创建全�
  
 ##   1、概述
 
- > A scope is a textual region of a Python program where a namespace is directly accessible. "Directly accessible" here means that an unqualified reference to a name attempts to find the name in the namespace.
+> A scope is a textual region of a Python program where a namespace is directly accessible. "Directly accessible" here means that an unqualified reference to a name attempts to find the name in the namespace.
  
- 作用域就是一个 Python 程序可以直接访问命名空间的正文区域。
+作用域就是一个 Python 程序可以直接访问命名空间的正文区域。
 - Python 程序中，直接访问一个变量，会从内到外依次访问所有的作用域直到找到，否则会报未定义的错误。
 - Python 中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。
 - Python 中， 变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称
@@ -134,6 +134,7 @@ Python 解释器启动 ->创建内建命名空间 -> 加载模块 -> 创建全�
 作用域规则顺序为：
 
     L->E->G->B
+	
 如果变量在局部内找不到，便会去局部外的局部找（例如闭包），再找不到就会去全局找，再找不到就去内置中找，如下图所示：
 
 ![作用域分类直观图](https://www.runoob.com/wp-content/uploads/2014/05/1418490-20180906153626089-1835444372.png)
@@ -240,7 +241,7 @@ print("函数外是全局变量 : ", total)
 
 **变量访问顺序**：  
                                             
-当前作用域局部变量->外层作用域变量->再外层作用域变量->......->当前模块全局变量->pyhton内置变量
+当前作用域局部变量 -> 外层作用域变量 -> 再外层作用域变量 -> ...... -> 当前模块全局变量 -> pyhton 内置变量
 
 - global: 全局变量,当局部作用域改变全局变量用 global，同时 global 还可以定义新的全局变量
 - nonlocal: 外层嵌套函数的变量, nonlocal 不能定义新的外层函数变量，只能改变已有的外层函数变量,同时 nonlocal 不能改变全局变量
@@ -275,7 +276,6 @@ print(num)
 
 如果要修改嵌套作用域（enclosing 作用域，外层非全局作用域）中的变量则需要 nonlocal 关键字
 
-
 ```
 # 定义函数
 def outer():
@@ -301,7 +301,6 @@ outer()
 
 另外还有一种特殊情况，以下这段代码有语法错误，运行会报一个异常：
 
-
 ```
 b = 8
 def test():
@@ -311,7 +310,6 @@ test()
 
 #　异常信息：UnboundLocalError
 ```
-
 
 程序执行异常：
 
