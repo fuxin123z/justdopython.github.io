@@ -39,7 +39,7 @@ shutil.copyfile('folder1/fsrc.txt','folder1/fdst.txt')
 shutil.copymode('folder1/fsrc.txt','folder1/fdst.txt')
 ```
 
-> 注：符号链接（软链接）是一类特殊的文件， 其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用。
+> 符号链接（软链接）是一类特殊的文件， 其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用。
 
 **4）copystat(src, dst, \*, follow_symlinks=True)**
 
