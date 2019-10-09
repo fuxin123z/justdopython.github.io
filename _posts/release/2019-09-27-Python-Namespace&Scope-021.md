@@ -106,7 +106,6 @@ Python 解释器启动 ->创建内建命名空间 -> 加载模块 -> 创建全�
 
 函数调用结束 -> 销毁函数对应的局部命名空间 -> Python 虚拟机（解释器）退出 ->销毁全局命名空间 ->销毁内建命名空间
 
-
 ##  4、命名空间总结
  
  一个模块的引入，函数的调用，类的定义都会引入命名空间，函数中的再定义函数，类中的成员函数定义会在局部 namespace 中再次引入局部 namespace。
@@ -118,6 +117,7 @@ Python 解释器启动 ->创建内建命名空间 -> 加载模块 -> 创建全�
 > A scope is a textual region of a Python program where a namespace is directly accessible. "Directly accessible" here means that an unqualified reference to a name attempts to find the name in the namespace.
  
 作用域就是一个 Python 程序可以直接访问命名空间的正文区域。
+
 - Python 程序中，直接访问一个变量，会从内到外依次访问所有的作用域直到找到，否则会报未定义的错误。
 - Python 中，程序的变量并不是在哪个位置都可以访问的，访问权限决定于这个变量是在哪里赋值的。
 - Python 中， 变量的作用域决定了在哪一部分程序可以访问哪个特定的变量名称
@@ -323,7 +323,7 @@ UnboundLocalError: local variable 'a' referenced before assignment
 ```
 
 错误信息为局部作用域引用错误，因为 test 函数中的 a 使用的是局部变量，未定义，无法修改。
-将　a 修改为全局变量，通过函数参数传递，程序就可以正常执行，输出结果为：
+将 a 修改为全局变量，通过函数参数传递，程序就可以正常执行，输出结果为：
 
 ```
 b = 8
