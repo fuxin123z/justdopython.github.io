@@ -1,8 +1,19 @@
+---
+layout: post
+category: python
+title: 第26天：Python 标准库之 os 模块详解
+tagline: by 轩辕御龙
+tags:
+  - python100
+---
+
 # Python os 模块详解
 
 ## 1. 简介
 
 `os`就是“operating system”的缩写，顾名思义，`os`模块提供的就是各种 Python 程序与操作系统进行交互的接口。通过使用`os`模块，一方面可以方便地与操作系统进行交互，另一方面页可以极大增强代码的可移植性。如果该模块中相关功能出错，会抛出`OSError`异常或其子类异常。
+
+<!--more-->
 
 > 注意，如果是读写文件的话，建议使用内置函数`open()`；如果是路径相关的操作，建议使用`os`的子模块`os.path`；如果要逐行读取多个文件，建议使用`fileinput`模块；要创建临时文件或路径，建议使用`tempfile`模块；要进行更高级的文件和路径操作则应当使用`shutil`模块。
 
