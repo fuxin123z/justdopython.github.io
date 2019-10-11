@@ -120,7 +120,7 @@ print(shutil.disk_usage('folder1/'))
 # usage(total=107375226880, used=69274427392, free=38100799488)
 ```
 
-12）which(cmd, mode=os.F_OK | os.X_OK, path=None)
+12）which(cmd, mode=os.F_OK \| os.X_OK, path=None)
 
 返回 cmd 调用的可执行文件路径，没有返回 None。mode：用于判断文件是否存在或可执行，path：cmd 的查找路径。示例如下：
 
