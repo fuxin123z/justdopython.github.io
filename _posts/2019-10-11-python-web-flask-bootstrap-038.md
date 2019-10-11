@@ -267,6 +267,8 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 
 ## 总结
 
+这篇文章简单介绍了 Flask 框架中如何使用 Bootstrap 扩展，从一个简单的示例开始，讲解了基于 Jinja2 模板引擎的 `bootstrap-flask` 模块的使用，其中包括资源助手 `bootstrap.load_css()` 和 `bootstrap.load_css()` ，以及一些基本的宏的用法，在参考代码中有较为完整的例子，您可以作为参考。在后面的文章中将会陆续介绍 **表单** 和 **数据库** 的使用，敬请期待。
+
 [参考代码](https://github.com/JustDoPython/python-100-day/tree/master/day-038)
 
 参考
