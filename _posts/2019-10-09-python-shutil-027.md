@@ -39,7 +39,7 @@ shutil.copyfile('folder1/fsrc.txt','folder1/fdst.txt')
 shutil.copymode('folder1/fsrc.txt','folder1/fdst.txt')
 ```
 
-> 符号链接（软链接）是一类特殊的文件， 其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用。
+> 注：符号链接（软链接）是一类特殊的文件， 其包含有一条以绝对路径或者相对路径的形式指向其它文件或者目录的引用。
 
 **4）copystat(src, dst, \*, follow_symlinks=True)**
 
@@ -204,10 +204,6 @@ print(shutil.get_terminal_size())
 # 输出结果
 # os.terminal_size(columns=80, lines=24)
 ```
-
-## 总结
-
-本节给大家具体介绍了 Python shutil 模块的概念及大部分方法的详细使用，掌握了这些方法基本就能满足我们日常的使用了。
 
 参考：
 
