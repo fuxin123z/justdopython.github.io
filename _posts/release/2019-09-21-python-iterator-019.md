@@ -211,6 +211,8 @@ class Reverse:
 
 本文探究了 Python 中迭代器的相关知识点，深入理解了迭代器的属性和行为，学到了两个重要的方法`__iter__()`和`__next__()`。同时搞明白了 Python 实现`for`循环的内部机制。
 
+> 示例代码：[Python-100-days-day019](https://github.com/JustDoPython/python-100-day/tree/master/day-019)
+
 ## 参考资料
 
 [1] [Python3 文档-内置类型](https://docs.python.org/3/library/stdtypes.html)
@@ -218,6 +220,4 @@ class Reverse:
 [2] [廖雪峰的官方网站](https://www.liaoxuefeng.com/wiki/1016959663602400/1017323698112640)
 
 [3] [Python3 文档-类-9.8 迭代器](https://docs.python.org/3/tutorial/classes.html?highlight=iterator#iterators)
-
-> 示例代码：[Python-100-days-day019](https://github.com/JustDoPython/python-100-day/tree/master/day-019)
 

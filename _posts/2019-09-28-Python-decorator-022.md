@@ -290,6 +290,8 @@ func = f1(arg)(f2(func))
 
 本文介绍了 Python 中的装饰器这一特性，详细讲解了装饰器的实际原理和使用方式，能够大大帮助学习者掌握有关装饰器的知识，减小读懂 Python 代码的阻力，写出更加 pythonic 的代码。
 
+> 示例代码：[Python-100-days-day022](https://github.com/JustDoPython/python-100-day/tree/master/day-022)
+
 ## 参考资料
 
 [1] [Python3 术语表-装饰器](https://docs.python.org/3/glossary.html#term-decorator)
@@ -301,6 +303,3 @@ func = f1(arg)(f2(func))
 [4] [语法糖](https://baike.baidu.com/item/语法糖/5247005?fr=aladdin)
 
 [5] [廖雪峰的官方网站-Python 教程-函数式编程-装饰器](https://www.liaoxuefeng.com/wiki/1016959663602400/1017451662295584)
-
-> 示例代码：[Python-100-days-day022](https://github.com/JustDoPython/python-100-day/tree/master/day-022)
-
