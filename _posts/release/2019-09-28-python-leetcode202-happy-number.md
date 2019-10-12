@@ -134,6 +134,10 @@ sol = Solution()
 print(sol.isHappy(19))
 ```
 
+<br>
+
+示例代码:
+<https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-202>
 
 
 

@@ -113,10 +113,7 @@ print(sol.addBinary('11', '1101'))
 ```
 
 
+<br>
 
-
-
-
-
-
-
+示例代码:
+<https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-067>

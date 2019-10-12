@@ -181,5 +181,8 @@ class Solution:
 
 显然，对于此题，`位运算`依然更胜一筹。
 
+<br>
 
+示例代码:
+<https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-136>
 

@@ -170,6 +170,10 @@ class Solution:
 执行用时 : `100 ms`, 在所有 Python3 提交中击败了`94.27 %`的用户.
 
 
+<br>
+
+示例代码:
+<https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-204>
 
 **参考资料:**
 

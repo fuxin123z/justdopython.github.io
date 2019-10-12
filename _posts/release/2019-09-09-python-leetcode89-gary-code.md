@@ -109,6 +109,11 @@ print(obj.grayCode(2))
 
 <br>
 
+示例代码:
+<https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-089>
+
+<br>
+
 **参考:**
 
 [LeetCode] Gray Code - 穆穆兔兔 - 博客园
