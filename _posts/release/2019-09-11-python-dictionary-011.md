@@ -596,8 +596,6 @@ True
 
 由以上实例可以看出，当列表元素内容一致，顺序不同再对比内容时匹配不成功，同理字典值匹配成功，说明字典中元素内容不按顺序存放。
 
-文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day "python-100-days")
-
 ## 总结
 
 本节给大家介绍了 Python 数据结构之字典的操作与使用，对 Python 工程师使用字典的一些基本知识提供了支撑。
