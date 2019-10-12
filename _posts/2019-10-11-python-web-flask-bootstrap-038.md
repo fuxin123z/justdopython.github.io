@@ -105,11 +105,11 @@ bootstrap = Bootstrap(app) # 为应用初始化 bootstrap
 
 是不是感觉很头大，不过是代码多了些，结构很其实很简单，大部分代码是 Bootstrap 提供的基本框架代码，然后加入了一些 `bootstrap-flask` 的扩展。我们来分析一下：
 
-1. 首先引入导航元素宏 `render_nav_item`，因为在后面制作导航菜单时要用
-2. 然后是大段的 Bootstrap 框架代码
-3. 定义块，用来在继承 base.html 的子模板中做替换，其中有 标题、内容和页尾
-4. 动态加载 Bootstrap 样式和脚本，通过 `bootstrap.load_css()` 和 `bootstrap.load_js()`
-5. 在导航菜单的位置，使用宏 `render_nav_item` 创建一个首页菜单
+- 首先引入导航元素宏 `render_nav_item`，因为在后面制作导航菜单时要用
+- 然后是大段的 Bootstrap 框架代码
+- 定义块，用来在继承 base.html 的子模板中做替换，其中有 标题、内容和页尾
+- 动态加载 Bootstrap 样式和脚本，通过 `bootstrap.load_css()` 和 `bootstrap.load_js()`
+- 在导航菜单的位置，使用宏 `render_nav_item` 创建一个首页菜单
 
 这样就完成基础模板的定义，稍后会对 `render_nav_item`、`bootstrap.load_css()` 和 `bootstrap.load_js()` 做解释。
 
@@ -168,7 +168,7 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 加载 Bootstrap 样式资源，
 参数:
 
-+ `version`，指定 Bootstrap 样式版本号，默认值为 4.3.1，本地资源无效
+- `version`，指定 Bootstrap 样式版本号，默认值为 4.3.1，本地资源无效
 
 ### bootstrap.load_js()
 
@@ -176,11 +176,11 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 
 参数：
 
-+ `version`，指定 Bootstrap 脚本版本号，默认为 4.3.1，本地资源无效
-+ `jquery_version`，指定 JQuery 版本号，默认为 3.3.1，本地资源无效
-+ `popper_version`，指定 Popper 版本号，默认为 1.14.0，本地资源无效
-+ `with_jquery`，是否加载 JQuery， 默认为 `True`
-+ `with_popper`，是否加载 Popper, 默认为 `True`
+- `version`，指定 Bootstrap 脚本版本号，默认为 4.3.1，本地资源无效
+- `jquery_version`，指定 JQuery 版本号，默认为 3.3.1，本地资源无效
+- `popper_version`，指定 Popper 版本号，默认为 1.14.0，本地资源无效
+- `with_jquery`，是否加载 JQuery， 默认为 `True`
+- `with_popper`，是否加载 Popper, 默认为 `True`
 
 ## 宏
 
@@ -192,8 +192,8 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 
 参数:
 
-+ endpoint，路径点，可以直接写视图函数名
-+ text，标题
+- endpoint，路径点，可以直接写视图函数名
+- text，标题
 
 代码示例:
 
@@ -218,8 +218,8 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 面包屑导航条
 参数:
 
-+ endpoint，路径点，可以直接写视图函数名
-+ text，标题
+- endpoint，路径点，可以直接写视图函数名
+- text，标题
 
 代码示例:
 
@@ -246,9 +246,9 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 
 参数:
 
-+ type 资源类型，可以是 css 或 js 或 icon
-+ filename_or_url 资源路径，文件名 或者 参数 `local` 为 `False` 时的远程 url
-+ local 是否本地资源，默认为 `True`
+- type 资源类型，可以是 css 或 js 或 icon
+- filename_or_url 资源路径，文件名 或者 参数 `local` 为 `False` 时的远程 url
+- local 是否本地资源，默认为 `True`
 
 代码示例:
 
@@ -270,11 +270,11 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 
 这篇文章简单介绍了 Flask 框架中如何使用 Bootstrap 扩展，从一个简单的示例开始，讲解了基于 Jinja2 模板引擎的 `bootstrap-flask` 模块的使用，其中包括资源助手 `bootstrap.load_css()` 和 `bootstrap.load_css()` ，以及一些基本的宏的用法，在参考代码中有较为完整的例子，您可以作为参考。在后面的文章中将会陆续介绍 **表单** 和 **数据库** 的使用，敬请期待。
 
-[参考代码](https://github.com/JustDoPython/python-100-day/tree/master/day-038)
+[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-038)
 
 参考
 
-+ [bootstrap-flask 文档: https://bootstrap-flask.readthedocs.io/en/latest/basic.html](https://bootstrap-flask.readthedocs.io/en/latest/basic.html)
-+ [bootstrap-flask 源码: https://github.com/greyli/bootstrap-flask](https://github.com/greyli/bootstrap-flask)
-+ [Bootstrap: https://getbootstrap.com/](https://getbootstrap.com/)
-+ [bootstrap-flask 作者: http://greyli.com/](http://greyli.com/)
+- [bootstrap-flask 文档: https://bootstrap-flask.readthedocs.io/en/latest/basic.html](https://bootstrap-flask.readthedocs.io/en/latest/basic.html)
+- [bootstrap-flask 源码: https://github.com/greyli/bootstrap-flask](https://github.com/greyli/bootstrap-flask)
+- [Bootstrap: https://getbootstrap.com/](https://getbootstrap.com/)
+- [bootstrap-flask 作者: http://greyli.com/](http://greyli.com/)
