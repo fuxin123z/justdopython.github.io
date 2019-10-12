@@ -15,19 +15,13 @@ tags:
 
 今天要给大家分析的面试题是 LeetCode 上第 **204** 号问题，
 
-
-
 LeetCode - 204. 统计质数
 
 <https://leetcode-cn.com/problems/count-primes/>
 
-
-
 #### 题目描述
 
 统计所有小于非负整数 *n* 的质数的数量。
-
-
 
 **示例:**
 
@@ -37,28 +31,17 @@ LeetCode - 204. 统计质数
 解释: 小于 10 的质数一共有 4 个, 它们是 2, 3, 5, 7 。
 ```
 
-
-
 - 贡献者: LeetCode
-
-
 
 - 题目难度: **Easy**
 
-
-
 - 通过率: `30.23%`
-
-
 
 - 相关话题
   - [数学](https://leetcode.com/tag/math)
   - [哈希表](https://leetcode.com/tag/hash-table) 
-  
-  
-  
+
 - 相似题目
-  
   - [丑数](https://leetcode-cn.com/problems/ugly-number/)   难度: **简单**
   - [丑数 II](https://leetcode-cn.com/problems/ugly-number-ii/)  难度: **中等**
   - [完全平方数](https://leetcode-cn.com/problems/perfect-squares/)  难度: **中等**
@@ -80,10 +63,7 @@ LeetCode - 204. 统计质数
 
 下面我们使用**埃筛**来统计质数数量，具体操作是从2开始维护一个bool数组isDelete来记录该数是否被删掉，依次删掉当前索引 **i** 的倍数，最后数组中未被删掉的值(其isDelete值为false)都是素数。
 
-
-
 已AC代码 解法1:
-
 
 ```python
 class Solution:
@@ -135,13 +115,9 @@ sol = Solution()
 print(sol.countPrimes(5566))
 ```
 
-
-
 ![sol1](http://www.justdopython.com/assets/images/2019/python/sol1.png)
 
 执行用时 : `492 ms`, 在所有 Python3 提交中击败了`47.44 %`的用户.
-
-
 
 已AC代码 解法2:
 
@@ -161,14 +137,9 @@ class Solution:
         return sum(isPrime)
 ```
 
-
-
 ![sol2](http://www.justdopython.com/assets/images/2019/python/sol2.png)
 
-
-
 执行用时 : `100 ms`, 在所有 Python3 提交中击败了`94.27 %`的用户.
-
 
 <br>
 
@@ -179,4 +150,3 @@ class Solution:
 
 Eratosthenes筛法(埃式筛法)时间复杂度分析 - Gavin_Nicholas的博客 - CSDN博客
 <https://blog.csdn.net/Gavin_Nicholas/article/details/88974079>
-

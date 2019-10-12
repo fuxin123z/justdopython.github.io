@@ -13,7 +13,6 @@ excerpt: Leetcode面试题系列
 
 ![matrix](http://www.justdopython.com/assets/images/2019/python/matrix-01.gif)
 
-
 比较典型的一个问题是 Leetcode 上第 89 号问题，
 
 Leetcode 89. Gray Code
@@ -27,36 +26,34 @@ Leetcode 89. Gray Code
 
 ------
 
-   格雷编码是一个二进制数字系统，在该系统中，两个连续的数值仅有一个位数的差异。
+格雷编码是一个二进制数字系统，在该系统中，两个连续的数值仅有一个位数的差异。
 
-   给定一个代表编码总位数的非负整数 n，打印格雷码序列。格雷码序列必须以 0 开头。
+给定一个代表编码总位数的非负整数 n，打印格雷码序列。格雷码序列必须以 0 开头。
 
-   例如，给定 *n* = 2，返回 **[0,1,3,2]**。其格雷编码是：
+例如，给定 *n* = 2，返回 **[0,1,3,2]**。其格雷编码是：
+
 ```
-　00 - 0
-　01 - 1
-　11 - 3
-　10 - 2
+00 - 0
+01 - 1
+11 - 3
+10 - 2
 ```
 
- 
+**说明:**
 
-  **说明:**
+对于给定的 *n*，其格雷编码的顺序并不唯一(因此返回结果的顺序不重要，可使用 Vector 或 List )。
 
-   对于给定的 *n*，其格雷编码的顺序并不唯一(因此返回结果的顺序不重要，可使用 Vector 或 List )。
-
-   例如 [0,2,3,1] 也是一个有效的格雷编码顺序。
-
-------
-&nbsp; ● &nbsp;题目难度:  **Medium**
-
-   - 相关话题 [回溯算法](https://leetcode-cn.com/tag/backtracking)
-
-   - 相似题目 [1比特与2比特字符](https://leetcode-cn.com/problems/1-bit-and-2-bit-characters)
+例如 [0,2,3,1] 也是一个有效的格雷编码顺序。
 
 ------
 
+- 题目难度:  **Medium**
 
+- 相关话题 [回溯算法](https://leetcode-cn.com/tag/backtracking)
+
+- 相似题目 [1比特与2比特字符](https://leetcode-cn.com/problems/1-bit-and-2-bit-characters)
+
+------
 
 **解题思路:**
 
@@ -65,7 +62,6 @@ Leetcode 89. Gray Code
 ![grayCode](http://www.justdopython.com/assets/images/2019/python/grayCode.png)
 
 于是只需遍历从 0 到 2^n - 1 的所有整数 *i*，使用公式将其转换为格雷码，添加到 List 中即可。
-
 
 已AC代码(Python 3):
 
@@ -78,11 +74,7 @@ class Solution:
         return res
 ```
 
-
-
 ![code](http://www.justdopython.com/assets/images/2019/python/leetcode89-code.jpg)
-
-
 
 如果需要在本地测试，需要先在代码开头引入`from typing import List`，然后实例化 `Solution`，最后调用相应的 method 即可。完整代码如下:
 
@@ -100,8 +92,6 @@ class Solution:
 obj = Solution()
 print(obj.grayCode(2))
 ```
-
-
 
 **运行结果:**
 

@@ -19,15 +19,11 @@ LeetCode - 202. 快乐数
 
 <https://leetcode-cn.com/problems/happy-number/>
 
-
-
 #### 题目描述
 
 编写一个算法来判断一个数是不是“快乐数”。
 
 一个“快乐数”定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，也可能是无限循环但始终变不到 1。如果可以变为 1，那么这个数就是快乐数。
-
-
 
 **示例:**
 
@@ -35,8 +31,6 @@ LeetCode - 202. 快乐数
 输入: 19
 输出: true
 ```
-
-
 
 **解释:** 
 
@@ -48,30 +42,20 @@ LeetCode - 202. 快乐数
 
 1<sup>2</sup> + 0<sup>2</sup> + 0<sup>2</sup> = 1
 
-
-
 - 贡献者: LeetCode
 
-
-
 - 题目难度: **Easy**
-
-
 
 - 相关话题
   - [数学](https://leetcode.com/tag/math)
   - [哈希表](https://leetcode.com/tag/hash-table) 
-  
-  
-  
+
 - 相似题目
   
   - [各位相加](https://leetcode-cn.com/problems/add-digits/)   难度: 简单
   - [丑数](https://leetcode-cn.com/problems/ugly-number/)   难度: 简单
 
 ------
-
-
 
 **解题思路:**
 
@@ -80,8 +64,6 @@ LeetCode - 202. 快乐数
 于是可以使用迭代法和 set 这种数据结构来求解此题。
 
 具体操作为: 迭代地求给定数的各位数字的平方和，维护一个 set，迭代循环的出口是平方和为1或已在 set 中出现过。
-
-
 
 已`AC`的代码为:
 
@@ -103,13 +85,9 @@ class Solution:
         return sum0
 ```
 
-
-
 **运行结果:**
 
-执行用时 : `36 ms`, 在所有 Python3 提交中击败了`99.72%`的用户
-
-
+执行用时 : `36 ms`, 在所有 Python3 提交中击败了`99.72%`的用户.
 
 相应的，如需测试，本地可执行的代码为:
 
@@ -138,7 +116,3 @@ print(sol.isHappy(19))
 
 示例代码:
 <https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-202>
-
-
-
-
