@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第16天：初识 Python 多线程 
+title: 第43天：初识 Python 多线程 
 tagline: by 程序员野客
 tags: 
   - python100
