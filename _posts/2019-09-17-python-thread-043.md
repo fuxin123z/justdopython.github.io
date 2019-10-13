@@ -333,8 +333,8 @@ I/O 密集型任务，多进程耗时 21.05265736579895
 
 参考：
 
-[1] [https://www.cnblogs.com/SuKiWX/p/8804974.html](https://www.cnblogs.com/SuKiWX/p/8804974.html)
+[https://www.cnblogs.com/SuKiWX/p/8804974.html](https://www.cnblogs.com/SuKiWX/p/8804974.html)
 
-[2] [https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock](https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock)
+[https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock](https://docs.python.org/zh-cn/3/glossary.html#term-global-interpreter-lock)
 
 
