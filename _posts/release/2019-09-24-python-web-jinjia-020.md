@@ -104,7 +104,7 @@ def template():
 
 显示结果:
 
-![显示结果](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2019/python/python_web_template_01.jpg?raw=true)
+![显示结果](http://justdopython.com/assets/images/2019/python/python_web_template_01.jpg)
 
 ### 过滤器
 
@@ -172,13 +172,13 @@ def html():
 - `default`，可以当变量未定义时，提供默认值，如果想将 `false`、`False` 和空( `none` )视为未定义，需要提供第二个参数为 `true`
 {% raw %}
 
-    ```Jinja
-    <!-- 提供默认值过滤器 -->
-    <h1>Hello {{ name | default('world') }}!</h1>
+```Jinja
+<!-- 提供默认值过滤器 -->
+<h1>Hello {{ name | default('world') }}!</h1>
 
-    <!-- 将false、False和空(none)视为未定义的默认值过滤器 -->
-    <h1>Hello {{ name | default('world', true)! }}</h1>
-    ```
+<!-- 将false、False和空(none)视为未定义的默认值过滤器 -->
+<h1>Hello {{ name | default('world', true)! }}</h1>
+```
 
 {% endraw %}
 当变量 `name` 的未定义时，上下两个显示效果一样，当值为 `none` 时，上面会显示 `Hello none!`, 而下面的会显示 `Hello world!`
@@ -373,7 +373,7 @@ mymacro.html
 
 效果如图所示:
 
-![显示结果](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2019/python/python_web_template_02.jpg?raw=true)
+![显示结果](http://justdopython.com/assets/images/2019/python/python_web_template_02.jpg)
 
 通过 `extends` 标记来指定需要继承的基类，然后用 `block` 标记来设置子类需要替换调基类中的内容，只要 `block` 指定的名称一样就行。
 另外，如不需要完全替换调基类的内容，可以在子类 `block` 中，调用 `super` 方法，以获取基类在此名称下的内容，这样就能达到更号的灵活性。
