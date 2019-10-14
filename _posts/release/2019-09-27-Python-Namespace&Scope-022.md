@@ -1,6 +1,6 @@
 ---
 layout: post     
-title:  第21天：Python NameSpace&Scope                                                  
+title:  第22天：Python NameSpace&Scope                                                  
 category: python 命名空间和作用域         
 copyright: python                           
 tagline: by 潮汐           
@@ -365,7 +365,7 @@ test()
 
 本节给大家介绍了 Python 命名空间和作用用户的介绍与简单应用，在 Python 开发实战中对命名空间和作用域的运用比较广泛，谨以此文献给在 Python 学习道路上的道友，希望对大家有一丝帮助。
 
-> 示例代码：[Python-100-days-day021](https://github.com/JustDoPython/python-100-day/tree/master/day-021)
+> 示例代码：[Python-100-days-day021](https://github.com/JustDoPython/python-100-day/tree/master/day-022)
 
 参考：
 

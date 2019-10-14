@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第20天： Web 开发 Jinja2 模板引擎
+title: 第21天： Web 开发 Jinja2 模板引擎
 tagline: by 太阳雪
 tags:
   - python100
@@ -383,7 +383,7 @@ mymacro.html
 今天介绍了 Jinja2 模板引擎的基本用法和特点，期望通过不同的特点，让你了解到模板的基本用法，以便更快的使用和进一步学习更深入的内容。另外，想通过 Jinja2 模板引擎，说明模板的基本特征，以便触类旁通、举一反三，更快的学习其他优秀的模板, 同时也想说明，模板不仅仅可以用在 Web 的开发中，还可以用在自动化编码、测试等众多领域。
 最后在本章开头，留了个思考题，为什么不将**展现逻辑**和**业务逻辑**说成是**前台**和**后台**呢？如果你有答案，欢迎留言交流。
 
-[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-020)
+[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-021)
 
 参考
 
