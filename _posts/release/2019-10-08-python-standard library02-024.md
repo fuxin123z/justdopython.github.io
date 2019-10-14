@@ -1,6 +1,6 @@
 ---
 layout: post     
-title:  第29天：Python 标准库概览2                                                 
+title:  第24天：Python 标准库概览2                                                 
 category: python 标准库概览2   
 copyright: python                           
 tagline: by 潮汐           
@@ -202,7 +202,7 @@ decimal 模块提供了一种 Decimal 数据类型用于十进制浮点运算。
 
 本节给大家介绍了 Python 常用标准库的基本概念，在后续的文章中将对具体的模块作详细介绍，更好的对 Python 工程师使用标准库提供支撑。
 
-> 示例代码：[Python-100-days-day029](https://github.com/JustDoPython/python-100-day/tree/master/day-029)
+> 示例代码：[Python-100-days-day029](https://github.com/JustDoPython/python-100-day/tree/master/day-024)
 
 参考：
 
