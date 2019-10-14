@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第20天： Web 开发 Jinja2 模板引擎
+title: 第21天： Web 开发 Jinja2 模板引擎
 tagline: by 太阳雪
 tags:
   - python100
