@@ -141,7 +141,7 @@ def index():
 
 如果一切顺利，访问 `localhost:5000` 就能看到如下效果:
 
-![首页效果](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2019/python/python_web_flask_bootstrap_01.jpg)
+![首页效果](http://www.justdopython.com/assets/images/2019/python/python_web_flask_bootstrap_01.jpg)
 
 调整浏览器页面大小，可以看到页面自适应效果，是不是很神奇。接下来详细说明一下 `bootstrap-flask` 模块
 
@@ -161,7 +161,7 @@ app.config['BOOTSTRAP_SERVE_LOCAL'] = True  # 设置为使用本地资源
 
 本地资源放在 `static` 目录下(这个目录是 Flask 框架默认的静态资源目录)，Bootstrap 本地资源放置如下:
 
-![Bootstrap 资源](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2019/python/python_web_flask_bootstrap_02.jpg)
+![Bootstrap 资源](http://www.justdopython.com/assets/images/2019/python/python_web_flask_bootstrap_02.jpg)
 
 ### bootstrap.load_css()
 
