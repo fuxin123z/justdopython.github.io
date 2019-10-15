@@ -7,12 +7,12 @@ tagline: by 千阳
 tags:
     -python100
 ---
-在本节中继续介绍 Python 提供的常用模块—random 模块，它的主要功能是用来生成伪随机数的。
+在本节中继续介绍 Python 提供的常用模块 random 模块，它的主要功能是用来生成伪随机数的。
 <!--more-->
 
-## random模块
+## random 模块
 
-Python 提供的random模块实现了各种分布式的伪随机数生成器。该模块主要包含以下几种常用的函数。
+Python 提供的 random 模块实现了各种分布式的伪随机数生成器。该模块主要包含以下几种常用的函数。
 
 ### random()函数
 
@@ -27,7 +27,7 @@ print(random.random())
 
 ### randint(a,b)函数
 
-`randint(a,b)`函数可以在指定范围内随机生成一个整数，其中参数a是下限，参数b是上限，生成的随机数n：a <= n <= b。例如：
+`randint(a,b)`函数可以在指定范围内随机生成一个整数，其中参数a是下限，参数 b 是上限，生成的随机数n：a <= n <= b。例如：
 
 ```
 import random  
@@ -88,7 +88,7 @@ print(random.randrange(1,10,2))
 
 ### choice(sequence)函数
 
-`choice(sequence)`函数可以从非空序列 sequence 中随机返回一个数，参数 sequence 表示一个有序类型，可以包含list、tuple等。例如：
+`choice(sequence)`函数可以从非空序列 sequence 中随机返回一个数，参数 sequence 表示一个有序类型，可以包含 list、tuple 等。例如：
 
 ```
 import random  

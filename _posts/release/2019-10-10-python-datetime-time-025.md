@@ -11,7 +11,7 @@ tags:
 在前面的章节中已经介绍了一些 Python 常用的模块，本节再介绍两个模块 datetime 模块和 time 模块，这两个模块主要用于转换日期格式的功能。
 <!--more-->
 
-## datetime模块
+## datetime 模块
 
 datetime 模块是 Python 内置的功能模块，它可以实现对日期的算数运算，以指定的方式格式化日期。datetime 模块内含有一个同名的 datetime 类，该类中包含多个操作日期的函数，例如：datetime.now()、datetime.fromtimestamp()、datetime.timedelta()等，下面逐一举例说明。
 
@@ -88,7 +88,7 @@ print(newdate)
 2019-09-30 00:23:50.152118
 ```
 
-## time模块
+## time 模块
 
 与 datetime 模块有所不同，time 模块主要功能是读取系统时钟的当前时间。其中，time.time()和time.sleep()是两个最常用的模块。
 
@@ -158,7 +158,7 @@ two
 
 本节给大家介绍了 Python 中 datetime 和 time 模块的常用操作，对 Python 工程师实现系统日期显示和转换功能提供了支撑。
 
-> 示例代码：[Python-100-days-day030](https://github.com/JustDoPython/python-100-day/tree/master/day-030)
+> 示例代码：[Python-100-days-day025](https://github.com/JustDoPython/python-100-day/tree/master/day-025)
 
 参考
 [1] Python编程快速上手 https://item.jd.com/11943853.html
