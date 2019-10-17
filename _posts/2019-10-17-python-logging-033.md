@@ -1,7 +1,7 @@
 ---
 layout: post     
-title:  第33天：Python 模块之 logging                                                 
-category: Python 模块之 logging  
+title:  第33天：Python logging 模块详解                                              
+category: Python logging 模块详解 
 copyright: python                           
 tagline: by 潮汐           
 tags: 
