@@ -1,6 +1,6 @@
 ---
 layout: post     
-title:  第33天：Python logging 模块详解                                              
+title:  第32天：Python logging 模块详解                                              
 category: Python logging 模块详解 
 copyright: python                           
 tagline: by 潮汐           
@@ -469,7 +469,7 @@ logger.critical('critical message')
 
 本章节给大家介绍了 Python 标准库中 Logging 模块的详细介绍与使用，对 Python 工程师使用该模块提供更好的支撑
 
-> 示例代码：[Python-100-days-day033](https://github.com/JustDoPython/python-100-day/tree/master/day-033)
+> 示例代码：[Python-100-days-day032](https://github.com/JustDoPython/python-100-day/tree/master/day-032)
 
 参考：
 https://docs.python.org/3.6/library/logging.html?highlight=logging#integration-with-the-warnings-module
