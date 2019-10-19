@@ -17,7 +17,7 @@ tags:
 
 LeetCode - 9. 回文数
 
-https://leetcode-cn.com/problems/happy-number/
+<https://leetcode-cn.com/problems/palindrome-number/>
 
 #### 题目描述
 
@@ -45,10 +45,6 @@ https://leetcode-cn.com/problems/happy-number/
 输出: false
 解释: 从右向左读, 为 01 。因此它不是一个回文数。
 ```
-
-**进阶:**
-
-你能不将整数转为字符串来解决这个问题吗？
 
 - 题目难度：**简单**
 - 通过次数：182.9K
