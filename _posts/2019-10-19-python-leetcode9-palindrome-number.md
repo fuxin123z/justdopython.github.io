@@ -53,12 +53,11 @@ LeetCode - 9. 回文数
 
 - 相关话题
   - 数学
-  
-    https://leetcode.com/tag/math
+    <https://leetcode.com/tag/math>
 
 - 相似题目
   - 回文链表
-    https://leetcode-cn.com/problems/palindrome-linked-list  难度: **简单**
+    <https://leetcode-cn.com/problems/palindrome-linked-list>  难度: **简单**
 
 ------
 
