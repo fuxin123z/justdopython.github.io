@@ -205,6 +205,8 @@ print(shutil.get_terminal_size())
 # os.terminal_size(columns=80, lines=24)
 ```
 
+> 示例代码：[Python-100-days-day027](https://github.com/JustDoPython/python-100-day/tree/master/day-027)
+
 参考：
 
 [https://docs.python.org/3.3/library/shutil.html](https://docs.python.org/3.3/library/shutil.html)
@@ -212,5 +214,3 @@ print(shutil.get_terminal_size())
 [http://liujiangblog.com/course/python/61](http://liujiangblog.com/course/python/61)
 
 
-
-> 示例代码：[Python-100-days-day037](https://github.com/JustDoPython/python-100-day/tree/master/day-037)

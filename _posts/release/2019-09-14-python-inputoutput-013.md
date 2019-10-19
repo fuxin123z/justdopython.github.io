@@ -221,11 +221,13 @@ True
 
 本节给大家介绍了 Python 输入输出，对 Python 工程师提供了支撑，能够根据实际情况选择合适的输入输出方式。
 
+> 示例代码：[Python-100-days-day013](https://github.com/JustDoPython/python-100-day/tree/master/day-013)
+
 参考：
 
-[1] [https://docs.python.org/zh-cn/3/library/string.html#formatspec](https://docs.python.org/zh-cn/3/library/string.html#formatspec)
+[https://docs.python.org/zh-cn/3/library/string.html#formatspec](https://docs.python.org/zh-cn/3/library/string.html#formatspec)
 
-[2] [https://docs.pythontab.com/python/python3.5/inputoutput.html#tut-files](https://docs.pythontab.com/python/python3.5/inputoutput.html#tut-files)
+[https://docs.pythontab.com/python/python3.5/inputoutput.html#tut-files](https://docs.pythontab.com/python/python3.5/inputoutput.html#tut-files)
 
-> 示例代码：[Python-100-days-day013](https://github.com/JustDoPython/python-100-day/tree/master/day-013)
+
 

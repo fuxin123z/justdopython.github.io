@@ -1,6 +1,6 @@
 ---
 layout: post     
-title:  第30天：Python datetime&time                                                 
+title:  第25天：Python datetime&time                                                 
 category: Python datetime&time
 copyright: Python                           
 tagline: by 千阳          

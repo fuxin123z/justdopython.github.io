@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第20天： Web 开发 Jinja2 模板引擎
+title: 第21天： Web 开发 Jinja2 模板引擎
 tagline: by 太阳雪
 tags:
   - python100
@@ -21,13 +21,13 @@ tags:
 
 对于简单的练习还行，但对于规模大的，动态化程度高的项目来说，这样写就有些勉强了，即，不利于项目和产品化。那么模板有什么好处呢：
 
-1. **能让展现逻辑和业务逻辑**
+- **能让展现逻辑和业务逻辑**
     展示逻辑即 UI，就是用来给用户看和操作的，业务逻辑是业务规则，比如什么条件可以注册，什么权限能考到什么。模板将展现逻辑封装起来，业务逻辑写在视图函数中。
-1. **能使项目更易维护**
+- **能使项目更易维护**
     由于展现逻辑和业务逻辑的分离，它们可以由不同的开发人员来维护，不会有代码冲突的问题
-1. **使项目更加安全**
+- **使项目更加安全**
     在做交互式开发中，有个原则: **永远不要相信用户的输入**，因为恶意用户可能通过输入来注入（关于注入以后有机会可以单独聊聊），而模板在一定程度上会防注入，例如用户输入一点 html 代码作为输入，默认情况下模板会将其替换为网络安全字符，以防止恶意注入。
-1. **能提高开发效率**
+- **能提高开发效率**
     有了模板，相当于一个展示逻辑的函数，所以就可以被复用，可以用在不同的视图函数中，也可以用在不同的项目中
 
 >思考下：
@@ -104,7 +104,7 @@ def template():
 
 显示结果:
 
-![显示结果](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2019/python/python_web_template_01.jpg?raw=true)
+![显示结果](http://justdopython.com/assets/images/2019/python/python_web_template_01.jpg)
 
 ### 过滤器
 
@@ -169,21 +169,21 @@ def html():
 
 还有一些有用的过滤器
 
-+ `default`，可以当变量未定义时，提供默认值，如果想将 `false`、`False` 和空( `none` )视为未定义，需要提供第二个参数为 `true`
+- `default`，可以当变量未定义时，提供默认值，如果想将 `false`、`False` 和空( `none` )视为未定义，需要提供第二个参数为 `true`
 {% raw %}
 
-    ```Jinja
-    <!-- 提供默认值过滤器 -->
-    <h1>Hello {{ name | default('world') }}!</h1>
+```Jinja
+<!-- 提供默认值过滤器 -->
+<h1>Hello {{ name | default('world') }}!</h1>
 
-    <!-- 将false、False和空(none)视为未定义的默认值过滤器 -->
-    <h1>Hello {{ name | default('world', true)! }}</h1>
-    ```
+<!-- 将false、False和空(none)视为未定义的默认值过滤器 -->
+<h1>Hello {{ name | default('world', true)! }}</h1>
+```
 
 {% endraw %}
-    当变量 `name` 的未定义时，上下两个显示效果一样，当值为 `none` 时，上面会显示 `Hello none!`, 而下面的会显示 `Hello world!`
+当变量 `name` 的未定义时，上下两个显示效果一样，当值为 `none` 时，上面会显示 `Hello none!`, 而下面的会显示 `Hello world!`
 
-+ 列表过滤器 `min`, `max`, 得到列表中的最小值或最大值
+- 列表过滤器 `min`, `max`, 得到列表中的最小值或最大值
 
 #### 自定义过滤器
 
@@ -373,7 +373,7 @@ mymacro.html
 
 效果如图所示:
 
-![显示结果](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2019/python/python_web_template_02.jpg?raw=true)
+![显示结果](http://justdopython.com/assets/images/2019/python/python_web_template_02.jpg)
 
 通过 `extends` 标记来指定需要继承的基类，然后用 `block` 标记来设置子类需要替换调基类中的内容，只要 `block` 指定的名称一样就行。
 另外，如不需要完全替换调基类的内容，可以在子类 `block` 中，调用 `super` 方法，以获取基类在此名称下的内容，这样就能达到更号的灵活性。
@@ -383,10 +383,10 @@ mymacro.html
 今天介绍了 Jinja2 模板引擎的基本用法和特点，期望通过不同的特点，让你了解到模板的基本用法，以便更快的使用和进一步学习更深入的内容。另外，想通过 Jinja2 模板引擎，说明模板的基本特征，以便触类旁通、举一反三，更快的学习其他优秀的模板, 同时也想说明，模板不仅仅可以用在 Web 的开发中，还可以用在自动化编码、测试等众多领域。
 最后在本章开头，留了个思考题，为什么不将**展现逻辑**和**业务逻辑**说成是**前台**和**后台**呢？如果你有答案，欢迎留言交流。
 
-[参考代码](https://github.com/JustDoPython/python-100-day/tree/master/day-020)
+[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-021)
 
 参考
 
-+ [图书: Flask Web开发　https://item.jd.com/12418677.html](https://item.jd.com/12418677.html)
-+ [API-Jinja Documentation(2,10.x)　https://jinja.palletsprojects.com/en/2.10.x/api/#the-context](https://jinja.palletsprojects.com/en/2.10.x/api/#the-context)
-+ [ansible基础-Jinjia2模板——过滤器　https://www.cnblogs.com/mauricewei/p/10056379.html](https://www.cnblogs.com/mauricewei/p/10056379.html)
+- [图书: Flask Web开发　https://item.jd.com/12418677.html](https://item.jd.com/12418677.html)
+- [API-Jinja Documentation(2,10.x)　https://jinja.palletsprojects.com/en/2.10.x/api/#the-context](https://jinja.palletsprojects.com/en/2.10.x/api/#the-context)
+- [ansible基础-Jinjia2模板——过滤器　https://www.cnblogs.com/mauricewei/p/10056379.html](https://www.cnblogs.com/mauricewei/p/10056379.html)

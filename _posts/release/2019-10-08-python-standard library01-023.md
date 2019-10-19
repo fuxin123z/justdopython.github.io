@@ -1,6 +1,6 @@
 ---
 layout: post     
-title:  第28天：Python 标准库概览1                                                 
+title:  第23天：Python 标准库概览1                                                 
 category: python 标准库概览1    
 copyright: python                           
 tagline: by 潮汐           

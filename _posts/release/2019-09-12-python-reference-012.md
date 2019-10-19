@@ -313,7 +313,9 @@ False
 
 对于列表、字典和集合这些“可变对象”，通过对变量所引用对象本身进行操作，可以只改变变量的值而不改变变量的引用；但对于数字、字符串和元组这些“不可变对象”，由于对象本身是不能够进行变值操作的，因此要想改变相应变量的值，就必须要新建对象，再把新建对象赋值给变量。
 
-通过这样的探究，也能更加生动地理解“万物皆对象”的深刻含义。
+通过这样的探究，也能更加生动地理解“万物皆对象”的深刻含义。0
+
+> 示例代码：[Python-100-days-day012](https://github.com/JustDoPython/python-100-day/tree/master/day-012)
 
 ## 5. 参考资料
 
@@ -326,7 +328,4 @@ False
 [Python 3.7.4 文档-术语表](https://docs.python.org/3.7/glossary.html?highlight=getrefcount)
 
 [关于Python中的引用](https://www.cnblogs.com/yuyan/archive/2012/04/21/2461673.html)
-
-
-> 示例代码：[Python-100-days-day012](https://github.com/JustDoPython/python-100-day/tree/master/day-012)
 
