@@ -239,9 +239,13 @@ app.config['UPLOAD_FOLDER'] = './upload'
 
 首先在模板中导入 bootstrap 的 Form 相关宏:
 
+{% raw %}
+
 ```jinjia
 {% from 'bootstrap/form.html' import render_form, render_form_row, render_field %}
 ```
+
+{% endraw %}
 
 - `render_form` 接受一个 Form 对象，将其渲染成 Html 表单，是最省事的，例如:
 
