@@ -117,7 +117,7 @@ FlaskForm 从 0.9.0 版本开始，不再从 WTForms 中导入任何东西，所
 from wtforms import StringField, IntergreField, validators
 ```
 
-常用的字段
+- 常用的字段
 
 |字段|说明|
 |---|---|
@@ -130,7 +130,8 @@ from wtforms import StringField, IntergreField, validators
 |SelectMultipleField|多项选择字段|
 |SubmitField|表单的提交按钮|
 
-常用验证
+- 常用验证
+
 |验证|说明|
 |---|---|
 |DataRequired|必填字段|
