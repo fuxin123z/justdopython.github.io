@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第40天： Web 开发 Form
+title: 第44天： Web 开发 Form
 tagline: by 太阳雪
 tags:
   - python100
@@ -302,7 +302,7 @@ app.config['UPLOAD_FOLDER'] = './upload'
 
 本节课程简单介绍了 Flask 中表单的处理方式和方法，包括 FlaskForm，WTForms和一些常用的字段，最后说明了 Bootstrap-flask 对表单的支持，以便是 Web 开发更高效。
 
-[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-040)
+[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-044)
 
 参考
 

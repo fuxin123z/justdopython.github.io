@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第43天：初识 Python 多线程 
+title: 第45天：初识 Python 多线程 
 tagline: by 程序员野客
 tags: 
   - python100
@@ -329,7 +329,7 @@ I/O 密集型任务，多进程耗时 21.05265736579895
 
 本节给大家介绍了 Python 多线程，让大家对 Python 多线程现状有了一定了解，能够根据任务类型选择更加高效的处理方式。
 
-> 示例代码：[Python-100-days-day043](https://github.com/JustDoPython/python-100-day/tree/master/day-043)
+> 示例代码：[Python-100-days-day045](https://github.com/JustDoPython/python-100-day/tree/master/day-045)
 
 参考：
 
