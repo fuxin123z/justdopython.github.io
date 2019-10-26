@@ -9,8 +9,6 @@ tags:
 
 上一篇 LeetCode 面试题中，我们分析了一道轻松的字符串面试题 - **回文数**。今天我们来分析一道将数学和字符串结合起来的的面试题。
 
-
-
 <!--more-->
 
 ![Leetcode](http://www.justdopython.com/assets/images/2019/python/LeetCode.png)
@@ -20,8 +18,6 @@ tags:
 LeetCode - 13. 罗马数字转整数
 
 <https://leetcode-cn.com/problems/palindrome-number/>
-
-
 
 #### 题目描述
 
@@ -47,8 +43,6 @@ M             1000
 - `C` 可以放在 `D` (500) 和 `M` (1000) 的左边，来表示 400 和 900。
 
 给定一个罗马数字，将其转换成整数。输入确保在 1 到 3999 的范围内。
-
-
 
 **示例 1:**
 
@@ -95,26 +89,18 @@ M             1000
 
 - 贡献者：LeetCode
 
-  
-
 - 相关标签 
   - 数学
-  
     https://leetcode-cn.com/tag/math
   
-    字符串
-    
+  - 字符串
     https://leetcode-cn.com/tag/string
-    
-    
-  
+
 - 相似题目
   - 整数转罗马数字
      https://leetcode-cn.com/problems/integer-to-roman  难度: **中等**
 
 ------
-
-
 
 **解题思路:**
 
@@ -123,8 +109,6 @@ M             1000
 - 使用字典存储每个罗马字母表示的数，比如，'V' - 5, 'X' - 10
 - 如果当前位的字母是最后一位，或者它后一位字母对应的数比它对应的数小的话，则加上当前位的字母对应的数
 - 其他情况则减去当前位的字母对应的数.
-
-
 
 已`AC`的代码为:
 
@@ -154,7 +138,4 @@ class Solution:
         return sum0 
 ```
 
-
-
 示例代码: <https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-013>
-
