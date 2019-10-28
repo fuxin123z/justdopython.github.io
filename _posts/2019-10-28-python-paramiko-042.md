@@ -108,3 +108,5 @@ sftp.close()
 ### 结语
 
 以上是 paramiko 模块的基本操作，学会以上内容后在多个远程服务器的情况下，可以快速、便捷的操作服务器内容
+
+> 示例代码：[Python-100-days-day042](https://github.com/JustDoPython/python-100-day/tree/master/day-042)
