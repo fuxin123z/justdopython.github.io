@@ -7,8 +7,6 @@ tags:
   - LeetCode面试题系列
 ---
 
-
-
 上一篇 LeetCode 面试题中，我们分析了一道将数学和字符串结合起来的的面试题，今天我们再来分析了一道轻松的字符串面试题吧~
 
 <!--more-->
@@ -19,20 +17,15 @@ tags:
 
 LeetCode -  58. 最后一个单词的长度
 
-https://leetcode-cn.com/classic/problems/length-of-last-word/
-
-
+<https://leetcode-cn.com/classic/problems/length-of-last-word/>
 
 ### 题目描述
-
 
 给定一个仅包含大小写字母和空格 `' '` 的字符串，返回其最后一个单词的长度。
 
 如果不存在最后一个单词，请返回 0 。
 
 **说明：**一个单词是指由字母组成，但不包含任何空格的字符串。
-
-
 
 **示例:**
 
@@ -46,15 +39,13 @@ https://leetcode-cn.com/classic/problems/length-of-last-word/
 - 提交次数：156.4K
 - 贡献者：LeetCode
 
-
+<br>
 
 - 相关标签 
 
   - 字符串
 
-    https://leetcode-cn.com/tag/string
-
-
+    <https://leetcode-cn.com/tag/string>
 
 **解题思路:**
 
@@ -64,8 +55,6 @@ https://leetcode-cn.com/classic/problems/length-of-last-word/
 - 寻找最后一个空格
   - 如果不存在空格，直接返回字符串的长度
   - 若存在空格，用长度 减去 最后一个空格的位置
-
-
 
 已AC代码:
 
@@ -80,11 +69,6 @@ class Solution:
             return len(newStr) - lastSpacePos - 1
 ```
 
-
-
-执行用时: `28 ms`, 在所有 python3 提交中击败了`99.83%`的用户
-
-
+执行用时: `28 ms`, 在所有 python3 提交中击败了 `99.83%` 的用户
 
 示例代码: <https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-058>
-
