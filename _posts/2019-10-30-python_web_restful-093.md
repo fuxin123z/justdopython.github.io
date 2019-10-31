@@ -6,13 +6,14 @@ tagline: by 太阳雪
 tags:
   - python100
 ---
+
 现在单页 Web 项目很流行，使用各种 Js 框架，通过 Ajax 和服务器的 Api 进行交互，实现类似原生 app 效果，很酷，对 Flask 来说小菜一碟，是时候了解下 Flask-RESTful 了
 
 <!--more-->
 
 开始前先了解下 RESTful，阮一峰老师有这样的解释:
 
-> 网络应用程序，分为前端和后端两个部分。当前的发展趋势，就是前端设备层出不穷（手机、平板、桌面电脑、其他专用设备......）。
+>网络应用程序，分为前端和后端两个部分。当前的发展趋势，就是前端设备层出不穷（手机、平板、桌面电脑、其他专用设备......）。
 >因此，必须有一种统一的机制，方便不同的前端设备与后端进行通信。这导致API构架的流行，甚至出现"API First"的设计思想。RESTful API是目前比较成熟的一套互联网应用程序的API设计理论
 
 也就是说 RESTful 一个框架和互联网应用的设计原则，遵循这个设计原则，可以让应用脱离前台展现的束缚，支持不同的前端设备。
@@ -76,7 +77,7 @@ if __name__ == '__main__':   # 别忘了启动应用的代码
 也可以用 curl 工具在终端或者命令行下发送请求:
 
 ```bash
-$ curl http://localhost:5000 -s
+ curl http://localhost:5000 -s
 {
     "greet": "Hello Flask RESTful!"
 }
@@ -91,13 +92,12 @@ $ curl http://localhost:5000 -s
 例如创建一个 todo 字样，支持获取代办事项和新增代办事项：
 
 ```python
-todos = {}  # 待办事项们
-
 # 初始化待办列表
-todos['todo_1'] = "读《程序员的自我修养》"
-todos['todo_2'] = "买点吃的"
-todos['todo_3'] = "去看星星"
-
+todos = {
+  'todo_1': "读《程序员的自我修养》",
+  'todo_2': "买点吃的",
+  'todo_3': "去看星星"
+}
 class Todo(Resource):
     # 根据 todo_id 获取代办事项
     def get(self, todo_id):
@@ -123,20 +123,20 @@ api.add_resource(Todo, '/todo/<string:todo_id>/')
 
 ```bash
 # 读取 key 为 todo_1 的待办事项
-$ curl http://localhost:5000/todo/todo_1/
+ curl http://localhost:5000/todo/todo_1/
 {
     "todo_1": "\u8bfb\u300a\u7a0b\u5e8f\u5458\u7684\u81ea\u6211\u4fee\u517b\u300b"
 }
 
 # 创建一个 key 为 todo_4 的代办事项
-$ curl http://localhost:5000/todo/todo_4/ -d "data=学习 Flask" -X PUT
+ curl http://localhost:5000/todo/todo_4/ -d "data=学习 Flask" -X PUT
 {
     "todo_4": "\u5b66\u4e60 Flask"
 }
 
 
 # 读取刚添加的待办事项 todo_4
-$ curl http://localhost:5000/todo/todo_4/
+ curl http://localhost:5000/todo/todo_4/
 {
     "todo_4": "\u5b66\u4e60 Flask"
 }
@@ -172,13 +172,13 @@ api.add_resource(Todo1, '/todo_3/')
 启动项目后，用 curl 工具来测试:
 
 ```bash
-$ curl http://localhost:5000/todo_1/
+ curl http://localhost:5000/todo_1/
 {
     "task": "Hello world"
 }
 
 # -请求 todo_2 并显示出 HTTP 标头，HTTP 状态码为 201
-$ curl http://localhost:5000/todo_2/ -i
+ curl http://localhost:5000/todo_2/ -i
 HTTP/1.0 201 CREATED
 Content-Type: application/json
 Content-Length: 30
@@ -190,7 +190,7 @@ Date: Thu, 31 Oct 2019 14:12:54 GMT
 }
 
 # -请求 todo_3 并显示出 HTTP 标头，HTTP 状态码为 200 ，标头中还有 Etag
-$ curl http://localhost:5000/todo_3/ -i
+ curl http://localhost:5000/todo_3/ -i
 HTTP/1.0 200 OK
 Content-Type: application/json
 Content-Length: 30
@@ -255,7 +255,7 @@ api.add_resource(Reqparser, '/reqparser/')  # 指定路由
 
 ```bash
 # 提供一个非整数参数 id
-$ curl http://localhost:5000/reqparser/ -d "id=noint" -X GET
+ curl http://localhost:5000/reqparser/ -d "id=noint" -X GET
 {
     "message": {
         "id": "\u53c2\u6570 id \u5fc5\u987b\u662f\u6574\u6570"
