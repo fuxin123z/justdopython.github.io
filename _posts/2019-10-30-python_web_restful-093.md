@@ -308,7 +308,7 @@ resource_fields = {
 
 class TodoFormat(Resource):
     @marshal_with(resource_fields, envelope='resource')
-    def get(self, **kwargs):
+    def get(self):
         return db_get_todo()  # 某个获得待办事项的方法
 ```
 
@@ -321,7 +321,7 @@ class TodoFormat(Resource):
 fields = {
     # name 将被重命名为 private_name
     'name': fields.String(attribute='private_name'),
-    'address': fields.String,
+    'address': fields.String
 }
 ```
 
@@ -331,7 +331,7 @@ fields = {
 fields = {
     # 为 name 设置默认值
     'name': fields.String(default='Anonymous User'),
-    'address': fields.String,
+    'address': fields.String
 }
 ```
 
