@@ -156,6 +156,8 @@ class MyForm(FlaskForm):
 
 要完整的在模板中定义字段以及错误信息，是件乏味的事情，这里通过一个自定义的模板宏来完成：
 
+{% raw %}
+
 ```jinjia
 {% macro render_field(field) %}
   <dt>{{ field.label }}:
@@ -170,6 +172,8 @@ class MyForm(FlaskForm):
   </dd>
 {% endmacro %}
 ```
+
+{% endraw %}
 
 ## 文件上传
 
@@ -213,6 +217,8 @@ app.config['UPLOAD_FOLDER'] = './upload'
 
 最后新建一个模板文件 upload.html：
 
+{% raw %}
+
 ```html
 <form action="/upload" method="post" enctype="multipart/form-data">
     {{ form.csrf_token() }}
@@ -220,6 +226,8 @@ app.config['UPLOAD_FOLDER'] = './upload'
     <input type="submit" value="提交">
 </form>
 ```
+
+{% endraw %}
 
 注意模板中 `form` 的编码类型必须设置为 `multipart/form-data`
 
@@ -231,25 +239,39 @@ app.config['UPLOAD_FOLDER'] = './upload'
 
 首先在模板中导入 bootstrap 的 Form 相关宏:
 
+{% raw %}
+
 ```jinjia
 {% from 'bootstrap/form.html' import render_form, render_form_row, render_field %}
 ```
 
+{% endraw %}
+
 - `render_form` 接受一个 Form 对象，将其渲染成 Html 表单，是最省事的，例如:
+
+{% raw %}
 
 ```jinjia
 {{ render_form(form) }}
 ```
 
+{% endraw %}
+
 - `render_field` 接受一个 Field， 将其渲染成一个表单的字段：
+
+{% raw %}
 
 ```jinjia
 {{ render_field(form.name) }}
 ```
 
+{% endraw %}
+
 - `render_form_row` 接受一个 Field 列表，将列表中的字段渲染到一行
 
 模板代码如下:
+
+{% raw %}
 
 ```html
 {% from 'bootstrap/form.html' import render_form, render_form_row, render_field %}
@@ -271,6 +293,8 @@ app.config['UPLOAD_FOLDER'] = './upload'
     {{ render_field(form.interest) }}
 </form>
 ```
+
+{% endraw %}
 
 先导入表单相关的宏，然后加入 Bootstrap 的样式，之后是各个宏的使用
 
