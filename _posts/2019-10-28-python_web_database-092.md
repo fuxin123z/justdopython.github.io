@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第92天： Web 开发 数据库
+title: 第46天： Flask数据持久化
 tagline: by 太阳雪
 tags:
   - python100
@@ -278,7 +278,7 @@ def createprofile():
 
 本节课程简单介绍了 Flask 中数据库技术，主要是借助 Flask-SQLAlchamy 框架来操作数据库，以 SQLite 关系数据库为例讲解了数据的增删改查操作，最后展示了如何在视图函数中操作数据，以便与 Flask 应用相结合。
 
-[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-092)
+> 示例代码：[Python-100-days-day046](https://github.com/JustDoPython/python-100-day/tree/master/day-046)
 
 参考
 
