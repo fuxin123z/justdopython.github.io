@@ -1,7 +1,7 @@
 ---
 layout: post
-category: python
-title: 第93天： Web 开发 RESTful
+category: python Web 开发 RESTful
+title: 第47天： Web 开发 RESTful
 tagline: by 太阳雪
 tags:
   - python100
@@ -339,7 +339,7 @@ fields = {
 
 本节课程简单介绍了 Flask 如何玩 RESTful，通过对 RESTful 的说明，讲解了 Flask-RESTful 模块的用法，并简单讲解了资源、路由，以及请求解析和格式化输出等技术
 
-[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-093)
+> 示例代码：[Python-100-days-day047](https://github.com/JustDoPython/python-100-day/tree/master/day-047)
 
 参考
 
