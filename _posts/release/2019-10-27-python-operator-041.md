@@ -229,3 +229,5 @@ operator 模块的 itemgetter 类会返回一个可调用对象，传入多个�
 >>> sorted(inventory, key = getCount)
 [('banana', 2), ('pear', 7), ('apple', 8)]
 ```
+
+> 代码示例：[Python-100-days-day041](https://github.com/JustDoPython/python-100-day/tree/master/day-041)
