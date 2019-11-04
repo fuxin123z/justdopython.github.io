@@ -196,13 +196,13 @@ if __name__ == '__main__':
                 Student("xiaoMing", 100)]
 
 
-    print("按照【分数】排序: ")
+    print("按分数排序: ")
     print(sorted(students, key=attrgetter('score'), reverse=True))
 
-    g = attrgetter("score") # 获取【分数】属性
+    g = attrgetter("score")
     vals = [g(i) for i in students]
-    print ('获取分数属性：' + vals)
-
+    print("获取分数属性: ")
+    print (vals)
 ```
 
 ### itemgetter类
