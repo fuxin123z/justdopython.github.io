@@ -33,7 +33,7 @@ if __name__ == '__main__':
 hello world
 ```
 
-需要注意的是，在上面示例代码中使用了`if __name__ == '__main__'`，这行代码是符合编程规范的。加上它可以确保主模块能够被新启动的Python解释器安全导入。
+需要注意的是，在上面示例代码中使用了`if __name__ == '__main__'`，这行代码是符合编程规范的。加上它可以确保主模块能够被新启动的 Python 解释器安全导入。
 
 在启动进程的过程中，需要考虑执行顺序的问题，正常情况下是主进程先执行，子进程后执行。例如：
 
@@ -62,7 +62,9 @@ if __name__ == "__main__":
 
 ### Queue类
 
-Queue 队列使用一个管道和少量锁和信号量实现的共享队列实例，它是线程和进程安全的。常被用于两个进程之间的通讯，例如有一个 wirte 进程负责写数据，另外一个 read 进程负责读数据。当我们需要将写的数据交给读的进程时，可以通过 Queue 作为中间桥梁，先把 write 进程写的数据交给队列，再由队列将数据传递给 read 进程。
+因为不同进程之间内存是不共享的，要想实现进程间的通信，必须要提供中间的媒介。Python 提供了两个通信的对象类。一个是 Queue 类，另一个是 Pipe 类。
+
+Queue 队列使用一个管道和少量锁和信号量实现的共享队列实例，它是线程和进程安全的，常被用于两个进程之间的通讯。例如有一个 wirte 进程负责写数据，另外一个 read 进程负责读数据。当我们需要将写的数据交给读的进程时，可以通过 Queue 作为中间桥梁，先把 write 进程写的数据交给队列，再由队列将数据传递给 read 进程。
 
 ```python
 #Queue队列
@@ -80,9 +82,13 @@ if __name__ == '__main__':
 [11, None, 'lily']
 ```
 
+在上述示例中调用了 `join()`函数，它可以阻塞主进程，直到调用 `join()`函数的进程终止。该函数有一个可选的参数 timeout，参数 timeout 的默认值是 None。如果 timeout 是一个正数，它最多会阻塞 timeout 秒。
+
 ### Pipe类
 
-Pipe 和 Queue 一样，可以作为进程之间通信的通道。因为不同进程之间内存是不共享的，要想实现进程间的通信，必须要存在中间的媒介。`Pipe()`函数返回两个对象，这两个对象表示管道的两端，每个对象都可以进行数据的发送和接收。例如：
+Pipe 和 Queue 一样，可以作为进程之间通信的通道。`Pipe()`函数返回两个对象 `conn1` 和 `conn2` ，这两个对象表示管道的两端。
+
+`Pipe()`函数有一个可选参数 duplex，参数 duplex 的默认值为 True，表示该管道是双向的，即两个对象都可以发送和接收消息。如果把参数 duplex 设置为 False ，表示该管道是单向的，即 `conn1` 只能用于接收消息，`conn2` 只能用于发送消息。例如：
 
 ```python
 from multiprocessing import Process, Pipe
@@ -91,10 +97,10 @@ def f(conn):
     conn.close()
 
 if __name__ == '__main__':
-    parent_conn, child_conn = Pipe()
-    p = Process(target=f, args=(child_conn,))
+    conn1, conn2 = Pipe()
+    p = Process(target=f, args=(conn2,))
     p.start()
-    print(parent_conn.recv())
+    print(conn1.recv())
     p.join()
 
 #执行结果：
