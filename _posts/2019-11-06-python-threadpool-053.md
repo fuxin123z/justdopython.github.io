@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第58天： Python 线程池
+title: 第53天： Python 线程池
 tagline: by 豆豆
 tags: 
   - python100
@@ -127,7 +127,7 @@ MainThread cost 2 second
 
 ## 代码地址
 
-https://github.com/JustDoPython/python-100-day/tree/master/day-058
+https://github.com/JustDoPython/python-100-day/tree/master/day-053
 
 ## 参考资料
 
