@@ -342,11 +342,11 @@ python app.py
 
 访问 [localhost:5000](localhost:5000)，将看到登录页，主要浏览器地址上的 next 参数:
 
-![显示结果](../assets/images/2019/python/python_web_auth_01.png)
+![显示结果](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2019/python/python_web_auth_01.png)
 
 填写初始化中的用户名和密码，登录将进入首页，且看到登录者的用户名:
 
-![显示结果](../assets/images/2019/python/python_web_auth_02.png)
+![显示结果](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2019/python/python_web_auth_02.png)
 
 ## 用户注册
 
