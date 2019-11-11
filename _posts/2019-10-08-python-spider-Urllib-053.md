@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第53天：urllib 包基本使用
+title: 第56天：urllib 包基本使用
 tagline: by 吴刀钓鱼
 tags: 
   - python100
@@ -414,4 +414,4 @@ print(rp.can_fetch('*', 'http://www.baidu.com'))
 
 [2] https://www.cnblogs.com/zhangxinqi/p/9170312.html
 
-> 示例代码：[Python-100-days-day030](https://github.com/JustDoPython/python-100-day)
+> 示例代码：[Python-100-days-day056](https://github.com/JustDoPython/python-100-day/tree/master/day-056-urllib)
