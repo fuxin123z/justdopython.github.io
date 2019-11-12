@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第92天： Flask 用户登录 Flask-Login
+title: 第57天： Flask 用户登录 Flask-Login
 tagline: by 太阳雪
 tags:
   - python100
@@ -91,6 +91,7 @@ USERS = [
         "password": generate_password_hash('123')
     }
 ]
+
 ```
 
 用户信息只包含最基本的信息：
@@ -387,9 +388,7 @@ python app.py
 
 用户登录是 `Web` 应用的一个常用而又复杂的功能，除了今天介绍的 `Session` 方式之外，还有基于 `RESTful` 的非状态的 `token` 方式，以及第三方认证机制，比如微信、支付宝等，后面会陆续讲解，敬请期待。
 
-[示例代码](https://github.com/JustDoPython/python-100-day/tree/master/day-092)
-
-参考
+## 参考
 
 - [https://zhuanlan.zhihu.com/p/23137867](https://zhuanlan.zhihu.com/p/23137867)
 - [https://blog.csdn.net/sinat_29315627/article/details/74177792](https://blog.csdn.net/sinat_29315627/article/details/74177792)
@@ -398,3 +397,5 @@ python app.py
 - [https://flask-login.readthedocs.io/en/latest/](https://flask-login.readthedocs.io/en/latest/)
 - [https://flask-httpauth.readthedocs.io/en/latest/](https://flask-httpauth.readthedocs.io/en/latest/)
 - [https://www.jianshu.com/p/8c87099f72a5](https://www.jianshu.com/p/8c87099f72a5)
+
+> 示例代码：[Python-100-days-day057](https://github.com/JustDoPython/python-100-day/tree/master/day-057-flask-login)
