@@ -3,6 +3,11 @@
 
 Python 技术由一群热爱 Python 的技术人组建，专业输出高质量、原创的 Python 系列文章，目前已经有十几名作者加入。
 
+现在已经有超过 10000+ 用户加入了 Python 技术，赶快扫码加入吧！
+
+![](/assets/images/wechat-qcode.jpg)
+
+
 
 ## 为什么要创建这个组织
 

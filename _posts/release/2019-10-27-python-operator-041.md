@@ -196,13 +196,13 @@ if __name__ == '__main__':
                 Student("xiaoMing", 100)]
 
 
-    print("按照【分数】排序: ")
+    print("按分数排序: ")
     print(sorted(students, key=attrgetter('score'), reverse=True))
 
-    g = attrgetter("score") # 获取【分数】属性
+    g = attrgetter("score")
     vals = [g(i) for i in students]
-    print ('获取分数属性：' + vals)
-
+    print("获取分数属性: ")
+    print (vals)
 ```
 
 ### itemgetter类
@@ -229,3 +229,5 @@ operator 模块的 itemgetter 类会返回一个可调用对象，传入多个�
 >>> sorted(inventory, key = getCount)
 [('banana', 2), ('pear', 7), ('apple', 8)]
 ```
+
+> 代码示例：[Python-100-days-day041](https://github.com/JustDoPython/python-100-day/tree/master/day-041)
