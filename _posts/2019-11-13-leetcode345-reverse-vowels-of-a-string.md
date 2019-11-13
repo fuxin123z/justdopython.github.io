@@ -64,6 +64,7 @@ LeetCode - 345. 反转字符串中的元音字母
     <https://leetcode-cn.com/problems/reverse-string>  难度: **简单**
 
   - 删去字符串中的元音
+    
     <https://leetcode-cn.com/problems/remove-vowels-from-a-string>  难度: **简单**
 
 **解题思路:**
@@ -111,4 +112,4 @@ class Solution:
 
 示例代码: <https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-345>
 
-![Leetcode](http://www.justdopython.com/assets/images/2019/python/leetCode345.png)
+![Leetcode](http://www.justdopython.com/assets/images/2019/python/leetcode345.png)
