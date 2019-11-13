@@ -109,10 +109,6 @@ class Solution:
 
 执行用时: `84 ms`, 在所有 python3 提交中击败了 `48.79%` 的用户.
 
-
-
-
-
-
+示例代码: <https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-345>
 
 ![Leetcode](http://www.justdopython.com/assets/images/2019/python/leetCode345.png)
