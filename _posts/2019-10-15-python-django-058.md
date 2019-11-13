@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第42天： Web 开发 Django 入门
+title: 第58天： Web 开发 Django 入门
 tagline: by 极光
 tags:
   - python100
@@ -230,9 +230,10 @@ Django设计 `include()` 的理念是使其可以即插即用，当包括其它
 
 本文通过上面几步操作，就可以快速创建一个可访问的网站，是不是觉得用 Django 开发网站原来这么简单方便。Django还有模板，表单，路由，认证，基本的数据库管理等等内建功能，接下来将进一步的介绍 Django 的高级功能。
 
-[示例代码：https://github.com/JustDoPython/python-100-day](https://github.com/JustDoPython/python-100-day)
-
-参考
+## 参考
 
 - [Django 中文文档：https://docs.djangoproject.com/zh-hans/2.2/](https://docs.djangoproject.com/zh-hans/2.2/)
 - [Django W3C介绍：https://www.w3cschool.cn/django/](https://www.w3cschool.cn/django/)
+
+[示例代码：https://github.com/JustDoPython/python-100-day](https://github.com/JustDoPython/python-100-day)
+
