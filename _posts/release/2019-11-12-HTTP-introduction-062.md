@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第57天：HTTP 入门
+title: 第62天：HTTP 入门
 tagline: by 轩辕御龙
 tags:
   - python100
@@ -159,7 +159,7 @@ HTTP/2 仅仅是在 HTTP/1.x 的基础上附加了一个步骤，在使用时无
 
 本文带领读者简单认识了一下 HTTP 协议，粗浅地了解了与之相关的一些知识。限于整体考虑，本文没有做更深入的讲解，因此希望对进一步学习 HTTP 有兴趣的同学能够自行探索。
 
-> 示例代码：[Python-100-days-day057](https://github.com/JustDoPython/python-100-day/tree/master/day-057)
+> 示例代码：[Python-100-days-day062](https://github.com/JustDoPython/python-100-day/tree/master/day-062)
 
 ## 5. 参考资料
 
