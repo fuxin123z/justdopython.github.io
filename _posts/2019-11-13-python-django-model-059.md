@@ -163,7 +163,7 @@ urlpatterns = [
 
 保存后，通过 `python manage.py runserver 127.0.0.1:8080` 命令启动本地开发服务器，启动后在浏览器中输入URL地址 `http://127.0.0.1:8080/polls/add` ，会返回如下页面表示新增数据成功。
 
-![](http://www.justdopython.com/assets/images/2019/python/python_web_django_11.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_web_django_11.jpg)
 
 接下来我们再刷新下页面，这样就会再增加一条数据，然后我们把这两条记录查出来。
 
@@ -209,7 +209,7 @@ urlpatterns = [
 
 然后再浏览器中输入 URL `http://127.0.0.1:8080/polls/query` ，看到如下图所求请求结果：
 
-![](http://www.justdopython.com/assets/images/2019/python/python_web_django_12.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_web_django_12.jpg)
 
 可以看到出现两条一样的记录，但是 `id` 不同，不过这正符合我们的预期，下面我们将对第一条数据进行修改和删除。
 
@@ -269,15 +269,15 @@ urlpatterns = [
 
 完成以上代码配置，我们就可以通过访问 URL `http://127.0.0.1:8080/polls/update` 实现第一条数据的更新操作，请求后返回页面如下：
 
-![](http://www.justdopython.com/assets/images/2019/python/python_web_django_15.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_web_django_15.jpg)
 
 这样我们就把第一条数据的问题描述更新了，再次通过 URL `http://127.0.0.1:8080/polls/query` 查询下所有数据，可以看到返回页面如下：
 
-![](http://www.justdopython.com/assets/images/2019/python/python_web_django_16.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_web_django_16.jpg)
 
 好，更新成功后，我们再试下删除数据了，通过查看删除相关代码是把 `id` 为2的数据删除了，这次我们访问的 URL `http://127.0.0.1:8080/polls/del`，然后返回删除后再次查询所有记录的页面，如下图：
 
-![](http://www.justdopython.com/assets/images/2019/python/python_web_django_17.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_web_django_17.jpg)
 
 可以看到只剩下一条数据，说明我们已经删除成功了。
 
