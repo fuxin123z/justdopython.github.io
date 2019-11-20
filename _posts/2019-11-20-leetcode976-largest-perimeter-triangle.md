@@ -124,4 +124,4 @@ LeetCode - 976. 三角形的最大周长
 
 
 
-参考代码: <https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-976> .
+示例代码: <https://github.com/JustDoPython/leetcode-python/tree/master/leetcode-976> .
