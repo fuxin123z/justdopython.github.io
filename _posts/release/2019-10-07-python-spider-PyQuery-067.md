@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第59天：PyQuery 详解
+title:  第67天：PyQuery 详解
 category: python
 tagline: by 闲欢
 tags: 
@@ -408,4 +408,4 @@ print(response)
 
 这篇文章给大家介绍了 PyQuery 的常见使用方法，大家如果用的熟练的话，还是可以极大地节约我们解析 HTML 网页内容的时间的。PyQuery 可以称得上是爬虫神器，还有一些用法由于篇幅有限，没有进行介绍。大家可以去官网详细查看，官网地址： https://pythonhosted.org/pyquery/ 。
 
-> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
+> 文中示例代码：[Python-100-days-day067](https://github.com/JustDoPython/python-100-day/tree/master/day-067)
