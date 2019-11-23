@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第60天：Selenium环境配置
+title:  第68天：Selenium 环境配置
 category: python
 tagline: by 闲欢
 tags: 
@@ -105,4 +105,4 @@ browser.get('http://www.baidu.com/')
 
 本节给大家简单介绍了 Selenium ， 以及对应的环境配置。其中环境配置是比较繁琐的，不同的操作系统不同的机器可能会出现各种各样的问题，这也是我们技术人员最头疼的地方，大家需要耐住性子慢慢来解决。环境配置好后，后面我们就可以用 Selenium 去做一些很 Cool 的事情了！
 
-> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
+> 文中示例代码：[Python-100-days-day068](https://github.com/JustDoPython/python-100-day/tree/master/day-068)
