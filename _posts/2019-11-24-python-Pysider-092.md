@@ -9,7 +9,7 @@ tags:
 
 ## Pysider
 
-Pysider是一个国人用Python编写的、带有强大的WebUI的网络爬虫系统，它支持多种数据库、任务监控、项目管理、结果查看、URL去重等强大的功能。
+Pysider 是一个国人用 Python 编写的、带有强大的 WebUI 的网络爬虫系统，它支持多种数据库、任务监控、项目管理、结果查看、URL去重等强大的功能。
 <!-- more -->
 
 ### 安装
@@ -44,11 +44,11 @@ localhost:5000
 
 #### 创建项目
 
-在创建表单中填写项目名和爬虫开始的URL,点击 Create 按钮
+在创建表单中填写项目名和爬虫开始的 URL,点击 Create 按钮
 
 ![创建](http://www.justdopython.com/assets/images/2019/11/26/news_init.png)
 
-下面是xinwen爬虫系统的初始化代码
+下面是 xinwen 爬虫系统的初始化代码
 
 ![初始化](http://www.justdopython.com/assets/images/2019/11/26/init.png)
 
@@ -63,13 +63,13 @@ def on_start(self):
 2. crawl() 函数 Pyspider 抓取指定页面，然后使用 callback 函数对结果进行解析
 3. @every(minutes=24 * 60) 装饰器，表示每过多久运行一次，是一个计划任务
 
-点击 左窗口中的【run】按钮，会在【follows】安装上看到一个带红色的【1】，这个表示抓取到了一个URL，点击它。这时会切换到 follows 面板，点击绿色播放按钮
+点击 左窗口中的 run 按钮，会在 follows 安装上看到一个带红色的 1 ，这个表示抓取到了一个URL，点击它。这时会切换到 follows 面板，点击绿色播放按钮
 
 ![播放图](http://www.justdopython.com/assets/images/2019/11/26/run.png)
 
 #### 翻页和列表页面处理
 
-在点击绿色播放按钮后，会发现 Pysider 已经抓取到了好多个 URL 地址，其中的一些地址已经做了去重复处理。在这些URL地址中大多数是不需要的，所以我们需要进一步的对这些URL过滤。
+在点击绿色播放按钮后，会发现 Pysider 已经抓取到了好多个 URL 地址，其中的一些地址已经做了去重复处理。在这些 URL 地址中大多数是不需要的，所以我们需要进一步的对这些 URL 过滤。
 
 对页面的分析发现，翻页的 URL 都是带有 list_32_x.html 的地址。
 
