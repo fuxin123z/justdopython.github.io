@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第71天： 三木板模型算法项目实战
+title: 第100天： 三木板模型算法项目实战
 tagline: by 戴景波
 tags: 
   - python100
@@ -97,5 +97,5 @@ sum	151	62	220	279	66	468	166
 
 
 
-> 示例代码：[Python-100-days-day071](https://github.com/JustDoPython/python-100-day/tree/master/day-071)
+> 示例代码：[Python-100-days-day071](https://github.com/JustDoPython/python-100-day/tree/master/day-100)
 

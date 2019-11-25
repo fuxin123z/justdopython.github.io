@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第70天： Python XGBoost算法项目实战
+title: 第101天： Python XGBoost算法项目实战
 tagline: by 戴景波
 tags: 
   - python100
@@ -92,5 +92,5 @@ def trainandTest(X, y,X_t):
 ## 代码地址
 
 
-> 示例代码：[Python-100-days-day070](https://github.com/JustDoPython/python-100-day/tree/master/day-070)
+> 示例代码：[Python-100-days-day070](https://github.com/JustDoPython/python-100-day/tree/master/day-101)
 

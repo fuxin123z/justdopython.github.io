@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第62天：Selenium详解
+title:  第69天：Selenium详解
 category: python
 tagline: by 闲欢
 tags: 
@@ -418,7 +418,7 @@ driver.quit()
 
 本节给大家介绍了 Selenium 的常见使用方法，利用这些方法我们可以很轻易地去操纵浏览器，让浏览器按照我们预设的规则来顺序执行操作指令。当然本文中列举的只是 selenium 的一部分操作，还有很多丰富的功能等着大家自己去探索。如果你能够熟练地运用和组合这些操作，你会发现还有更多复杂好玩的事情等着你去探索！
 
-> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
+> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day/tree/master/day-069)
 
 
 
