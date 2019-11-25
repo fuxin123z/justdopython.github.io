@@ -158,6 +158,57 @@ def detail_page(self, response):
 
 ![结果](http://www.justdopython.com/assets/images/2019/11/26/r2.png)
 
+### 保存到 Mysql
+
+#### 重写 on_result() 函数
+
+在 Pysider 抓取的结果保存到数据库，必须重写 on_result() 函数。on_result() 函数在每个函数结束都会被调用，所以必须判断 result 参数是不是空的。
+
+```python
+from pyspider.database.mysql.crawlerdb import crawlerdb
+
+def on_result(self,result):
+    if not result:
+        return
+    sql = crawlerdb()
+    sql.insert(result)
+```
+
+#### 自定义保存模块
+
+crawlerdb 模块是一个把结果保存到 Mysql 数据库的自定义模块，模块存放的地址每个人的路径都不相同，我的是在 /Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pyspider/database/mysql 下。
+
+```python
+#!/usr/bin/env python
+# -*- encoding: utf-8 -*-
+
+import mysql.connector
+import pymysql
+
+from pyspider.result import ResultWorker
+
+
+class crawlerdb:
+    conn = None
+    cursor = None
+
+    def __init__(self):
+        self.conn = pymysql.connect("127.0.0.1", "root", "12345678", "crawler")
+        self.cursor = self.conn.cursor()
+
+
+    def insert(self, _result):
+        sql = "insert into info(title,body,editorial,ctime) VALUES('{}','{}','{}','{}')"
+        try:
+            sql = sql.format(pymysql.escape_string(_result.get('title')), pymysql.escape_string(_result.get('body')), _result.get('editorial'),_result.get('ctime'))
+            self.cursor.execute(sql)
+            self.conn.commit()
+            return True
+        except mysql.connector.Error:
+            print('插入失败')
+            return False
+```
+
 
 ### 运行问题
 
