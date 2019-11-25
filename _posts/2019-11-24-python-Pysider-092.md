@@ -26,7 +26,7 @@ pip3 install pysider
 pyspider
 ```
 
-[image]()
+![image](http://www.justdopython.com/assets/images/2019/11/26/run1.png)
 
 运行成功后，在浏览器地址中输入
 
@@ -36,7 +36,7 @@ localhost:5000
 
 进入 Pyspider 控制台
 
-[image]()
+![image](http://www.justdopython.com/assets/images/2019/11/26/webui.png)
 
 ### 从一个网站开始
 
