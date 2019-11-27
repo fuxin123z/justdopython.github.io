@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第92天： PySpider框架的使用
+title: 第72天： PySpider框架的使用
 tagline: by 某某白米饭
 tags: 
   - python100
@@ -229,4 +229,4 @@ SyntaxError: invalid syntax
 
 ## 代码地址
 
-> 示例代码：[Python-100-days-day092](https://github.com/JustDoPython/python-100-day/tree/master/day-092)
+> 示例代码：[Python-100-days-day072](https://github.com/JustDoPython/python-100-day/tree/master/day-072)
