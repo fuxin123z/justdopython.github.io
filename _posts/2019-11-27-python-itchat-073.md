@@ -267,6 +267,7 @@ Content:
 - 如果不想要运行上述命令，请在退出程序前调用 `itchat.dump_login_status()`，更新热拔插需要的信息
 
 2、群聊的搜索方法为 `search_chatrooms`，有两种搜索方法，分别是通过传参 `userName` 和 `name` 进行搜索，方式同公众号搜索相似。
+
 3、群聊用户列表的获取方法为 `update_chatroom`，同时需要关注以下几点：
 
 - 如果想要更新该群聊的其他信息也可以用该方法
