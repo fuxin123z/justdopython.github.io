@@ -145,9 +145,30 @@ if __name__ == "__main__":
         newspaper_url("https://tech.huanqiu.com/")
 ```
 
+## 3 多任务
+
+当我们需要从多个渠道获取新闻信息时可以采用多任务的方式，如下所示：
+
+```
+import newspaper
+from newspaper import news_pool
+
+hq_paper = newspaper.build('https://www.huanqiu.com', language="zh")
+sh_paper = newspaper.build('http://news.sohu.com', language="zh")
+sn_paper = newspaper.build('https://news.sina.com.cn', language="zh")
+
+papers = [hq_paper, sh_paper, sn_paper]
+# 线程数为 3 * 2 = 6
+news_pool.set(papers, threads_per_source=2)
+news_pool.join()
+print(hq_paper.articles[0].html)
+```
+
+因获取内容较多，上述代码执行可能需要一段时间，我们要耐心等待。
+
 ## 总结
 
-本文为大家介绍了 Python 爬虫框架 newspaper，让大家能够对 newspaper 有个基本了解以及能够上手使用。
+本文为大家介绍了 Python 爬虫框架 newspaper，让大家能够对 newspaper 有个基本了解以及能够上手使用。newspaper 框架还存在一些 bug，因此，我们在实际工作中需要综合考虑、谨慎使用。
 
 > 示例代码：[Python-100-days-day072](https://github.com/JustDoPython/python-100-day/tree/master/day-072)
 
