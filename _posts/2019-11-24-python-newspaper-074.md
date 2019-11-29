@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第72天：Python newspaper 框架
+title: 第74天：Python newspaper 框架
 tagline: by 程序员野客
 tags: 
   - python100
@@ -170,7 +170,7 @@ print(hq_paper.articles[0].html)
 
 本文为大家介绍了 Python 爬虫框架 newspaper，让大家能够对 newspaper 有个基本了解以及能够上手使用。newspaper 框架还存在一些 bug，因此，我们在实际工作中需要综合考虑、谨慎使用。
 
-> 示例代码：[Python-100-days-day072](https://github.com/JustDoPython/python-100-day/tree/master/day-072)
+> 示例代码：[Python-100-days-day074](https://github.com/JustDoPython/python-100-day/tree/master/day-074)
 
 参考：
 
