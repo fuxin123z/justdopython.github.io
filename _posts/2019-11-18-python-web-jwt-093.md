@@ -62,7 +62,9 @@ JWT Wiki 上的定义是:
 JWT 由 `Header`、`Payload` 和 `Signature`，三部分组成，像这样的形式：
 
 ```python
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJpc3MiOiJBdXRobGliIiwic3ViIjoiMTIzIiwibmFtZSI6ImJvYiJ9. cBo6e7Uss5__16mlqZECjHJSKJDdyisevDP5cUGvJms
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+eyJpc3MiOiJBdXRobGliIiwic3ViIjoiMTIzIiwibmFtZSI6ImJvYiJ9.
+cBo6e7Uss5__16mlqZECjHJSKJDdyisevDP5cUGvJms
 ```
 
 > 换行符只是为了展示用，实际 token 中不包括换行符
