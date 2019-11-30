@@ -34,7 +34,7 @@ Fiddler 的下载地址为：https://www.telerik.com/download/fiddler ，安装�
 
 ![](http://www.justdopython.com/assets/images/2019/11/30/android.jpg)
 
-![](http://www.justdopython.com/assets/images/2019/11/30/online.png)
+![](http://www.justdopython.com/assets/images/2019/11/30/ip.png)
 
 在手机浏览器中访问配置的地址：http://ip:8888，当显示 Fiddler Echo Service，则配置手机成功。
 
