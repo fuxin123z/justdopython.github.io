@@ -18,15 +18,13 @@ Fiddler 的下载地址为：https://www.telerik.com/download/fiddler ，安装�
 
 ### Finddler 的配置
 
-点击 Tools >> Options >> Connections 面板
+点击 Tools >> Options >> Connections 面板，参考下图配置，Fiddler 的默认端口为 8888，如果 8888 端口被占用了，可修改为其他端口。
 
 ![](http://www.justdopython.com/assets/images/2019/11/30/connections.png)
 
 点击 Tools >> Options >> HTTPS 面板，参考下图配置
 
 ![](http://www.justdopython.com/assets/images/2019/11/30/https.png)
-
-点击 Connections 面板，参考下图配置，Fiddler 的默认端口为 8888，如果 8888 端口被占用了，可修改为其他端口。
 
 ### Android 手机配置
 
