@@ -26,7 +26,7 @@ pip3 install pysider
 pyspider
 ```
 
-![image](http://www.justdopython.com/assets/images/2019/11/26/run1.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/run1.png)
 
 运行成功后，在浏览器地址中输入
 
@@ -36,7 +36,7 @@ localhost:5000
 
 进入 Pyspider 控制台
 
-![image](http://www.justdopython.com/assets/images/2019/11/26/webui.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/webui.png)
 
 ### 从一个网站开始
 
@@ -46,11 +46,11 @@ localhost:5000
 
 在创建表单中填写项目名和爬虫开始的 URL,点击 Create 按钮
 
-![创建](http://www.justdopython.com/assets/images/2019/11/26/news_init.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/news_init.png)
 
 下面是 xinwen 爬虫系统的初始化代码
 
-![初始化](http://www.justdopython.com/assets/images/2019/11/26/init.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/init.png)
 
 我们来看一下，爬虫系统的入口函数
 
@@ -65,7 +65,7 @@ def on_start(self):
 
 点击 左窗口中的 run 按钮，会在 follows 安装上看到一个带红色的 1 ，这个表示抓取到了一个URL，点击它。这时会切换到 follows 面板，点击绿色播放按钮
 
-![播放图](http://www.justdopython.com/assets/images/2019/11/26/run.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/run.png)
 
 #### 翻页和列表页面处理
 
@@ -118,7 +118,7 @@ def list_page(self, response):
 
 左窗口切换到 WEB 页面，然后点击 enable css selector helper 按钮，此时把鼠标放到左窗口的页面上，鼠标所在的标签变成了黄色，在它的上面可以看到当前标签的路径，点击向右箭将把路径复制到光标处
 
-![CSS](http://www.justdopython.com/assets/images/2019/11/26/css.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/css.png)
 
 修改 detail_page() 函数
 
@@ -137,7 +137,7 @@ def detail_page(self, response):
 
 点击 run 按钮
 
-![结果](http://www.justdopython.com/assets/images/2019/11/26/result.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/result.png)
 
 如果觉得 Pysider 提取的元素路径并不合适，也可以使用在 Google 浏览器中审查元素，提取一个适合的元素选择器。
 
@@ -150,13 +150,13 @@ def detail_page(self, response):
 
 下面是自动抓取的结果
 
-![结果](http://www.justdopython.com/assets/images/2019/11/26/r1.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/r1.png)
 
 点击 Dashboard 界面的 Results 按钮
 
-![结果](http://www.justdopython.com/assets/images/2019/11/26/r3.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/r3.png)
 
-![结果](http://www.justdopython.com/assets/images/2019/11/26/r2.png)
+![](http://www.justdopython.com/assets/images/2019/11/26/r2.png)
 
 ### 保存到 Mysql
 
