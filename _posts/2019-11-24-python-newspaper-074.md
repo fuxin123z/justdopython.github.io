@@ -129,6 +129,8 @@ publish_date= 2019-11-15 00:00:00
 ### 2.7 Article 类使用
 
 ```
+from newspaper import Article
+
 article = Article('https://money.163.com/19/1130/08/EV7HD86300258105.html')
 article.download()
 article.parse()
@@ -161,6 +163,7 @@ print('解析后的信息', text)
 
 ```
 >>> from newspaper import Article
+
 >>> article = Article('https://money.163.com/19/1130/08/EV7HD86300258105.html')
 >>> article.download()
 >>> article.parse()
@@ -248,7 +251,6 @@ word_top10 = word_counts.most_common(10)
 # 词条及次数
 for w, c in word_top10:
     print(w, c)
-
 ```
 
 ### 生成词云
@@ -286,7 +288,7 @@ plt.show()
 
 ## 总结
 
-本文为大家介绍了 Python 爬虫框架 newspaper，让大家能够对 newspaper 有个基本了解以及能够上手使用。newspaper 框架还存在一些 bug，因此，我们在实际工作中需要综合考虑、谨慎使用。
+本文为大家介绍了 Python 爬虫框架 newspaper，让大家能够对 newspaper 有个基本了解以及能够上手使用。在使用的过程中，我们会发现 newspaper 框架还存在一些 bug，因此，我们在实际工作中需要综合考虑、谨慎使用。
 
 > 示例代码：[Python-100-days-day074](https://github.com/JustDoPython/python-100-day/tree/master/day-074)
 
