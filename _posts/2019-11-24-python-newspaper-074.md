@@ -29,7 +29,15 @@ GitHub 链接：https://github.com/codelucas/newspaper
 
 ## 2 基本使用
 
-### 2.1 获取新闻
+### 2.1 查看支持语言
+
+```
+import newspaper
+
+print(newspaper.languages())
+```
+
+### 2.2 获取新闻
 
 我们以环球网为例，如下所示：
 
@@ -41,7 +49,7 @@ hq_paper = newspaper.build("https://tech.huanqiu.com/", language="zh", memoize_a
 
 默认情况下，newspaper 缓存所有以前提取的文章，并删除它已经提取的任何文章，使用 memoize_articles 参数选择退出此功能。
 
-### 2.2 获取文章 URL
+### 2.3 获取文章 URL
 
 ```
 >>> import newspaper
@@ -57,7 +65,7 @@ http://world.huanqiu.com/gallery/9CaKrnQhXvw
 ...
 ```
 
-### 2.3 获取类别
+### 2.4 获取类别
 
 ```
 >>> import newspaper
@@ -72,7 +80,7 @@ http://smart.huanqiu.com
 https://tech.huanqiu.com/
 ```
 
-### 2.4 获取品牌和描述
+### 2.5 获取品牌和描述
 
 ```
 >>> import newspaper
@@ -85,7 +93,7 @@ huanqiu
 环球网科技，不一样的IT视角！以“成为全球科技界的一面镜子”为出发点，向关注国际科技类资讯的网民，提供国际科技资讯的传播与服务。
 ```
 
-### 2.5 下载解析
+### 2.6 下载解析
 
 我们选取其中一篇文章为例，如下所示：
 
@@ -118,34 +126,56 @@ publish_date= 2019-11-15 00:00:00
 ...
 ```
 
-### 2.6 Article 类使用
+### 2.7 Article 类使用
 
 ```
-import newspaper
-from newspaper import Article
-
-def newspaper_url(url):
-    web_paper = newspaper.build(url, language="zh", memoize_articles=False)
-    for article in web_paper.articles:
-        newspaper_info(article.url)
-
-def newspaper_info(url):
-    article = Article(url, language='zh')
-    article.download()
-    article.parse()
-    print("title=", article.title)
-    print("author=", article.authors)
-    print("publish_date=", article.publish_date)
-    print("top_iamge=", article.top_image)
-    print("movies=", article.movies)
-    print("text=", article.text)
-    print("summary=", article.summary)
-
-if __name__ == "__main__":
-        newspaper_url("https://tech.huanqiu.com/")
+article = Article('https://money.163.com/19/1130/08/EV7HD86300258105.html')
+article.download()
+article.parse()
+print("title=", article.title)
+print("author=", article.authors)
+print("publish_date=", article.publish_date)
+print("top_iamge=", article.top_image)
+print("movies=", article.movies)
+print("text=", article.text)
+print("summary=", article.summary)
 ```
 
-## 3 多任务
+## 2.8 解析 html
+
+我们通过 requests 库获取文章 html 信息，用 newspaper 进行解析，如下所示：
+
+```
+import requests
+from newspaper import fulltext
+
+html = requests.get('https://money.163.com/19/1130/08/EV7HD86300258105.html').text
+print('获取的原信息-->', html)
+text = fulltext(html, language='zh')
+print('解析后的信息', text)
+```
+
+## 2.9 nlp（自然语言处理）
+
+我们看一下在 nlp 处理前后获取一篇新闻的关键词情况，如下所示：
+
+```
+>>> from newspaper import Article
+>>> article = Article('https://money.163.com/19/1130/08/EV7HD86300258105.html')
+>>> article.download()
+>>> article.parse()
+>>> print('处理前-->', article.keywords)
+# nlp 处理
+>>> article.nlp()
+>>> print('处理后-->', article.keywords)
+
+处理前--> []
+处理后--> ['亚洲最大水秀项目成摆设', '至今拖欠百万设计费']
+```
+
+通过结果我们可以看出 newspaper 框架的 nlp 处理效果还算可以。
+
+## 2.10 多任务
 
 当我们需要从多个渠道获取新闻信息时可以采用多任务的方式，如下所示：
 
@@ -165,6 +195,94 @@ print(hq_paper.articles[0].html)
 ```
 
 因获取内容较多，上述代码执行可能需要一段时间，我们要耐心等待。
+
+## 3 词频统计实现
+
+### 需要的库
+
+```
+import newspaper
+# 词频统计库
+import collections  
+# numpy 库
+import numpy as np  
+# 结巴分词
+import jieba  
+# 词云展示库
+import wordcloud 
+# 图像处理库
+from PIL import Image  
+# 图像展示库
+import matplotlib.pyplot as plt  
+```
+
+第三方库的安装使用 pip install 即可，如：pip install wordcloud。
+
+### 文章获取及处理
+
+```
+# 获取文章
+article = newspaper.Article('https://news.sina.com.cn/o/2019-11-28/doc-iihnzahi3991780.shtml')
+# 下载文章
+article.download()
+# 解析文章
+article.parse()
+# 对文章进行 nlp 处理
+article.nlp()
+# nlp 处理后的文章拼接
+article_words = "".join(article.keywords)
+# 精确模式分词(默认模式)
+seg_list_exact = jieba.cut(article_words, cut_all=False)
+# 存储分词结果
+object_list = []
+# 移出的词
+rm_words = ['迎', '以来', '将']
+# 迭代分词对象
+for word in seg_list_exact:
+    if word not in rm_words:
+        object_list.append(word)
+# 词频统计
+word_counts = collections.Counter(object_list)
+# 获取前 10 个频率最高的词
+word_top10 = word_counts.most_common(10)
+# 词条及次数
+for w, c in word_top10:
+    print(w, c)
+
+```
+
+### 生成词云
+
+```
+# 词频展示
+# 定义词频背景
+mask = np.array(Image.open('bg.jpg'))
+wc = wordcloud.WordCloud(
+    # 设置字体格式
+    font_path='C:/Windows/Fonts/simhei.ttf',
+    # 背景图
+    mask=mask,
+    # 设置最大显示的词数
+    max_words=100,
+    # 设置字体最大值
+    max_font_size=120
+)
+# 从字典生成词云
+wc.generate_from_frequencies(word_counts)
+# 从背景图建立颜色方案
+image_colors = wordcloud.ImageColorGenerator(mask)
+# 显示词云
+plt.imshow(wc)
+# 关闭坐标轴
+plt.axis('off')
+plt.savefig('wc.jpg')
+# 显示图像
+plt.show()  
+```
+
+效果如图所示：
+
+![](http://www.justdopython.com/assets/images/2019/newspaper/cloud.PNG)
 
 ## 总结
 
