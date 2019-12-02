@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第80天：Python 操作 SQLite
+title: 第77天：Python 操作 SQLite
 tagline: by 程序员野客
 tags: 
   - python100
