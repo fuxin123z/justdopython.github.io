@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第77天： Python 操作 MongoDB 数据库介绍
+title: 第78天： Python 操作 MongoDB 数据库介绍
 tagline: by 極光
 tags:
   - python100
@@ -282,8 +282,8 @@ collection.drop()
 
 本文为大家介绍了 Python 中如何创建连接 MongoDB 数据库，并通过代码的方式展示了对 MongoDB 数据的增删改查以及排序索引等操作，通过以上学习个人感觉操作起来还是比较简单方便的。今天就先介绍到这里，以后还会为大家介绍其他数据库的操作。
 
-参考
+## 参考
 
-- [PyMongo 文档：https://pymongo.readthedocs.io/en/stable/](https://pymongo.readthedocs.io/en/stable/)
+PyMongo 文档：https://pymongo.readthedocs.io/en/stable/
 
-[示例代码：https://github.com/JustDoPython/python-100-day](https://github.com/JustDoPython/python-100-day)
+> 示例代码：https://github.com/JustDoPython/python-100-day
