@@ -7,7 +7,7 @@ tags:
   - python100
 ---
 
-# Python实现机器学习
+## Python实现机器学习
 
 如果你的机器学习预测模型表现得不尽如人意，那就用XGBoost。XGBoost算法现在已经成为很多数据工程师的重要武器。
 
@@ -92,5 +92,5 @@ def trainandTest(X, y,X_t):
 ## 代码地址
 
 
-> 示例代码：[Python-100-days-day070](https://github.com/JustDoPython/python-100-day/tree/master/day-101)
+> 示例代码：[Python-100-days-day101](https://github.com/JustDoPython/python-100-day/tree/master/day-101)
 
