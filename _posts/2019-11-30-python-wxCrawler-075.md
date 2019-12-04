@@ -18,7 +18,7 @@ Fiddler 的下载地址为：https://www.telerik.com/download/fiddler ，安装�
 
 ### Finddler 的配置
 
-点击 Tools >> Options >> Connections 面板
+点击 Tools >> Options >> Connections 面板，参考下图配置，Fiddler 的默认端口为 8888，如果 8888 端口被占用了，可修改为其他端口。
 
 ![](http://www.justdopython.com/assets/images/2019/11/30/connections.png)
 
@@ -26,15 +26,13 @@ Fiddler 的下载地址为：https://www.telerik.com/download/fiddler ，安装�
 
 ![](http://www.justdopython.com/assets/images/2019/11/30/https.png)
 
-点击 Connections 面板，参考下图配置，Fiddler 的默认端口为 8888，如果 8888 端口被占用了，可修改为其他端口。
-
 ### Android 手机配置
 
 进入 WLAN 设置，选择当前所在局域网的 WIFI 设置，代理设置为 手动 ，代理服务器主机名为 Finddler 中 右上角 Online 点击显示，端口号为 8888。
 
 ![](http://www.justdopython.com/assets/images/2019/11/30/android.jpg)
 
-![](http://www.justdopython.com/assets/images/2019/11/30/online.png)
+![](http://www.justdopython.com/assets/images/2019/11/30/ip.png)
 
 在手机浏览器中访问配置的地址：http://ip:8888，当显示 Fiddler Echo Service，则配置手机成功。
 
