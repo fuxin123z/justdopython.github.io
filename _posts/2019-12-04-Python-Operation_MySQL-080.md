@@ -213,7 +213,7 @@ Database changed
 
 ```
 
-## pymysql 模块安装与数据库 CURD
+## pymysql 模块安装与数据 CURD
 
 ### 一、安装
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第79天：NumPy Ndarray 对象和 NumPy 数据类型
+title:  第81天：NumPy Ndarray_Object&NumPy_Data_Type
 category: python
 tagline: by 潮汐
 tags: 
