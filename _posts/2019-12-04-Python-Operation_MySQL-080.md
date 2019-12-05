@@ -591,7 +591,7 @@ NotSupportedError|	不支持错误，指使用了数据库不支持的函数或A
 
 ### 总结
 
-本文给大家介绍 Python 如何连接 Mysql 进行数据的增删改查操作，文章通过简介的代码方式进行示例演示，给需要使用 Python 操作 Mysql 的工程师提供支撑。
+本文给大家介绍 Python 如何连接 Mysql 进行数据的增删改查操作，文章通过简洁的代码方式进行示例演示，给使用 Python 操作 Mysql 的工程师提供支撑。
 
 ### 参考
 [https://www.runoob.com/mysql/mysql-install.html](https://www.runoob.com/mysql/mysql-install.html)
