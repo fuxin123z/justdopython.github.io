@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第80天：Python-Operation_MySQL
+title:  第79天：Python-Operation_MySQL
 category: python
 tagline: by 潮汐
 tags: 
