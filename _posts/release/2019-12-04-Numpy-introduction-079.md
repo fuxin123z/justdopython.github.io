@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第77天：数据分析之 Numpy 初步
+title: 第79天：数据分析之 Numpy 初步
 tagline: by 轩辕御龙
 tags:
   - python100
