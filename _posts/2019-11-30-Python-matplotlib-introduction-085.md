@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第83天：Python 数据可视化之 matplotlib 简介
+title:  第85天：Python matplotlib_introduction
 category: python
 tagline: by 潮汐
 tags: 
@@ -96,34 +96,34 @@ matplotlib 编程接口由 3 层组成，组成描述如下：
 
 **绘图部分函数如下：**
 
-序号|	绘图函数（plt.xxx）|	说明
+序号|	绘图函数（plt.xxx）|	说明|
 | --- | --- | --- |
-1|	acorr()	|绘制x的自相关图
-2|	angle_spectrum()|	绘制角度谱图
-3	|bar()	|制作条形图
-4|	barbs()|	绘制倒钩的二维场图
-5|	barh()	|制作水平条形图。
-6|	boxplot()	|制作一个盒子和胡须图
-7|	broken_barh()|	绘制一个水平的矩形序列图
-8|	clabel()|	绘制等高线图
-9	|cohere()	|绘制x和y之间的一致性图
-10	|csd()	|绘制交叉谱密度图
-11	|eventplot()	|绘制相同的平行线
-12	|fill()|	绘制填充多边形图
-13	|hexbin()	|制作六边形分箱图
-14	|hist()|绘制直方图
-15	|hist2d()	|制作2D直方图
-16	|magnitude_spectrum()|	绘制幅度谱图
-17	|phase_spectrum()|	绘制相位谱图
-18	|pie()	|绘制饼图
-19	|plot()	|绘制折线图
-20	|plot_date()	|绘制包含日期的数据图
-21	|quiver()|	绘制一个二维箭头场图
-22	|scatter()|绘制散点图
-23	|specgram()	|绘制频谱图
-24	|stackplot()|	绘制堆积区域图
-25|	streamplot()	|绘制矢量流的流线型图
-26|	triplot()	|绘制非结构化三角形网格作为线条图
+|1|	acorr()	|绘制x的自相关图|
+|2|	angle_spectrum()|	绘制角度谱图|
+|3	|bar()	|制作条形图|
+|4|	barbs()|	绘制倒钩的二维场图|
+|5|	barh()	|制作水平条形图|
+|6|	boxplot()	|制作一个盒子和胡须图|
+|7|	broken_barh()|	绘制一个水平的矩形序列图|
+|8|	clabel()|	绘制等高线图|
+|9	|cohere()	|绘制x和y之间的一致性图|
+|10	|csd()	|绘制交叉谱密度图|
+|11	|eventplot()	|绘制相同的平行线|
+|12	|fill()|	绘制填充多边形图|
+|13	|hexbin()	|制作六边形分箱图|
+|14	|hist()|绘制直方图|
+|15	|hist2d()	|制作2D直方图|
+|16	|magnitude_spectrum()|	绘制幅度谱图|
+|17	|phase_spectrum()|	绘制相位谱图|
+|18	|pie()	|绘制饼图|
+|19	|plot()	|绘制折线图|
+|20	|plot_date()	|绘制包含日期的数据图|
+|21	|quiver()|	绘制一个二维箭头场图|
+|22	|scatter()|绘制散点图|
+|23	|specgram()	|绘制频谱图|
+|24	|stackplot()|	绘制堆积区域图|
+|25|	streamplot()	|绘制矢量流的流线型图|
+|26|	triplot()	|绘制非结构化三角形网格作为线条图|
 
 - 方法二：面向对象式绘图
 
@@ -134,6 +134,7 @@ matplotlib 编程接口由 3 层组成，组成描述如下：
 ![matplotlib 绘图概念描述](https://qiniu.mdnice.com/10ce120d56575c1dee417fdd692df90a.png)
 
 元素描述：
+
 | 元素| 描述 |
 | --- | --- |
 |   figure  |  图形   |
