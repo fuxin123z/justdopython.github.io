@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第90天：Python SQLAlchemy
+title: 第86天：Python SQLAlchemy
 tagline: by 程序员野客
 tags: 
   - python100
@@ -350,7 +350,7 @@ session.commit()
 
 本文介绍了 SQLAlchemy 的基本概念和使用，对 Python 工程师使用 SQLAlchemy 提供了支撑。
 
-> 示例代码：[Python-100-days-day090](https://github.com/JustDoPython/python-100-day/tree/master/day-090)
+> 示例代码：[Python-100-days-day086](https://github.com/JustDoPython/python-100-day/tree/master/day-086)
 
 参考：
 
