@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第82天：NumPy 字符串操作
+title:  第83天：NumPy 字符串操作
 category: python
 tagline: by 闲欢
 tags: 

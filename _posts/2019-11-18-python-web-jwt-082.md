@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第93天： JWT 简介
+title: 第82天： JWT 简介
 tagline: by 太阳雪
 tags:
   - python100

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第84天：NumPy 统计函数
+title:  第85天：NumPy 统计函数
 category: python
 tagline: by 闲欢
 tags: 
