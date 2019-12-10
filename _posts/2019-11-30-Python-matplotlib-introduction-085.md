@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第85天：Python matplotlib_introduction
+title:  第89天：Python matplotlib introduction
 category: python
 tagline: by 潮汐
 tags: 
@@ -31,6 +31,7 @@ pylab 是 matplotlib 面向对象绘图库的一个接口。它的语法和 Matl
 
 ### 二、 安装
 
+#### 在线安装
 安装 Matplotlib 包与安装其他 Python 包一样，都可以使用 pip 来安装。
 启动命令行窗口，在命令行窗口中输入如下命令：
 
@@ -45,12 +46,33 @@ Installing collected packages: matplotlib
 Successfully installed matplotlib-3.1.1
 ```
 
+#### 离线安装
+
+在有网络限制条件下我们需要下载离线包来安装，python matplotlib 离线安装需要提前下载好与 python 版本对应的 wheel 安装包，[下载地址](https://pypi.org/project/matplotlib/#files)
+
+![安装包图片](https://imgkr.cn-bj.ufileos.com/9bbb8246-41c5-44e8-b68b-32fcf133d368.png)
+
+在上图中选择相应的安装包下载即可，`cp36` 表示 python 是 3.6 版本，同样的 `cp37` 表示 python 是3.7 版本，同样可以在 python 命令行下使用一下命令查看支持的版本属性：
+
+```python
+>>>python
+>>> import pip._internal
+>>> print(pip._internal.pep425tags.get_supported())
+```
+
+![安装包支持版本](https://imgkr.cn-bj.ufileos.com/189d2fad-d6df-417a-b0fd-3b8dcb54d597.png)
+
+以上结果可以显示出相应的版本支持，下载好后 使用 pip命令安装即可成功：
+
+```
+pip install matplotlib-3.1.1-cp36-cp36m-manylinux1_x86_64.whl
+```
+
 ### 三、matplotlib 架构
 
 #### 1、matplotlib 架构图
 
-![matplotlib 架构图](https://qiniu.mdnice.com/5a9fe2629ca1e62834f06881c9bf73d3.png)
-
+![matplotlib 架构图](https://imgkr.cn-bj.ufileos.com/56b0bdb3-860b-463b-9831-579508591e96.png)
 
 matplotlib 框架分为三层，这三层构成了一个栈，上层可以调用下层，三层框架描述如下：
 
@@ -63,9 +85,9 @@ matplotlib 框架分为三层，这三层构成了一个栈，上层可以调用
 #### 2、matplotlib 编程接口
 
 matplotlib 编程接口由 3 层组成，组成描述如下：
-- 第一层状态机环境，是由pyplot提供的。
-- 第二层是有pyplot和面向对象(oo)接口提供，由pyplot获取figure对象，通过面向对象接口来显示地管理axies对象。
-- 第三层由面向对象(oo)接口提供，该层完全不使用pyplot模块。
+- 第一层状态机环境，是由 pyplot 提供的。
+- 第二层是有 pyplot 和面向对象(oo)接口提供，由 pyplot 获取 figure 对象，通过面向对象接口来显示地管理axies 对象。
+- 第三层由面向对象(oo)接口提供，该层完全不使用 pyplot 模块。
 
 **编程接口图：**
 
@@ -96,10 +118,10 @@ matplotlib 编程接口由 3 层组成，组成描述如下：
 
 **绘图部分函数如下：**
 
-序号|	绘图函数（plt.xxx）|	说明|
+|序号|	绘图函数（plt.xxx）|	说明|
 | --- | --- | --- |
 |1|	acorr()	|绘制x的自相关图|
-|2|	angle_spectrum()|	绘制角度谱图|
+||2|	angle_spectrum()|	绘制角度谱图|
 |3	|bar()	|制作条形图|
 |4|	barbs()|	绘制倒钩的二维场图|
 |5|	barh()	|制作水平条形图|
@@ -134,7 +156,6 @@ matplotlib 编程接口由 3 层组成，组成描述如下：
 ![matplotlib 绘图概念描述](https://qiniu.mdnice.com/10ce120d56575c1dee417fdd692df90a.png)
 
 元素描述：
-
 | 元素| 描述 |
 | --- | --- |
 |   figure  |  图形   |
@@ -233,7 +254,7 @@ plt.show()
 
 matplotlib.pytplot包含了一系列类似于matlab的画图函数。 它的函数作用于当前图形(figure)的当前坐标系(axes)。
 
-#### 3.1 导入模块
+#### 3.1 导入模块	
 
 ```
 import matplotlib.pyplot as plt
@@ -265,6 +286,28 @@ plt.show()
 
 ![运行结果图](https://qiniu.mdnice.com/06b781a8a0c7ff2c6b2a62a3178ab361.png)
 
+再例如一个简单的折线图如下：
+```python
+import matplotlib.pyplot as plt
+
+x = (1,3,5,9,13)
+
+y = (2,5,9,12,28)
+
+# 调用绘制方法
+# 设置线条属性
+# linewidth属性设置线条的宽度
+plt.plot(x,y,linewidth = 5)
+
+# 显示图片
+plt.show()
+```
+
+运行结果：
+![6666666666666](https://imgkr.cn-bj.ufileos.com/9b645225-2e6d-4285-b46c-ae2e9b06892c.png)
+
+除了设置这些属性以外，图形还可以设置其他属性，这些概念我们将在下一节文章中作详细的讲解。
+
 ## 总结
 
 凡事预则立，学习任何一门知识也得从最基本开始，本章节对 matplotlib 模块做了详细的概念描述，在接下来的的章节中将结合 NumPy 模块进行实战性演练，以此对初入门的伙伴们做更好的支撑。
@@ -276,4 +319,3 @@ https://matplotlib.org/3.1.1/contents.html
 https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html?highlight=matplotlib%20pyplot#module-matplotlib.pyplot
 
 > 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
-
