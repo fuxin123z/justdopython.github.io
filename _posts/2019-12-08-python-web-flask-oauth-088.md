@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第105天： OAuth2.0 客户端实战
+title: 第88天： OAuth2.0 客户端实战
 tagline: by 太阳雪
 tags:
   - python100
@@ -235,10 +235,12 @@ python3 app.py
 
 总体来说，认证客户端的实现不复杂，主要是概念比较绕，建议下载示例代码，实践一下，加深理解
 
-> 示例代码：[Python-100-days-day105](https://github.com/JustDoPython/python-100-day/tree/master/day-105)
-
-参考1
+## 参考
 
 - [blinker: https://pythonhosted.org/blinker/](https://pythonhosted.org/blinker/)
 - [Authlib Flask: https://docs.authlib.org/en/latest/client/flask.html](https://docs.authlib.org/en/latest/client/flask.html)
 - [http://www.ruanyifeng.com/blog/2019/04/github-oauth.html](http://www.ruanyifeng.com/blog/2019/04/github-oauth.html)
+
+
+> 示例代码：[Python-100-days-day105](https://github.com/JustDoPython/python-100-day/tree/master/day-105)
+
