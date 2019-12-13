@@ -506,5 +506,7 @@ print(np.power(d, e))
 ## 参考
 [https://www.runoob.com/numpy/numpy-arithmetic-operations.html](https://www.runoob.com/numpy/numpy-arithmetic-operations.html)
 [https://www.numpy.org.cn/reference/ufuncs.html](https://www.numpy.org.cn/reference/ufuncs.html#%E6%95%B0%E5%AD%A6%E8%BF%90%E7%AE%97)
+[https://numpy.org/devdocs/reference/routines.math.html](https://numpy.org/devdocs/reference/routines.math.html)
+
 
 > 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
