@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第93天：数据分析之 pandas 初步
+title: 第94天：数据分析之 pandas 初步
 tagline: by 轩辕御龙
 tags:
   - python100
