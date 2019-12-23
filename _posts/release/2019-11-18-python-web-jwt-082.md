@@ -1,11 +1,12 @@
 ---
 layout: post
 category: python
-title: 第93天： JWT 简介
+title: 第82天： JWT 简介
 tagline: by 太阳雪
 tags:
   - python100
 ---
+
 在之前的课程中,介绍过 Flask-Login 框架，它是基于 Session 和 Cookie 技术来实现用户授权和验证的，不过 Session 有很多的局限性，这一节介绍一种基于 token 的验证方式 —— JWT (JSON Web Token)，除了对 JWT 的概念讲解之外，还有在 Flask 中简单实践
 
 <!--more-->
