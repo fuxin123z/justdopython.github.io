@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第80天： Python asyncio
+title: 第101天： Python asyncio
 tagline: by 某某白米饭
 tags: 
   - python100
@@ -324,4 +324,4 @@ asyncio 在协程、网络爬虫等多种耗时操作时程序不再需要等待
 
 ### 代码地址
 
-> 示例代码：[Python-100-days-day104](https://github.com/JustDoPython/python-100-day/tree/master/day-104)
+> 示例代码：[Python-100-days-day101](https://github.com/JustDoPython/python-100-day/tree/master/day-101)
