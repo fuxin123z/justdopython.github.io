@@ -322,4 +322,4 @@ aiohttp 以异步的方式爬取网站耗时远小于 requests 同步方式，�
 ### 代码地址
 
 
-> 示例代码：[Python-100-day](https://github.com/JustDoPython/python-100-day/tree/master/day-104)
+> 示例代码：[Python-100-day](https://github.com/JustDoPython/python-100-day/tree/master/day-102)
