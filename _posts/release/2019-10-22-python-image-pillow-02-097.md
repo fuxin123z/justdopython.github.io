@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第88天：图像库 PIL（二）
+title:  第97天：图像库 PIL（二）
 category: python
 tagline: by 闲欢
 tags: 

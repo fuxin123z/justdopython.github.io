@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第89天：Python matplotlib introduction
+title:  第91天：Python matplotlib introduction
 category: python
 tagline: by 潮汐
 tags: 
@@ -304,7 +304,7 @@ plt.show()
 ```
 
 运行结果：
-![6666666666666](https://imgkr.cn-bj.ufileos.com/9b645225-2e6d-4285-b46c-ae2e9b06892c.png)
+![运行结果图](https://imgkr.cn-bj.ufileos.com/9b645225-2e6d-4285-b46c-ae2e9b06892c.png)
 
 除了设置这些属性以外，图形还可以设置其他属性，这些概念我们将在下一节文章中作详细的讲解。
 

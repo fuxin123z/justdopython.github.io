@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第103天：StringIO & BytesIO
+title: 第95天：StringIO & BytesIO
 tagline: by 吴刀钓鱼
 tags: 
   - python100
@@ -211,10 +211,10 @@ Tips:
 
 本节给大家介绍了 Python 中 StringIO 和 BytesIO 的基本使用方法，掌握在内存中存取数据的基本操作，同时介绍了内存与硬盘的区别，让大家明白在内存中存取数据的优势，助力您在爬虫的道路越走越远。
 
+> 示例代码：[Python-100-days-day95](https://github.com/JustDoPython/python-100-day)
+
 ## 参考资料
 
 [1] https://www.cnblogs.com/minseo/p/11164921.html
 
 [2] https://www.liaoxuefeng.com/wiki/1016959663602400/1017609424203904
-
-> 示例代码：[Python-100-days-day103](https://github.com/JustDoPython/python-100-day)

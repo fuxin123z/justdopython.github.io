@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第87天：图像库 PIL（一）
+title:  第96天：图像库 PIL（一）
 category: python
 tagline: by 闲欢
 tags: 
@@ -308,11 +308,9 @@ im4.show()
 
 本节为大家介绍了 Python pillow 库中图像有关的几个基本概念，以及 PIL 模块中处理图像的几个常见功能。掌握了这些功能后，我们可以打开、创建图像，也可以对图像做一些常见的如拆分、合成、融合等操作，这些都是图像处理的基础，需要大家好好理解和掌握。
 
+> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
 
 ## 参考资料
 
 https://www.osgeo.cn/pillow/reference/
-
-
-> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
 

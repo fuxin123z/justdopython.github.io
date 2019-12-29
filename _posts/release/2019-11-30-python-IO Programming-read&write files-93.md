@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第102天：文件读写
+title: 第93天：文件读写
 tagline: by 吴刀钓鱼
 tags: 
   - python100
@@ -349,4 +349,4 @@ f.close()
 
 [2] https://www.runoob.com/python/python-files-io.html
 
-> 示例代码：[Python-100-days-day102](https://github.com/JustDoPython/python-100-day)
+> 示例代码：[Python-100-days-day93](https://github.com/JustDoPython/python-100-day)

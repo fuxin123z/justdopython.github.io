@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  第89天：图像库 PIL 实例—验证码去噪
+title:  第98天：图像库 PIL 实例—验证码去噪
 category: python
 tagline: by 闲欢
 tags: 
@@ -221,4 +221,4 @@ b_im.save('result.png')
 
 https://www.osgeo.cn/pillow/reference/
 
-> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
+> 文中示例代码：https://github.com/JustDoPython/python-100-day/tree/master/day-098
