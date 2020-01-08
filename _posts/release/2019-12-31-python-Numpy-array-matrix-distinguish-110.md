@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第108天：Numpy 中数组和矩阵的区别
+title: 第110天：Numpy 中数组和矩阵的区别
 tagline: by 吴刀钓鱼
 tags: 
   - python100

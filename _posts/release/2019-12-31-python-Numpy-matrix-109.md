@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第107天：Numpy 矩阵
+title: 第109天：Numpy 矩阵
 tagline: by 吴刀钓鱼
 tags: 
   - python100
