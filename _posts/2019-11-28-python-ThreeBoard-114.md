@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第100天： 三木板模型算法项目实战
+title: 第114天： 三木板模型算法项目实战
 tagline: by 戴景波
 tags: 
   - python100
@@ -175,5 +175,5 @@ Bagging是并行式集成学习方法的典型代表，它直接基于自助采�
 
 
 
-> 示例代码：[Python-100-days-day100](https://github.com/JustDoPython/python-100-day/tree/master/day-100)
+> 示例代码：[Python-100-days-day114](https://github.com/JustDoPython/python-100-day/tree/master/day-100)
 

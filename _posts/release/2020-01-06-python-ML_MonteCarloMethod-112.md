@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第109天：机器学习算法之蒙特卡洛
+title: 第112天：机器学习算法之蒙特卡洛
 tagline: by 轩辕御龙
 tags:
   - python100
