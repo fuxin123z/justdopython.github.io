@@ -101,19 +101,19 @@ admin.site.register(Choice)
 
 保存后退出，然后刷新主页面，就能看到我们的 `polls` 应用的模型管理界面了，如下图所示：
 
-!(http://www.justdopython.com/assets/images/2019/python/python_django_admin_04.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_django_admin_04.png)
 
 然后我们就可以对 `polls` 应用数据进行操作了，点击 `Questions` 模型对应的增加按钮，跳转到数据新增页面，并填写一个问题描述以及设置发布日期，如下图：
 
-!(http://www.justdopython.com/assets/images/2019/python/python_django_admin_05.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_django_admin_05.png)
 
 单击保存后退出到列表页面，并提示操作成功，然后我们用以前我们配置过的查询投票问题的URL `http://127.0.0.1:8080/polls/query` 进行查询，就会查到新增加的这条投票问题，查询结果如下图所示：
 
-!(http://www.justdopython.com/assets/images/2019/python/python_django_admin_06.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_django_admin_06.png)
 
 是不是很快捷方便？当然除了新增，还可以对数据进行修改和删除操作，你可以在列表中点击要操作的模型名下对应的记录，然后就跳转到修改和删除页面，如下图所示：
 
-!(http://www.justdopython.com/assets/images/2019/python/python_django_admin_07.png)
+![](http://www.justdopython.com/assets/images/2019/python/python_django_admin_07.png)
 
 这些操作都比较简单，这里就不再详细介绍，不过需要注意的是：
 
