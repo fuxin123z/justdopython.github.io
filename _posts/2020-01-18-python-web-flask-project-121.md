@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第121天： Flask 项目结构
+title: 第121天：Flask 项目结构
 tagline: by 太阳雪
 tags:
   - python100
