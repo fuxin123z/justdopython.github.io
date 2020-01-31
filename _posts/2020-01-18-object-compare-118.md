@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第120天：Python 之对象的比较与拷贝
+title: 第118天：Python 之对象的比较与拷贝
 tagline: by 豆豆
 tags: 
   - python100
@@ -186,4 +186,4 @@ False
 
 ## 代码地址
 
-> 示例代码：https://github.com/JustDoPython/python-100-day/tree/master/day-120
+> 示例代码：https://github.com/JustDoPython/python-100-day/tree/master/day-118
