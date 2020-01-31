@@ -38,7 +38,7 @@ def getUrls():
 
 电影链接在 `div.info > div.hd > a` 里面。
 
-![](001.png)
+![](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/01/31-douban-movie/top-250-001.png?raw=true)
 
 获取到「霸王别姬」的详情页地址之后，我们再对该网页进行分析。
 
@@ -53,7 +53,7 @@ def getUrls():
 + 评价人数在 property='v:votes' 的 span 里面。
 + 具体评分在 class_='ratings-on-weight' 的 div 里面。
 
-![](002.png)
+![](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/01/31-douban-movie/top-250-002.png?raw=true)
 
 嗯，很好，经过分析之后，我们知道了我们所需信息的具体位置，接下来对这些内容进行抓取并解析即可。
 
@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
 之后，就可以看的我们的数据了。大功告成。
 
-![](002.png)
+![](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/01/31-douban-movie/top-250-003.png?raw=true)
 
 ## 总结
 
