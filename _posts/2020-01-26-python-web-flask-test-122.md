@@ -401,11 +401,11 @@ coverage html -d testreport
 
 参数 -d 用来指定测试报告存放的目录，如果不存在会创建
 
-![测试报告](http://www.justdopython.com/assets/images/2019/python/python_web_flask_test_01.png)
+![测试报告](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2019/python/python_web_flask_test_01.png)
 
 文件名是个连接，点击可以看到文件内容，并且将执行和未执行的代码标注的很清楚：
 
-![测试报告](http://www.justdopython.com/assets/images/2019/python/python_web_flask_test_02.png)
+![测试报告](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2019/python/python_web_flask_test_02.png)
 
 ## 总结
 
