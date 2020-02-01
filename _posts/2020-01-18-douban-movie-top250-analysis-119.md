@@ -38,7 +38,7 @@ def getUrls():
 
 电影链接在 `div.info > div.hd > a` 里面。
 
-![](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/01/31-douban-movie/top-250-001.png?raw=true)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/01/31-douban-movie/top-250-001.png)
 
 获取到「霸王别姬」的详情页地址之后，我们再对该网页进行分析。
 
@@ -53,7 +53,7 @@ def getUrls():
 + 评价人数在 property='v:votes' 的 span 里面。
 + 具体评分在 class_='ratings-on-weight' 的 div 里面。
 
-![](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/01/31-douban-movie/top-250-002.png?raw=true)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/01/31-douban-movie/top-250-002.png)
 
 嗯，很好，经过分析之后，我们知道了我们所需信息的具体位置，接下来对这些内容进行抓取并解析即可。
 
@@ -86,7 +86,7 @@ def get_page_html(url):
         return None
 ```
 
-接下来，我们开始获取数据，需要一个获取电影链接地址的函数。
+接下来，我们开始获取数据，需要一个获取电影详情页链接地址的函数。
 
 ```python
 def get_movie_url(html):
@@ -99,9 +99,9 @@ def get_movie_url(html):
     return ans
 ```
 
-在这个函数中，我们传入整个页面的 html 内容，该函数负责将电影链接地址解析出来并以列表形式返回给调用方。
+在这个函数中，我们传入整个页面的 html 内容，该函数负责将电影详情页链接地址解析出来并以列表形式返回给调用方。
 
-拿到了电影的链接地址，最后我们只需要将详细信息解析出来即可。我们可以看的，详情页和列表页有很多信息都是重复的，因此我们将所需的所有信息都从详情页获取。
+拿到了电影详情页的链接地址，最后我们只需要将详细信息解析出来即可。我们可以看的，详情页和列表页有很多信息都是重复的，因此我们将所需的所有信息都从详情页获取。
 
 因此我们需要定义一个函数，用来解析详情页。
 
@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
 之后，就可以看的我们的数据了。大功告成。
 
-![](https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/01/31-douban-movie/top-250-003.png?raw=true)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/01/31-douban-movie/top-250-003.png)
 
 ## 总结
 
