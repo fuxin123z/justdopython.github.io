@@ -42,7 +42,7 @@ def index(request):
     # 返回渲染模板
     return HttpResponse(t.render(c))
 
-# …… 忽略部分
+# …… 忽略部分代码
 ```
 
 修改完成并保存，先通过命令 `python manage.py runserver 127.0.0.1:8080` 启动本地 server，然后通过访问 URL `http://127.0.0.1:8080/polls` 就能看到我们刚修改完的页面，展示如下图所示：
@@ -78,7 +78,34 @@ def index(request):
     {% if 变量1 and 变量2 %}
     #   当变量1或者变量2为 true ，那就展示此处模板内容
     {% endif %}
-   ``` 
+   ```
+
+   现在我们继续在 `TestProject` 项目下的 `polls` 应用里面修改代码，进入到 `polls` 目录下，编辑 `views.py` 文件如下：
+
+    ```py
+    # views.py
+
+    from django.http import HttpResponse
+    from polls.models import Choice, Question
+    from django.utils import timezone
+    # 导入模板相关库
+    from django.template import Template, Context
+
+    # 修改之前 index 页面为模板渲染
+    def index(request):
+        # 定义模板
+        t = Template('{%if name %}你好<span style="color:#FF0000">{{ name }}</span>,{% else %} 你好游客, {% endif %} 这是一个投票页面。')
+        # 定义传入对象
+        c = Context({'name': '张三'})
+        # 返回渲染模板
+        return HttpResponse(t.render(c))
+
+    # …… 忽略部分代码
+    ```
+
+    刷新页面，发现跟之前页面没有区别，因为我们这里 `Context` 里传入了 `name` 变量，如果不传 `name` 变量，得到的结果如下图：
+
+    ![](http://www.justdopython.com/assets/images/2019/python/python_django_template_03.png)
 
 2. 循环迭代语法
    和大多数语言相同，循环是通过 for 语法实现，每一次循环中，模板系统会渲染在 {% for %} 和 {% endfor %} 之间的所有内容。
@@ -94,6 +121,33 @@ def index(request):
         <li>{{ book.name }}</li>
     {% endfor %}
    ```
+
+   我们继续在 `TestProject` 项目下的 `polls` 应用里面修改代码，编辑 `views.py` 文件如下：
+
+    ```py
+    # views.py
+
+    from django.http import HttpResponse
+    from polls.models import Choice, Question
+    from django.utils import timezone
+    # 导入模板相关库
+    from django.template import Template, Context
+
+    # 修改之前 index 页面为模板渲染
+    def index(request):
+        # 定义模板
+        t = Template(' 以下{% for name in name_list %} <li>{{ name }}</li>  {% endfor %}  请选择?')
+        # 定义传入对象
+        c = Context({'name_list': ('张一','张二','张三')})
+        # 返回渲染模板
+        return HttpResponse(t.render(c))
+
+    # …… 忽略部分代码
+    ```
+
+    刷新页面，这里在 `Context` 里传入了 `name_list` 列表变量，使用循环迭代语法，得到的结果如下图：
+
+    ![](http://www.justdopython.com/assets/images/2019/python/python_django_template_05.png)
 
 3. 特殊比较语法
 
@@ -116,6 +170,33 @@ def index(request):
         <h1>这是是一个游客页面！</h1>
     {% endifequal %}
    ```
+
+    我们继续在 `TestProject` 项目下的 `polls` 应用里面修改代码，编辑 `views.py` 文件如下：
+
+    ```py
+    # views.py
+
+    from django.http import HttpResponse
+    from polls.models import Choice, Question
+    from django.utils import timezone
+    # 导入模板相关库
+    from django.template import Template, Context
+
+    # 修改之前 index 页面为模板渲染
+    def index(request):
+        # 定义模板
+        t = Template('{% ifequal type 1 %}你好<span style="color:#FF0000"> 管理员</span>,这是个管理页面。{% else %} 你好游客, 这是一个投票页面。{% endifequal %}')
+        # 定义传入对象
+        c = Context({'type': 1})
+        # 返回渲染模板
+        return HttpResponse(t.render(c))
+
+    # …… 忽略部分代码
+    ```
+
+    刷新页面，这里在 `Context` 里传入了 `type` 变量，当变量传入1时，得到管理页面，如果不是1则还是原来的页面，`type` 传入 1时，得到的结果如下图：
+
+    ![](http://www.justdopython.com/assets/images/2019/python/python_django_template_06.png)
 
 4. 模板过滤器
 
