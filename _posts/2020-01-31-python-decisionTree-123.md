@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第123天：机器学习之决策树
+title: 第121天：机器学习之决策树
 tagline: by 某某白米饭
 tags:
   - python100
@@ -259,4 +259,4 @@ def createTree(dataSet,labels):
 
 《机器学习实战》
 
-> 示例代码：[Python-100-days-day123](https://github.com/JustDoPython/python-100-day/tree/master/day-123)
+> 示例代码：[Python-100-days-day123](https://github.com/JustDoPython/python-100-day/tree/master/day-121)
