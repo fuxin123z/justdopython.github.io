@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第110天： Web 开发 Django 管理工具
+title: 第123天： Web 开发 Django 管理工具
 tagline: by 極光
 tags:
   - python100
