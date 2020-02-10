@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第120天： Web 开发 Django 模板
+title: 第124天： Web 开发 Django 模板
 tagline: by 極光
 tags:
   - python100
@@ -308,8 +308,9 @@ def index(request):
 
 本文为大家介绍了 Django Template 模板基础，可以通过应用的模板实现数据和展示的分离，这样我们可以对前端进行更灵活的展示操作。当然只是简单介绍了下模板，它还有更复杂的使用方式，以后会为大家深入介绍。
 
-> 示例代码：https://github.com/JustDoPython/python-100-day
-
 ## 参考
 
 Django 中文官网：https://docs.djangoproject.com/zh-hans/2.2
+
+> 示例代码：https://github.com/JustDoPython/python-100-day
+
