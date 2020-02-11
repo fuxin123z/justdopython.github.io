@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第123天：Flask 项目结构
+title: 第125天：Flask 项目结构
 tagline: by 太阳雪
 tags:
   - python100
@@ -347,8 +347,9 @@ config = {
 
 ## 参考
 
-- [https://flask.palletsprojects.com/en/1.1.x/tutorial/factory/](https://flask.palletsprojects.com/en/1.1.x/tutorial/factory/)
-- [https://lepture.com/en/2018/structure-of-a-flask-project](https://lepture.com/en/2018/structure-of-a-flask-project)
-- [https://exploreflask.com/en/latest/blueprints.html](https://exploreflask.com/en/latest/blueprints.html)
+- https://flask.palletsprojects.com/en/1.1.x/tutorial/factory/
+- https://lepture.com/en/2018/structure-of-a-flask-project
+- https://exploreflask.com/en/latest/blueprints.html
 
-> 示例代码：[Python-100-days-day123](https://github.com/JustDoPython/python-100-day/tree/master/day-123)
+> 示例代码：https://github.com/JustDoPython/python-100-day
+
