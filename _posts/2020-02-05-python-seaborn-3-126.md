@@ -36,7 +36,7 @@ x = np.random.normal(size=100)
 sns.distplot(x)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-1.png?raw=true">
 </div>
 
 ### 2.2 示例2
@@ -48,7 +48,7 @@ x = np.random.normal(size=100)
 sns.distplot(x, kde=False, rug=True)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-2.png?raw=true">
 </div>
 
 ```
@@ -57,7 +57,7 @@ x = np.random.normal(size=100)
 sns.distplot(x, bins=20, kde=False, rug=True)  # 尝试更多或更少的柱数目可能会揭示数据中的其他特性
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-3.png?raw=true">
 </div>
 
 ### 2.3 示例3
@@ -69,7 +69,7 @@ x = np.random.normal(size=100)
 sns.distplot(x, hist=False, rug=True)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-4.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-4.png?raw=true">
 </div>
 
 下面介绍一下如何绘制核密度估计曲线，这比直方图绘制更复杂。首先每个观测值被一个以该值为中心的正态(高斯)曲线所取代。
@@ -89,7 +89,7 @@ for x_i in x:
 sns.rugplot(x, color=".2", linewidth=3)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-5.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-5.png?raw=true">
 </div>
 
 接下来，对这些曲线进行求和，计算支持网格(support grid)中每个点的密度值。然后对得到的曲线进行归一化，使曲线下的面积等于1。
@@ -101,7 +101,7 @@ density /= trapz(density, support)
 plt.plot(support, density)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-6.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-6.png?raw=true">
 </div>
 
 我们可以看到，如果在 seaborn 中使用 kdeplot() 函数， 我们可以得到相同的曲线。这个函数也被 distplot() 所使用, 但是当我们只想要核密度估计时，它提供了一个更直接的接口，可以更容易地访问其他选项。
@@ -110,7 +110,7 @@ plt.plot(support, density)
 sns.kdeplot(x, shade=True)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-7.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-7.png?raw=true">
 </div>
 
 KDE 的带宽参数控制估计与数据的拟合程度，就像直方图中的 bin 大小一样。 它对应于我们在上面绘制的内核的宽度。默认行为尝试使用常用参考规则猜测一个好的值，但尝试更大或更小的值可能会有所帮助。
@@ -122,7 +122,7 @@ sns.kdeplot(x, bw=2, label="bw: 2")
 plt.legend()
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-8.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-8.png?raw=true">
 </div>
 
 正如我们在上面所看到的，高斯 KDE 过程的本质意味着估计超出了数据集中最大和最小的值，有可能控制超过极值多远的曲线是由 cut 参数控制的，然而这只影响曲线的绘制方式，而不影响曲线的拟合方式。
@@ -132,7 +132,7 @@ sns.kdeplot(x, shade=True, cut=0)
 sns.rugplot(x)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-9.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-9.png?raw=true">
 </div>
 
 ### 2.4 示例4
@@ -144,7 +144,7 @@ x = np.random.gamma(6, size=200)
 sns.distplot(x, kde=False, fit=stats.gamma)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-10.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-10.png?raw=true">
 </div>
 
 ## 3 绘制二元分布
@@ -166,7 +166,7 @@ df = pd.DataFrame(data, columns=["x", "y"])
 sns.jointplot(x="x", y="y", data=df)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-11.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-11.png?raw=true">
 </div>
 
 ### 3.2 示例2-六边形“桶”(Hexbin)图
@@ -179,7 +179,7 @@ with sns.axes_style("white"):
     sns.jointplot(x=x, y=y, kind="hex", color="k")
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-12.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-12.png?raw=true">
 </div>
 
 ### 3.3 示例3-核密度估计
@@ -190,7 +190,7 @@ with sns.axes_style("white"):
 sns.jointplot(x="x", y="y", data=df, kind="kde")
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-13.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-13.png?raw=true">
 </div>
 
 还可以使用 kdeplot() 函数绘制二维核密度图。这允许您在一个特定的(可能已经存在的) matplotlib 轴上绘制这种图，而 jointplot() 函数能够管理它自己的图。
@@ -202,7 +202,7 @@ sns.rugplot(df.x, color="g", ax=ax)
 sns.rugplot(df.y, vertical=True, ax=ax)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-14.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-14.png?raw=true">
 </div>
 
 如果希望更连续地显示双变量密度，可以简单地增加轮廓层的数量。
@@ -213,7 +213,7 @@ cmap = sns.cubehelix_palette(as_cmap=True, dark=0, light=1, reverse=True)
 sns.kdeplot(df.x, df.y, cmap=cmap, n_levels=60, shade=True)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-15.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-15.png?raw=true">
 </div>
 
 jointplot() 函数使用 JointGrid 来管理图形。为了获得更大的灵活性，您可能想直接使用 JointGrid 来绘制图形。jointplot() 在绘图后返回 JointGrid 对象，您可以使用它添加更多图层或调整可视化的其他方面。
@@ -225,7 +225,7 @@ g.ax_joint.collections[0].set_alpha(0)
 g.set_axis_labels("$X$", "$Y$")
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-16.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-16.png?raw=true">
 </div>
 
 ## 4 可视化数据集中的成对关系
@@ -237,7 +237,7 @@ iris = sns.load_dataset("iris")
 sns.pairplot(iris)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-17.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-17.png?raw=true">
 </div>
 
 与 jointplot() 和 JointGrid 之间的关系非常类似， pairplot() 函数构建在 PairGrid 对象之上, 可以直接使用它来获得更大的灵活性。
@@ -248,7 +248,7 @@ g.map_diag(sns.kdeplot)
 g.map_offdiag(sns.kdeplot, n_levels=6)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-126/picture/displot-18.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/126/picture/displot-18.png?raw=true">
 </div>
 
 ## 总结

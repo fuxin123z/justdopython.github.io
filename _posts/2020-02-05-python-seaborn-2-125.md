@@ -37,7 +37,7 @@ tips = sns.load_dataset("tips")
 sns.catplot(x="day", y="total_bill", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catScat-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catScat-1.png?raw=true">
 </div>
 
 ```
@@ -45,7 +45,7 @@ sns.catplot(x="day", y="total_bill", data=tips)
 sns.catplot(x="day", y="total_bill", jitter=False, data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catScat-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catScat-2.png?raw=true">
 </div>
 
 ### 2.2 示例-swarmplot()
@@ -56,7 +56,7 @@ sns.catplot(x="day", y="total_bill", jitter=False, data=tips)
 sns.catplot(x="day", y="total_bill", kind="swarm", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catScat-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catScat-3.png?raw=true">
 </div>
 
 ```
@@ -64,7 +64,7 @@ sns.catplot(x="day", y="total_bill", kind="swarm", data=tips)
 sns.catplot(x="day", y="total_bill", hue="sex", kind="swarm", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catScat-4.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catScat-4.png?raw=true">
 </div>
 
 ```
@@ -72,7 +72,7 @@ sns.catplot(x="day", y="total_bill", hue="sex", kind="swarm", data=tips)
 sns.catplot(x="size", y="total_bill", kind="swarm", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catScat-5.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catScat-5.png?raw=true">
 </div>
 
 ```
@@ -80,7 +80,7 @@ sns.catplot(x="size", y="total_bill", kind="swarm", data=tips)
 sns.catplot(x="size", y="total_bill", order=[6, 5, 4, 2, 1, 3], kind="swarm", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catScat-6.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catScat-6.png?raw=true">
 </div>
 
 ```
@@ -88,7 +88,7 @@ sns.catplot(x="size", y="total_bill", order=[6, 5, 4, 2, 1, 3], kind="swarm", da
 sns.catplot(x="total_bill", y="day", hue="time", kind="swarm", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catScat-7.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catScat-7.png?raw=true">
 </div>
 
 ## 3 分类分布图
@@ -106,7 +106,7 @@ boxplot()，这就是箱型图，绘制方法是找出一组数据的上边缘�
 sns.catplot(x="day", y="total_bill", kind="box", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-1.png?raw=true">
 </div>
 
 ```
@@ -114,7 +114,7 @@ sns.catplot(x="day", y="total_bill", kind="box", data=tips)
 sns.catplot(x="day", y="total_bill", hue="smoker", kind="box", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-2.png?raw=true">
 </div>
 
 ```
@@ -122,7 +122,7 @@ sns.catplot(x="day", y="total_bill", hue="smoker", kind="box", data=tips)
 sns.catplot(x="day", y="total_bill", hue="smoker", kind="box", dodge=False, data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-3.png?raw=true">
 </div>
 
 ```
@@ -132,7 +132,7 @@ sns.catplot(x="day", y="total_bill", hue="weekend",
             kind="box", dodge=False, data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-4.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-4.png?raw=true">
 </div>
 
 ### 3.2 示例-boxenplot()
@@ -164,7 +164,7 @@ sns.catplot(x="color", y="price", kind="boxen",
             data=diamonds.sort_values("color"))
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-5.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-5.png?raw=true">
 </div>
 
 ### 3.3 示例-violinplot()
@@ -176,7 +176,7 @@ sns.catplot(x="total_bill", y="day", hue="time",
             kind="violin", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-6.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-6.png?raw=true">
 </div>
 
 ```
@@ -186,7 +186,7 @@ sns.catplot(x="total_bill", y="day", hue="time",
             data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-7.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-7.png?raw=true">
 </div>
 
 ```
@@ -195,7 +195,7 @@ sns.catplot(x="day", y="total_bill", hue="sex",
             kind="violin", split=True, data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-8.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-8.png?raw=true">
 </div>
 
 ```
@@ -205,7 +205,7 @@ sns.catplot(x="day", y="total_bill", hue="sex",
             palette="pastel", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-9.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-9.png?raw=true">
 </div>
 
 ```
@@ -214,7 +214,7 @@ g = sns.catplot(x="day", y="total_bill", kind="violin", inner=None, data=tips)
 sns.swarmplot(x="day", y="total_bill", color="k", size=3, data=tips, ax=g.ax)  # ax:绘图时使用 g.ax 作为轴对象
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catDis-10.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catDis-10.png?raw=true">
 </div>
 
 ## 4 分类估计图
@@ -253,7 +253,7 @@ print(titanic)
 sns.catplot(x="sex", y="survived", hue="class", kind="bar", data=titanic)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catEsti-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catEsti-1.png?raw=true">
 </div>
 
 ### 4.2 示例-countplot()
@@ -264,7 +264,7 @@ sns.catplot(x="sex", y="survived", hue="class", kind="bar", data=titanic)
 sns.catplot(x="deck", kind="count", palette="ch:.25", data=titanic)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catEsti-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catEsti-2.png?raw=true">
 </div>
 
 ```
@@ -274,7 +274,7 @@ sns.catplot(y="deck", hue="class", kind="count",
             data=titanic)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catEsti-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catEsti-3.png?raw=true">
 </div>
 
 ### 4.3 示例-pointplot()
@@ -285,7 +285,7 @@ pointplot() 函数提供了另一种可视化相同信息的样式。此函数�
 sns.catplot(x="sex", y="survived", hue="class", kind="point", data=titanic)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catEsti-4.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catEsti-4.png?raw=true">
 </div>
 
 ```
@@ -296,7 +296,7 @@ sns.catplot(x="class", y="survived", hue="sex",
             kind="point", data=titanic)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/catEsti-5.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/catEsti-5.png?raw=true">
 </div>
 
 ## 5 绘制“宽格式”数据
@@ -308,7 +308,7 @@ iris = sns.load_dataset("iris")
 sns.catplot(data=iris, orient="h", kind="box")
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/width-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/width-1.png?raw=true">
 </div>
 
 ```
@@ -316,7 +316,7 @@ sns.catplot(data=iris, orient="h", kind="box")
 sns.violinplot(x=iris.species, y=iris.sepal_length)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/width-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/width-2.png?raw=true">
 </div>
 
 ```
@@ -325,7 +325,7 @@ f, ax = plt.subplots(figsize=(7, 3))
 sns.countplot(y="deck", data=titanic, color="c")
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/width-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/width-3.png?raw=true">
 </div>
 
 ## 6 显示多图
@@ -338,7 +338,7 @@ sns.catplot(x="day", y="total_bill", hue="smoker",
             kind="swarm", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/multiPic-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/multiPic-1.png?raw=true">
 </div>
 
 ```
@@ -349,7 +349,7 @@ g = sns.catplot(x="fare", y="survived", row="class",
 g.set(xscale="log")
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-125/picture/multiPic-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/125/picture/multiPic-2.png?raw=true">
 </div>
 
 ## 总结
@@ -362,4 +362,4 @@ g.set(xscale="log")
 
 [2] https://github.com/apachecn/seaborn-doc-zh/blob/master/docs/4.md
 
-> 示例代码：[Python-100-days-dayxx](https://github.com/JustDoPython/python-100-day)
+> 示例代码：[Python-100-days](https://github.com/JustDoPython/python-100-day)

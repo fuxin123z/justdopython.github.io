@@ -78,7 +78,7 @@ sns.relplot(x="total_bill", y="tip", data=tips)
 ```
 
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/scatter-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/scatter-1.png?raw=true">
 </div>
 
 根据可视化的图形可以大致得出顾客给的小费与总账单之间的一些关系，比如消费高的给的小费也越高。
@@ -92,7 +92,7 @@ sns.relplot(x="total_bill", y="tip", data=tips)
 sns.relplot(x="total_bill", y="tip", hue="smoker", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/scatter-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/scatter-2.png?raw=true">
 </div>
 
 根据图上所示可知有3个维度的信息：total_bill、tip 以及 smoker(Yes:蓝色，No:橙色)。
@@ -106,7 +106,7 @@ sns.relplot(x="total_bill", y="tip", hue="smoker", data=tips)
 sns.relplot(x="total_bill", y="tip", hue="smoker", style="smoker", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/scatter-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/scatter-3.png?raw=true">
 </div>
 
 根据图上所示可知有3个维度的信息：total_bill、tip 以及 smoker(Yes:蓝色圆圈，No:橙色叉叉)。
@@ -120,7 +120,7 @@ sns.relplot(x="total_bill", y="tip", hue="smoker", style="smoker", data=tips)
 sns.relplot(x="total_bill", y="tip", hue="smoker", style="time", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/scatter-4.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/scatter-4.png?raw=true">
 </div>
 
 图中表示了四个维度的信息：total_bill、tip、smoker(Yes:蓝色，No:橙色)以及 time(Lunch:圆圈，Dinner:叉叉)。
@@ -134,7 +134,7 @@ sns.relplot(x="total_bill", y="tip", hue="smoker", style="time", data=tips)
 sns.relplot(x="total_bill", y="tip", hue="size", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/scatter-5.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/scatter-5.png?raw=true">
 </div>
 
 图中通过颜色深浅表示每个点代表的顾客人数大小，颜色越深表示的顾客人数越多。
@@ -148,7 +148,7 @@ sns.relplot(x="total_bill", y="tip", hue="size", data=tips)
 sns.relplot(x="total_bill", y="tip", size="size", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/scatter-6.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/scatter-6.png?raw=true">
 </div>
 
 图中点的形状越大代表的顾客人数越多。
@@ -160,7 +160,7 @@ sns.relplot(x="total_bill", y="tip", size="size", data=tips)
 sns.relplot(x="total_bill", y="tip", size="size", sizes=(15, 200), data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/scatter-7.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/scatter-7.png?raw=true">
 </div>
 
 ## 3 线图绘制
@@ -175,7 +175,7 @@ df = pd.DataFrame(dict(time=np.arange(500), value=np.random.randn(500).cumsum())
 sns.relplot(x="time", y="value", kind="line", data=df)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-1.png?raw=true">
 </div>
 
 ```
@@ -184,7 +184,7 @@ df = pd.DataFrame(np.random.randn(500, 2).cumsum(axis=0), columns=["x", "y"])
 sns.relplot(x="x", y="y", sort=False, kind="line", data=df)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-2.png?raw=true">
 </div>
 
 ### 3.2 示例2
@@ -216,7 +216,7 @@ print(fmri)
 sns.relplot(x="timepoint", y="signal", kind="line", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-3.png?raw=true">
 </div>
 
 ```
@@ -224,7 +224,7 @@ sns.relplot(x="timepoint", y="signal", kind="line", data=fmri)
 sns.relplot(x="timepoint", y="signal", ci=None, kind="line", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-4.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-4.png?raw=true">
 </div>
 
 ```
@@ -232,7 +232,7 @@ sns.relplot(x="timepoint", y="signal", ci=None, kind="line", data=fmri)
 sns.relplot(x="timepoint", y="signal", kind="line", ci="sd", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-5.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-5.png?raw=true">
 </div>
 
 ```
@@ -240,7 +240,7 @@ sns.relplot(x="timepoint", y="signal", kind="line", ci="sd", data=fmri)
 sns.relplot(x="timepoint", y="signal", estimator=None, kind="line", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-6.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-6.png?raw=true">
 </div>
 
 ```
@@ -248,7 +248,7 @@ sns.relplot(x="timepoint", y="signal", estimator=None, kind="line", data=fmri)
 sns.relplot(x="timepoint", y="signal", hue="event", kind="line", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-7.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-7.png?raw=true">
 </div>
 
 ```
@@ -256,7 +256,7 @@ sns.relplot(x="timepoint", y="signal", hue="event", kind="line", data=fmri)
 sns.relplot(x="timepoint", y="signal", hue="region", style="event", kind="line", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-8.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-8.png?raw=true">
 </div>
 
 ```
@@ -264,7 +264,7 @@ sns.relplot(x="timepoint", y="signal", hue="region", style="event", kind="line",
 sns.relplot(x="timepoint", y="signal", hue="region", style="event", dashes=False, markers=True, kind="line", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-9.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-9.png?raw=true">
 </div>
 
 ```
@@ -272,7 +272,7 @@ sns.relplot(x="timepoint", y="signal", hue="region", style="event", dashes=False
 sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-10.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-10.png?raw=true">
 </div>
 
 ```
@@ -280,7 +280,7 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event", kind="line", 
 sns.relplot(x="timepoint", y="signal", hue="region", units="subject", estimator=None, kind="line", data=fmri.query("event == 'stim'"))
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-11.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-11.png?raw=true">
 </div>
 
 ### 3.3 示例3
@@ -313,7 +313,7 @@ sns.relplot(x="time", y="firing_rate",
 ```
 如图所示，coherence 中以四个层级深浅不一的颜色表示该变量数值大小。
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-12.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-12.png?raw=true">
 </div>
 
 ```
@@ -322,7 +322,7 @@ palette = sns.cubehelix_palette(n_colors=6)  # 数据集中 coherence 变量有6
 sns.relplot(x="time", y="firing_rate", hue="coherence", style="choice", palette=palette, kind="line", data=dots)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-13.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-13.png?raw=true">
 </div>
 
 ```
@@ -334,7 +334,7 @@ sns.relplot(x="time", y="firing_rate",
             kind="line", data=dots)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-14.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-14.png?raw=true">
 </div>
 
 ```
@@ -344,7 +344,7 @@ sns.relplot(x="time", y="firing_rate",
             kind="line", data=dots)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-15.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-15.png?raw=true">
 </div>
 
 ```
@@ -354,7 +354,7 @@ sns.relplot(x="time", y="firing_rate",
            kind="line", data=dots)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-16.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-16.png?raw=true">
 </div>
 
 ### 3.4 示例4
@@ -368,7 +368,7 @@ g = sns.relplot(x="time", y="value", kind="line", data=df)
 ```
 如下图所示，x 坐标产生乱码，影响了图形的可读性。
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-17.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-17.png?raw=true">
 </div>
 
 ```
@@ -376,7 +376,7 @@ g = sns.relplot(x="time", y="value", kind="line", data=df)
 g.fig.autofmt_xdate()
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/line-18.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/line-18.png?raw=true">
 </div>
 
 ## 4 显示多图-格点图
@@ -392,7 +392,7 @@ sns.relplot(x="total_bill", y="tip", hue="smoker",
             col="time", data=tips)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/multipic-1.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/multipic-1.png?raw=true">
 </div>
 
 ```
@@ -403,7 +403,7 @@ sns.relplot(x="timepoint", y="signal", hue="subject",
             kind="line", estimator=None, data=fmri)
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/multipic-2.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/multipic-2.png?raw=true">
 </div>
 
 ```
@@ -415,7 +415,7 @@ sns.relplot(x="timepoint", y="signal", hue="event", style="event",
             kind="line", data=fmri.query("region == 'frontal'"))
 ```
 <div align="center">
-<img src="https://github.com/JustDoPython/python-100-day/blob/master/day-124/picture/multipic-3.png?raw=true">
+<img src="https://github.com/JustDoPython/justdopython.github.io/blob/master/assets/images/2020/02/124/picture/multipic-3.png?raw=true">
 </div>
 
 ## 总结
