@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第124天：Seaborn-可视化统计关系
+title: 第126天：Seaborn-可视化统计关系
 tagline: by 吴刀钓鱼
 tags: 
   - python100

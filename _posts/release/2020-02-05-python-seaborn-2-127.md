@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第125天：Seaborn-可视化分类数据
+title: 第127天：Seaborn-可视化分类数据
 tagline: by 吴刀钓鱼
 tags: 
   - python100
