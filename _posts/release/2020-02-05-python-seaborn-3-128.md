@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第126天：Seaborn-可视化数据集的分布
+title: 第128天：Seaborn-可视化数据集的分布
 tagline: by 吴刀钓鱼
 tags: 
   - python100
