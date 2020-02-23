@@ -1,6 +1,15 @@
-## 趣玩Python之绘制基本图形
+---
+layout: post
+category: Python
+title:  趣玩Python之绘制基本图形
+tagline: by 萌较瘦
+tags: 
+  - LeetCode面试题系列
+---
 
 Python中的类库极其丰富，数据科学中经常会用到可视化技术。今天我们来一起学习一下Python中基本图形的绘制方法，本文我们将主要基于`turtle`(小乌龟)库来画图~
+
+<!--more-->
 
 为了方便后面进行**交互性演示**，这里我建议大家安装好`Anaconda`，传送门是 https://www.anaconda.com/distribution/>，请根据自己电脑的操作系统(Windows/Mac/Linux)自行下载和安装，记得要选 `Python3.7`的版本，因为Python 2.7官方不打算维护了。
 
