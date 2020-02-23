@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第75天： 爬取微信公众号文章内容
+title: 第129天： 爬取微信公众号文章内容
 tagline: by 某某白米饭
 tags:
   - python100
@@ -283,4 +283,4 @@ def page(self, headers):
 
 到这里已经爬取到了公众号的内容，但是单个文章的阅读数和在看数还未爬取。思考一下，这些内容改如何爬取?
 
-> 示例代码：[Python-100-days-day075](https://github.com/JustDoPython/python-100-day)
+> 示例代码：[Python-100-days-day129](https://github.com/JustDoPython/python-100-day)
