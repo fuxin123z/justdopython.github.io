@@ -13,11 +13,11 @@ Python中的类库极其丰富，数据科学中经常会用到可视化技术�
 
 为了方便后面进行**交互性演示**，这里我建议大家安装好`Anaconda`，传送门是 https://www.anaconda.com/distribution/>，请根据自己电脑的操作系统(Windows/Mac/Linux)自行下载和安装，记得要选 `Python3.7`的版本，因为Python 2.7官方不打算维护了。
 
-![Anaconda-download](http://www.justdopython.com/2020/python/Anaconda-download.png)
+![Anaconda-download](http://www.justdopython.com/assets/images/2020/python/Anaconda-download.png)
 
 后面我们需要用到其中的一个强大工具箱 `jupyter notebook`。
 
-![jupyter-notebook](http://www.justdopython.com/2020/python/jupyter-notebook.jpg)
+![jupyter-notebook](http://www.justdopython.com/assets/images/2020/python/jupyter-notebook.jpg)
 
 
 
@@ -25,19 +25,19 @@ Anaconda安装完毕之后呢，接下来，在电脑的命令行(终端)中输�
 
 `jupyter notebook`来启动`notebook`，这时会打开浏览器，进入网址<http://localhost:8888/tree>，其界面如下~
 
-![notebook-home](http://www.justdopython.com/2020/python/notebook-home.png)
+![notebook-home](http://www.justdopython.com/assets/images/2020/python/notebook-home.png)
 
 
 
 接下来，我们需要创建一个`notebook`文件，按下图操作，点`Files` -> `New` -> `Python 3`即可。
 
-![create-python-notebook](http://www.justdopython.com/2020/python/create-python-notebook.png)
+![create-python-notebook](http://www.justdopython.com/assets/images/2020/python/create-python-notebook.png)
 
 
 
 创建好之后，可以按下图对`notebook`文件重命名:
 
-![rename](http://www.justdopython.com/2020/python/rename.gif)
+![rename](http://www.justdopython.com/assets/images/2020/python/rename.gif)
 
 
 
@@ -54,7 +54,7 @@ Anaconda安装完毕之后呢，接下来，在电脑的命令行(终端)中输�
 
 
 
-![draw-triangle-delay](http://www.justdopython.com/2020/python/square-draw.png)
+![draw-triangle-delay](http://www.justdopython.com/assets/images/2020/python/square-draw.png)
 
 具体代码如下:
 
@@ -79,7 +79,7 @@ t.done() # 绘图结束后停止画笔
 - 接着，顺时针旋转60°角，再画一条等长度的边
 - 最后停止画笔
 
-![draw-triangle-delay](http://www.justdopython.com/2020/python/draw-triangle-delay.gif)
+![draw-triangle-delay](http://www.justdopython.com/assets/images/2020/python/draw-triangle-delay.gif)
 
 
 
@@ -108,7 +108,7 @@ t.done()
 
 画六边形和正方形有点像，我们只需把之前每次画新边时旋转的90°改为60°，并把循环次数改为6即可。
 
-![six-bian-xing](http://www.justdopython.com/2020/python/six-bian-xing.png)
+![six-bian-xing](http://www.justdopython.com/assets/images/2020/python/six-bian-xing.png)
 
 具体代码是:
 
@@ -130,7 +130,7 @@ turtle.done() # 画布停留
 
 于是，画这个叠边图与画六边形有点像，我们只需把之前每次画新边时旋转的60°改为80°，并把循环次数改为9即可。
 
-![six-bian-xing-overlap](http://www.justdopython.com/2020/python/six-bian-xing-overlap.png)
+![six-bian-xing-overlap](http://www.justdopython.com/assets/images/2020/python/six-bian-xing-overlap.png)
 
 其具体的代码为:
 
@@ -150,7 +150,7 @@ turtle.done()
 
 首先，同切圆是什么？直接给个图吧，就是这样(多个圆都切于同一条线，比如我们就用水平线):
 
-![tong-qie-yuan](http://www.justdopython.com/2020/python/tong-qie-yuan.png)
+![tong-qie-yuan](http://www.justdopython.com/assets/images/2020/python/tong-qie-yuan.png)
 
 怎么画一个同切圆呢？观察后发现可以这么干:
 
@@ -161,7 +161,7 @@ turtle.done()
 
 我们这就画有4个圆同切吧~
 
-![tong-qie-yuan-draw](http://www.justdopython.com/2020/python/tong-qie-yuan-draw.png)
+![tong-qie-yuan-draw](http://www.justdopython.com/assets/images/2020/python/tong-qie-yuan-draw.png)
 
 具体代码为:
 
@@ -182,7 +182,7 @@ turtle.done()
 
 在草稿纸上画了画之后，我们会发现五角星和正方形的画法类似，旋转角度为144°，边数为5。
 
-![wu-jiao-xin](http://www.justdopython.com/2020/python/wu-jiao-xin.png)
+![wu-jiao-xin](http://www.justdopython.com/assets/images/2020/python/wu-jiao-xin.png)
 
 其具体代码为:
 
@@ -204,7 +204,7 @@ turtle.done()
 
 奥运五环正式版我们就不要求完全一样了，我们只需要画出如下近似的即可~
 
-![wu-huan](http://www.justdopython.com/2020/python/wu-huan.png)
+![wu-huan](http://www.justdopython.com/assets/images/2020/python/wu-huan.png)
 
 观察之后，我们大概可以这样做:
 
@@ -218,7 +218,7 @@ turtle.done()
 
   
 
-  ![wu-huan-draw](http://www.justdopython.com/2020/python/wu-huan-draw.png)
+  ![wu-huan-draw](http://www.justdopython.com/assets/images/2020/python/wu-huan-draw.png)
 
   
 
@@ -260,13 +260,13 @@ turtle.done()
 
 最后呢，我们来画一个风轮，其中要求每个风轮内角为45度，风轮边长150像素。
 
-![feng-ye](http://www.justdopython.com/2020/python/feng-lun.png)
+![feng-ye](http://www.justdopython.com/assets/images/2020/python/feng-lun.png)
 
 结合画上一个图的经验，其实我们结合`goto(x,y)`函数来画4个45°的扇形即可~
 
 
 
-![feng-lun-draw](http://www.justdopython.com/2020/python/feng-lun-draw.png)
+![feng-lun-draw](http://www.justdopython.com/assets/images/2020/python/feng-lun-draw.png)
 
 
 
