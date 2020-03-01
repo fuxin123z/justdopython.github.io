@@ -156,9 +156,9 @@ addons = [
 
 写好代码保存，接下来我们重新启动 `mitmweb`，这次命令后需要加上参数使 Python 脚本生效，在命令行输入：`mitmweb -s baidu.py`，启动完成后我们回到浏览器打开百度随便输入个内容进行搜索，你会看到效果如下图所示：
 
-![](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-10.png)
+![搜索前](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-10.png)
 
-![](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-11.png)
+![搜索后](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-11.png)
 
 可以看到上面我们随便个词点搜索，返回的结果都是“建议使用Google搜索”，并且右上角“百度”也都被替换为了“谷歌”。
 
