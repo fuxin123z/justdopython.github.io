@@ -402,6 +402,12 @@ turtle.mainloop()
 
 ![完整的繁花曲线图](http://www.justdopython.com/assets/images/2020/02/29/whole.png)
 
+## 小 tips
+
+大圆半径与小圆半径尽量互质，得到的图形会更加复杂精巧哦~
+
+> 示例代码：[Python-100-days](https://github.com/JustDoPython/python-100-day/tree/master/Spiro)
+
 ## 参考资料
 
 [Wikipedia-Spirograph](https://en.wikipedia.org/wiki/Spirograph)
