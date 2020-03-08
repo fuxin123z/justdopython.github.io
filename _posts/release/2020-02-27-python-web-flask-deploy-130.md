@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 第130天： 部署 Flask 应用
+title: 部署 Flask 应用
 tagline: by 太阳雪
 tags:
   - python100
