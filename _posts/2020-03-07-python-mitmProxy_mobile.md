@@ -39,17 +39,17 @@ Proxy server listening at http://*:8080
 
 在这里我点 Apple 的图标下载证书，下载后等待安装：
 
-![待安装]](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-03.png)
+![待安装](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-03.png)
 
-![点安装]](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-05.png)
+![点安装](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-05.png)
 
 单击上面的安装，可能会出现信任的提示，只要选择信任证书就可以了，下面是安装好的界面如下图：
 
-![安装成功]](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-06.png)
+![安装成功](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-06.png)
 
 好了，配置完成下面我们点开个手机 APP 看到电脑 mitmweb 的页面上，已经出现请求内容了。
 
-![安装成功]](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-07.png)
+![安装成功](http://www.justdopython.com/assets/images/2020/python/python-mitm/python-mitmproxy-mobile-07.png)
 
 
 ### 编写下载脚本
