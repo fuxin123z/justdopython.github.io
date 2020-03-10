@@ -166,6 +166,9 @@ addons = [
 
 本文为大家介绍了 `mitmproxy` 工具的安装以及如何使用，并写了一段小脚本简单实现了用它如何修改拦截的请求和返回的内容。当然它的功能不止这么简单，有了它我们可以做很多事情，有兴趣的话后续再为大家介绍。
 
+> 文中示例代码：[python-100-days](https://github.com/JustDoPython/python-100-day)
+
 ## 参考
 
 官网：https://mitmproxy.org
+
