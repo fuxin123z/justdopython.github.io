@@ -18,13 +18,13 @@ tags:
 
 我们从中国最权威的地方获取人口数据——国家数据。网址是：http://data.stats.gov.cn/easyquery.htm?cn=C01。打开网页后，如下图：
 
-![](http://www.justdopython.com/assets/images/2020/populationone/datapage.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/datapage.png)
 
 左边是菜单树，包含各种各样的统计数据。右边是数据表格，表格右上方有选择项，我们可以看到总人口数据可以选择时间段。
 
 要想获取数据，我们先要分析请求，于是我们打开了网页开发者工具，我们可以很容易地找到获取数据的请求：
 
-![](http://www.justdopython.com/assets/images/2020/populationone/dataurl.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/dataurl.png)
 
 通过分析请求参数，我们可以得出几个变动参数的含义：
 
@@ -79,11 +79,11 @@ def save_excel(population_dict):
 
 大家注意一点，国家数据网站上最新的人口数据是2018年的，所以2019年我得从另外渠道（国家统计局网站）获取，并且加入表格中。我获取数据的地址是：http://www.stats.gov.cn/tjsj/zxfb/202001/t20200117_1723383.html。
 
-![](http://www.justdopython.com/assets/images/2020/populationone/statsgov.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/statsgov.png)
 
 我们生成的数据表格是这样的：
 
-![](http://www.justdopython.com/assets/images/2020/populationone/dataexcel.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/dataexcel.png)
 
 
 ## 分析人口数据
@@ -134,7 +134,7 @@ def save_excel(population_dict):
 
 总人口数的柱状图效果如下：
 
-![](http://www.justdopython.com/assets/images/2020/populationone/total.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/total.png)
 
 从图中可以看出，我们的总人口数除了1960年和1961年两年是减少的，其他年份都是增加的。而那两年是由于严重自然灾害导致的大饥荒，饿死了好多人。我们也可以看到在2019年，我国的人口总数正式突破14亿人，以后需要更新数据了，再也不要在别人面前说我们国家有13亿人了。
 
@@ -181,7 +181,7 @@ def save_excel(population_dict):
 
 运行代码，我们得到的图像如下：
 
-![](http://www.justdopython.com/assets/images/2020/populationone/poprate.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/poprate.png)
 
 同样的，我们可以看到如下几点：
 - 1960年和1961年两年因为大饥荒导致死亡率激增。
@@ -206,7 +206,7 @@ pie = Pie()
 
 运行代码得到的效果图如下：
 
-![](http://www.justdopython.com/assets/images/2020/populationone/sexprop.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/sexprop.png)
 
 很显然，目前中国男性比女性多了2个多百分点。青年男士依然面临僧多粥少的局面啊。
 
@@ -257,7 +257,7 @@ line = Line(init_opts=opts.InitOpts(width="1400px", height="500px"))
 
 运行代码，得到的图像如下：
 
-![](http://www.justdopython.com/assets/images/2020/populationone/sexdelt.jpg)
+![](http://www.justdopython.com/assets/images/2020/populationone/sexdelt.png)
 
 从图中可以看出：
 - 在60年代，男女的差额是最小的一段时期，只有不到2000万。
