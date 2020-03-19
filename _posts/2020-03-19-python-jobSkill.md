@@ -133,7 +133,7 @@ if __name__ == '__main__':
     main()
 ```
 
-分词结果图
+最终分词的结果图
 
 ![](http://www.justdopython.com/assets/images/2020/jobSkill/jieba2.png)
 
@@ -204,7 +204,7 @@ plt.show()
 
 ```
 
-图表
+生成的柱状图
 
 ![](http://www.justdopython.com/assets/images/2020/jobSkill/bar.png)
 
@@ -229,7 +229,7 @@ def getWorldCloud():
    plt.show()
 ```
 
-最后生成的词云图
+生成的词云图
 
 ![](http://www.justdopython.com/assets/images/2020/jobSkill/ciyun.png)
 
