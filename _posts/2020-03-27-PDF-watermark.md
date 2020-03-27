@@ -96,8 +96,8 @@ pdfWriter = PyPDF2.PdfFileWriter()
 对于上面的代码，源 PDF 文件实际应为 10 页，我们输出相应值可以看到与实际一致：
 
 ```python
-print(pdfInput.numPages)	// 10
-print(pdfInput.getNumPages())	// 10
+print(pdfInput.numPages)	# 10
+print(pdfInput.getNumPages())	# 10
 ```
 
 这样我们就可以利用`for`循环和`range`来提供一个递增的索引，用以逐页取出 PDF 的内容了：
