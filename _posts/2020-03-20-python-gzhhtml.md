@@ -199,3 +199,5 @@ PythonFlask数据可视化下载完成!
 ## 总结
 
 本文为大家介绍了如何通过 Python 将公号文章批量下载到本地，并保存为 HTML 和图片，这样就能实现文章的离线浏览了。当然如果你想将 HTML 转成 PDF 也很简单，直接用 `pdfkit.from_file(xx.html,target.pdf)` 方法直接将网页转成 PDF，而且这样转成的 PDF 也是带图片的。
+
+> 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/jiguang/mpToHtml>
