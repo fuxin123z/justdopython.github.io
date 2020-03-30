@@ -25,6 +25,7 @@ tags:
 绘画的树干使用了 Python 中的随机函数，这样每次生成的树干都是随机的，树干的选择也是随机设置参数进行调整。
 
 示例图：
+
 ![树干和花瓣](https://img-blog.csdnimg.cn/20200323154330802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzEyOTc1MA==,size_16,color_FFFFFF,t_70)
 
 **代码如下所示：**
@@ -155,8 +156,8 @@ petal(300, t)
 
 ## 总结
 
-樱花的实现过程主要就是看个人对知识点的理解以及应用，每学习一项技能都需要付出很多的努力，实践和运用并存才能运用得如鱼得水。
+  樱花的实现过程主要就是看个人对知识点的理解以及应用，每学习一项技能都需要付出很多的努力，实践和运用并存才能运用得如鱼得水。
 今天分享的内容素材来源于周末和朋友出去看樱花的突发灵感，希望大家都能在疫情结束后与摘下口罩尽情赏花。
 
 
-> 示例代码：<https://github.com/JustDoPython/python-100-day>
+> 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/chaoxi/cherry_tree>
