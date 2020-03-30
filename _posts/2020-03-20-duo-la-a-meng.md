@@ -13,7 +13,7 @@ tags:
 
 先来看看我们最终实现的效果图。
 
-![](001)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-duo-la-a-meng/001.png)
 
 ## 头部轮廓和围巾
 
@@ -51,7 +51,7 @@ def scarf():
 
 不急不急，我们再画一下脸部细节。
 
-![](002)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-duo-la-a-meng/002.png)
 
 ## 脸部
 
@@ -96,7 +96,7 @@ def eyes():
 
 画眼睛不能直接画一个正圆，那样看起来会比较奇怪，要画一个椭圆才行，来看下效果。
 
-![](003)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-duo-la-a-meng/003.png)
 
 眼睛画上去之后明显感觉精神多了，也有点多啦 A 梦的模样了。可是看起来还是有点不太对，是的，眼睛还没有画瞳孔。
 
@@ -118,7 +118,7 @@ def fill_eyes():
     t.pensize(1)
 ```
 
-![](004)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-duo-la-a-meng/004.png)
 
 不错不错，越来越有样了。下面我们把鼻子和嘴巴加上。
 
@@ -150,7 +150,7 @@ def mouth():
     t.circle(-110, 60)
 ```
 
-![](005)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-duo-la-a-meng/005.png)
 
 离成功就剩下最后一步了，把胡须和铃铛画上就大功告成了。
 
@@ -236,7 +236,7 @@ if __name__ == '__main__':
 
 最终效果如下：
 
-![](005)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-duo-la-a-meng/001.png)
 
 是不是觉得很简单，块去后台获取源码 run 起来吧。有兴趣的读者还可以把身体给加上去。
 
@@ -250,4 +250,4 @@ if __name__ == '__main__':
 
 ## 代码地址
 
-> 示例代码：https://github.com/JustDoPython/python-100-day/
+> 示例代码：https://github.com/JustDoPython/python-examples/tree/master/doudou/2020-03-27-duo-la-a-meng

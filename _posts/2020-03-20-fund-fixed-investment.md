@@ -23,11 +23,11 @@ tags:
 
 首先我们打开 510300 的净值查询页面（http://fundf10.eastmoney.com/jjjz_510300.html），可以看到该基金的成立日期为 2012-05-04，到现在差不多有 8 年的历史了，该基金跟踪的是沪深 300 指数，可以说是相当有代表性的指数基金了。
 
-![](001)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-fund-fixed-investment/001.png)
 
 然后我们将查询日期设置为 2012-05-04 到 2020-03-01，打开 chrome 的开发者面板，切换到 Network 下，点击「查询」查看网络请求。我们会发现如下的一个请求，确认下其响应的数据确实是我们需要的基金净值数据。
 
-![](002)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-fund-fixed-investment/002.png)
 
 请求的 URL 如下：
 
@@ -192,7 +192,7 @@ def show_found(found_price):
     plt.show()
 ```
 
-![](003)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-fund-fixed-investment/003.png)
 
 从图中我们可以看出，该基金在 2015 年又一个很高的顶点，原因大家都知道的，2015 年是大牛市。之后在 2017 年底又有一个小的峰值，随后在 2018 年跌入最低点。
 
@@ -237,7 +237,7 @@ def show_pic():
     plt.show()
 ```
 
-![](004)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-fund-fixed-investment/004.png)
 
 由图示我么可以看出，周定投投入的金额基本一致，而月定投金额略少于周定投金额。在看收益率，周五定投收益率最高为 56263 元，而周一最少为 56263；而月定投为 56784 元。综合对比来看，单单来看周定投的话，周五定投收益最高。如果月定投也加入比较对象之内，那么月定投投资金额最低，收益率最高。
 
@@ -271,4 +271,4 @@ print(result)
 
 ## 代码地址
 
-> 示例代码：https://github.com/JustDoPython/python-100-day/
+> 示例代码：https://github.com/JustDoPython/python-examples/tree/master/doudou/2020-03-27-found
