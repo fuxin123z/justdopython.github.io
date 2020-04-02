@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 指数基金定投到底能不能赚钱？Python 来告诉你答案
+title: 定投指数到底能不能赚钱？Python 来告诉你答案
 tagline: by 豆豆
 tags: 
   - python100
@@ -45,15 +45,15 @@ http://api.fund.eastmoney.com/f10/lsjz?callback=jQuery183024641278834999003_1585
 import json
 import datetime
 import calendar
-import matplotlib.pyplot as plt
-from matplotlib import font_manager
+import requests
+from pyecharts.charts import Bar
+from pyecharts.charts import Line
+from pyecharts import options as opts
 ```
 
 获取基金历史净值数据函数如下：
 
 ```python
-import requests
-
 startDate = '2012-05-04'
 endDate = '2020-03-01'
 foundCode = '510300'
@@ -79,22 +79,30 @@ write_file(response.text)
 
 有了历史净值数据，我们就要开始计算收益了。
 
-来看下我们获取到的数据格式，其中对我们有用的就是 LSJZList 中的净值日期（FSRQ）和单位净值（DWJZ）了。因此，我们要先把数据整理成我们需要的格式，以日期为 key，净值为 value 放入到 dict 中即可。
+来看下我们获取到的数据格式。
+
+```
+{"Data":{"LSJZList":[{"FSRQ":"2020-02-28","DWJZ":"3.9313","LJJZ":"1.6026","SDATE":null,"ACTUALSYI":"","NAVTYPE":"1","JZZZL":"-3.55","SGZT":"场内买入","SHZT":"场内卖出","FHFCZ":"","FHFCBZ":"","DTYPE":null,"FHSP":""},
+{"FSRQ":"2020-02-27","DWJZ":"4.0758","LJJZ":"1.6562","SDATE":null,"ACTUALSYI":"","NAVTYPE":"1","JZZZL":"0.30","SGZT":"场内买入","SHZT":"场内卖出","FHFCZ":"","FHFCBZ":"","DTYPE":null,"FHSP":""}...
+```
+
+其中对我们有用的就是 LSJZList 中的净值日期（FSRQ）和单位净值（DWJZ）了。因此，我们要先把数据整理成我们需要的格式，以日期为 key，净值为 value 放入到 dict 中即可。
 
 ```python
 foundCode = '510300'
-file = f'./found_{foundCode}.txt'
-found_date_price = {}
-found_price_x = []
-found_price_y = []
+fixed_investment_amount_per_week = 500 # 每周定投金额
+fixed_investment_amount_per_month = 2000 # 每月定投金额
 
-with open(file) as f:
-    line = f.readline()
-    result = json.loads(line)
-    for found in result['Data']['LSJZList'][::-1]:
-        found_date_price[found['FSRQ']] = found['DWJZ']
-        found_price_x.append(found['FSRQ'])
-        found_price_y.append(found['DWJZ'])
+def get_data():
+    with open(f'./found_{foundCode}.txt') as f:
+        line = f.readline()
+        result = json.loads(line)
+        found_date_price = {}
+        for found in result['Data']['LSJZList'][::-1]:
+            found_date_price[found['FSRQ']] = found['DWJZ']
+        return found_date_price
+      
+found_date_price = get_data()
 ```
 
 这里我们采用两种计算方式，一种是周定投，一种是月定投。对应的函数分别是 `calculate_found_profit_by_week(start_date, end_date, weekday)` 和 `calculate_found_profit_by_month(start_date, end_date)`，其中两个函数共有的参数 start_date 和 end_date 分别表示起始日期，按周来计算收益的函数参数 weekday 则表示定投日，weekday 为 0 表示周一定投，1 表示周二定投...
@@ -176,65 +184,65 @@ def calculate_found_profit_by_month(start_date, end_date):
 首先我们将该基金的所有净值数据生成一张折线图，来看看该基金的走势如何。
 
 ```python
-def show_found(found_price):
-    found_price_y = list(map(float, found_price))
-    x = [i for i in range(0, len(found_price))]
-
-    plt.figure(figsize=(10, 6))
-
-    plt.plot(x, found_price_y, linewidth=1, color='r')
-
-    plt.xlabel('时间', fontproperties=my_font)
-    plt.ylabel('单位净值', fontproperties=my_font)
-    plt.title(f"{foundCode} 基金走势", fontproperties=my_font)
-    plt.xticks(x[::90], found_price_x[::90], rotation=45)
-
-    plt.show()
+line = (
+    Line()
+    .add_xaxis(list(found_date_price.keys()))
+    .add_yaxis(
+        '',
+        y_axis=list(found_date_price.values()),
+        label_opts=opts.LabelOpts(is_show=False),
+    )
+    .set_global_opts(
+        title_opts=opts.TitleOpts(title=f'{foundCode}基金走势图'),
+    )
+)
+line.render_notebook()
 ```
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-fund-fixed-investment/003.png)
 
-从图中我们可以看出，该基金在 2015 年又一个很高的顶点，原因大家都知道的，2015 年是大牛市。之后在 2017 年底又有一个小的峰值，随后在 2018 年跌入最低点。
+从图中我们可以看出，该基金在 2015 年有一个很高的顶点，原因大家都知道的，2015 年是大牛市。之后在 2017 年底又有一个小的峰值，随后在 2018 年跌入最低点。
 
-首先我们来分析下，定投频率对投资结果的影响，我们分别统计下，周一，周二，周三，周四，周五以及月定投的收益。
+首先我们来分析下，定投频率对投资结果的影响。我们分别统计下：周一、周二、周三、周四、周五以及月定投的收益。
 
 计算收益函数如下：
 
 ```python
-total_amount = [] # 总投资金额
-total_profit = [] # 总收益金额
+start_date = datetime.datetime.fromisoformat('2010-01-01')
+end_date = datetime.datetime.fromisoformat('2020-03-01')
 
-for i in range(5):
-    result = calculate_found_profit_by_week(start_date, end_date, i)
-    total_amount.append(result[2])
-    total_profit.append(result[3])
+def calculate_found_profit_week_month():
+    total_amount = []
+    total_profit = []
+    # 周定投收益
+    for i in range(5):
+        result = calculate_found_profit_by_week(start_date, end_date, i)
+        total_amount.append(result[2])
+        total_profit.append(result[3])
+    # 月定投收益
+    result_month = calculate_found_profit_by_month(start_date, end_date)
+    total_amount.append(result_month[2])
+    total_profit.append(result_month[3])
+    return total_amount, total_profit
 
-result_month = calculate_found_profit_by_month(start_date, end_date)
-total_amount.append(result_month[2])
-total_profit.append(result_month[3])
+total_amount, total_profit = calculate_found_profit_week_month()
 ```
 得出投资金额和收益之后，我们生成柱状图来综合对比下。
 
 ```python
-def show_pic():
-    labels = ['周一', '周二', '周三', '周四', '周五', '月定投']
-    index = np.arange(len(labels))
-    width = 0.2
-
-    fig, ax = plt.subplots()
-    rect1 = ax.bar(index - width / 2, total_profit, color='red', width=width, label='投资收益')
-    rect2 = ax.bar(index + width / 2, total_amount, color='springgreen', width=width, label='投资金额')
-
-    plt.title("投入金额 & 收益柱状图", fontproperties=my_font)
-    plt.xticks(fontproperties=my_font)
-    ax.set_xticks(ticks=index)
-    ax.set_xticklabels(labels)
-
-    ax.set_ylim(0, 220000)
-    auto_text(rect1)
-    auto_text(rect2)
-
-    plt.show()
+x = ['周一', '周二', '周三', '周四', '周五', '月定投']
+bar = (
+    Bar()
+    .add_xaxis(x)
+    .add_yaxis('投资金额', total_amount)
+    .add_yaxis('投资收益', total_profit)
+    .set_global_opts(
+        title_opts=opts.TitleOpts(title="投资总额 & 投资收益"),
+        xaxis_opts=opts.AxisOpts(splitline_opts=opts.SplitLineOpts(is_show=True)),
+        yaxis_opts=opts.AxisOpts(splitline_opts=opts.SplitLineOpts(is_show=True)),
+    )
+)
+bar.render_notebook()
 ```
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/03/2020-03-20-fund-fixed-investment/004.png)
@@ -255,7 +263,7 @@ print(result)
 (57, 31715.69, 114000, 10684)
 ```
 
-共计定投 57 次，投入金额 114000 元，共计收益 10684，相比 2010-01-01 入场少了接近 4W 元，但至少收益率还是正的。而且这还是在股市从大牛市跌到大熊市，几近腰斩呃情况下取得的成绩。
+共计定投 57 次，投入金额 114000 元，共计收益 10684，相比 2010-01-01 入场少了接近 4W 元，但至少收益率还是正的。而且这还是在股市从大牛市跌到大熊市，几近腰斩的情况下取得的成绩。
 
 ## 总结
 
@@ -265,7 +273,7 @@ print(result)
 
 于此同时我们还发现，2010-01-01 上证指数在 2900 点附近，如今在 2700 点附近，指数不涨反降低，但我们的收益却不断增长。即使选择在股市最高点入市，把时间拉长，指数定投也不会亏钱。
 
-当然，本文只做了 510300 这一只基金的数据分析，数据可能不够全面，读者可以从后台获取程序源码后，分析更多的基金数据，以及不通时间段的收益情况。
+当然，本文只做了 510300 这一只基金的数据分析，数据可能不够全面，读者可以从后台获取程序源码后，分析更多的基金数据，以及不同时间段的收益情况。
 
 **注意：股市千变万化，是不可完全预测的，要敬畏市场。本文仅作为学习讨论，不作为任何投资建议。**
 

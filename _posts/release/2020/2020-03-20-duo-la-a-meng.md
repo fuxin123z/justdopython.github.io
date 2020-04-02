@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 用 Python 画哆啦 a 梦
+title: 用 Python 画哆啦 A 梦
 tagline: by 豆豆
 tags: 
   - python100
