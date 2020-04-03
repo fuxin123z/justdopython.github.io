@@ -11,7 +11,7 @@ tags:
 
 <!--more-->
 
-### 需解决的问题
+## 需解决的问题
 
 其实我们要解决的有两个问题：
 
@@ -23,7 +23,7 @@ tags:
 
 综上问题，我觉得还是把公众号下载成网页 HTML 格式最好看，下面就介绍下如何实现。
 
-### 功能实现
+## 功能实现
 
 获取文章链接的方式，和上一篇下载成 PDF 的文章一样，依然是通过公众号平台的图文素材里超链接查询实现，在这里我们直接拿来上一期的代码，进行修改即可。首先将原来文件 `gzh_download.py` 复制成 `gzh_download_html.py`，然后在此基础进行代码改造：
 
@@ -79,7 +79,7 @@ for j in range(1, 10, 1):
 
 好了，从上面代码可以看出，主要就是将原来的方法 `pdfkit.from_url(i["link"], i["title"] + ".pdf")` 改成了现在的方式，需要用 `requests` 请求下文章的 URL ，然后再调用保存文章页面和图片到本地的方法，这里的 `save()` 方法通过以下代码实现。
 
-### 调用保存方法
+## 调用保存方法
 
 ```py
 #保存下载的 html 页面和图片
@@ -199,3 +199,5 @@ PythonFlask数据可视化下载完成!
 ## 总结
 
 本文为大家介绍了如何通过 Python 将公号文章批量下载到本地，并保存为 HTML 和图片，这样就能实现文章的离线浏览了。当然如果你想将 HTML 转成 PDF 也很简单，直接用 `pdfkit.from_file(xx.html,target.pdf)` 方法直接将网页转成 PDF，而且这样转成的 PDF 也是带图片的。
+
+> 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/jiguang/mpToHtml>
