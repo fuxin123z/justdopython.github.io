@@ -15,13 +15,7 @@ tags:
 
 先来看看我们最终实现的效果。
 
-<iframe 
-    height=450 
-    width=800 
-    src="https://mp.weixin.qq.com/mp/readtemplate?t=pages/video_player_tmpl&auto=0&vid=wxv_1282137698412806144" 
-    frameborder=0 
-    allowfullscreen>
-</iframe>
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/04/2020-04-04-greedy-snake/002.png)
 
 ## 安装
 
