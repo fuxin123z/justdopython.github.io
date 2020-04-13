@@ -84,7 +84,7 @@ def get_background():
 
 ```python
 def main():
-    fore = get_foreground('/Users/wubin/Desktop/20130128141111-2083519956.jpg')
+    fore = get_foreground('original.jpg')
     # 将图像裁剪到合适的像素
     p = fore.resize((330, 415))
     # 分离图片
