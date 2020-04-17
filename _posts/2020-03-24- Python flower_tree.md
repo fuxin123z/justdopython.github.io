@@ -1,14 +1,14 @@
 ---
 layout: post
 category: python
-title: Python 版繁花盛开
+title: Python 小技之繁花盛开
 tagline: by 潮汐
 tags:
   - python100
 ---
 
 今天请各位读者朋友欣赏用 Python 实现的鲜花盛宴，你准备好了吗？
-整体实现思路清晰明了,90 行代码即可实现一棵美丽的鲜花盛开树。
+90 行代码即可实现一棵美丽的鲜花盛开树。
 小编也是鲜花爱护协会者之一，但是想要看到美丽的花朵，得历经很多；对于知识的运用也是如此，需要不断吸收新知识，学习新技能，才能盛开出美丽的花朵。
 接下来就看看一棵迷人的花树是怎么实现的吧！
 
@@ -154,13 +154,10 @@ petal(300, t)
 
 ![完美的繁花盛开](http://www.justdopython.com/assets/images/2020/flower/result.png)
 
-## 总结
-
 至此，清风徐来，繁花已开！
-桃花细逐杨花落
-繁花似锦弄轻柔
-姹紫嫣红桃花笺
-繁花似锦为君妍
+
+### 总结
+只要思想不滑坡，方法总比困难多！每个人都拥有发现美的眼睛，尽情的去发现各种美吧！
 今天的赏花序曲暂且落幕，望伙伴们幕后自行品鉴！
 
 > 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/chaoxi/flower>
