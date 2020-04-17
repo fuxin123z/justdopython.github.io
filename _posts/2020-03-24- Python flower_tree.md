@@ -1,22 +1,24 @@
 ---
 layout: post
 category: python
-title: Python 之樱花小技
+title: Python 版繁花盛开
 tagline: by 潮汐
 tags:
   - python100
 ---
 
-亲爱的朋友们：
-	想要一起来看樱花吗? 听说武汉这座英雄城市的樱花已经开了，但是在疫情的影响下，我们只能隔幕观花，小编也是一个爱花使者，今天我们就以另一种方式来呈现樱花之美，想要看到美丽的花朵，得每天保持学习状态，不断吸收新知识，学习新技能，接下来和小编一起欣赏一棵别样的樱花树。
+今天请各位读者朋友欣赏用 Python 实现的鲜花盛宴，你准备好了吗？
+整体实现思路清晰明了,90 行代码即可实现一棵美丽的鲜花盛开树。
+小编也是鲜花爱护协会者之一，但是想要看到美丽的花朵，得历经很多；对于知识的运用也是如此，需要不断吸收新知识，学习新技能，才能盛开出美丽的花朵。
+接下来就看看一棵迷人的花树是怎么实现的吧！
 
 <!--more-->
 
-### 初夏的樱花
+### 夏天的花
 
-![樱花树](https://img-blog.csdnimg.cn/20200323154207597.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzEyOTc1MA==,size_16,color_FFFFFF,t_70)
+![鲜花树](http://www.justdopython.com/assets/images/2020/flower/flower.png)
 
-## 樱花树实现思路
+## 实现思路
 
 实现思路主要是利用之前学过的 Python 绘图模块 Turtle，Turtle 详细学习课程请参考[趣玩 Python 之绘制基本图形](https://mp.weixin.qq.com/s/zqoAZQ4aNzruXTd4QUGzmQ/) 或 [官网](https://docs.python.org/3/library/turtle.html) 再结合随机函数生成任意的一棵树，樱花树主要组成部分有树干和花瓣以及飘落的花瓣构成。
 
@@ -26,7 +28,7 @@ tags:
 
 示例图：
 
-![树干和花瓣](https://img-blog.csdnimg.cn/20200323154330802.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzEyOTc1MA==,size_16,color_FFFFFF,t_70)
+![树干和花瓣](http://www.justdopython.com/assets/images/2020/flower/trunk.png)
 
 **代码如下所示：**
 
@@ -34,6 +36,7 @@ tags:
 
 def cherryTree(branch, t):
     if branch > 4:
+        # 枝干数
         if 7 <= branch <= 13:
             # 随机数生成
             if random.randint(0, 3) == 0:
@@ -46,26 +49,23 @@ def cherryTree(branch, t):
             if random.randint(0, 2) == 0:
                 t.color('snow')
             else:
-                # 设置樱花树叶颜色
-                t.color('green')  # 樱花树颜色
+                # 设置树叶颜色
+                t.color('green')
             t.pensize(branch / 5)
         else:
             t.color('Peru')  # 树干颜色
             t.pensize(branch / 11)  #调整树干的粗细
         t.forward(branch)
+
         a = 1 * random.random()
         t.right(20 * a)
         b = 1 * random.random()
-       # 调用函数本身绘画　
         cherryTree(branch - 10 * b, t)
         t.left(60 * a)
-       # 调用函数本身绘画
         cherryTree(branch - 10 * b, t)
         t.right(40 * a)
-       # 提笔 
         t.up()
         t.backward(branch)
-        # 落笔
         t.down()
         
 ```
@@ -74,9 +74,9 @@ def cherryTree(branch, t):
 
 ### 花瓣随风飘
 
- 欣赏樱花最美不过是樱花随风飘落的场景，示例图：
+ 赏花最美不过是花瓣随风飘落的场景，示例图：
 
-![花瓣图](https://img-blog.csdnimg.cn/2020032315443518.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzEyOTc1MA==,size_16,color_FFFFFF,t_70)
+![花瓣图](http://www.justdopython.com/assets/images/2020/flower/petal.png)
 
 **代码实现：**
 
@@ -107,29 +107,29 @@ def petal(m, t):
         t.backward(b)
 ```
 
-### 文字
+### 鲜花配文字
 
-一棵好看的樱花树少不了合适的文案，这里我们再利用小海龟绘图将文字配上
+一棵盛开的鲜花树怎么能少得了合适的文案呢？这里我们再利用小海龟绘图将文字配上
 
-详细代码如下：
+代码如下：
 
 ```python
 def des_word():
     t.color('LightCoral') # 字体颜色设置
     t.hideturtle()
-    t.goto(-50,-130)
+  #  t.goto(-50, -130)
+    t.goto(-60,-170)
     t.pu()
-    # 昨日雪如花，今日花如雪，山樱如美人，红颜易消歇。
-    t.write('昨日雪如花,',move=False, align='center', font=('Arial', 20, 'normal'))
+    t.write('姹紫嫣红桃花笺,',move=False, align='center', font=('Arial', 20, 'normal'))
     t.pd()
 
     t.pu()
-    t.goto(90,-130)
-    t.write('今日花如雪', move=False, align='center', font=('Arial', 20, 'normal'))
+    #  t.goto(90, 130)
+    t.goto(150,-170)
+    t.write('繁花似锦为君妍', move=False, align='center', font=('Arial', 20, 'normal'))
     t.pd()
 
 ```
-
 
 ### 画笔样式调整
 
@@ -152,12 +152,15 @@ petal(300, t)
 ```
 ### 最终结果
 
-![完美的樱花树](https://img-blog.csdnimg.cn/20200324110105307.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzEyOTc1MA==,size_16,color_FFFFFF,t_70)
+![完美的繁花盛开](http://www.justdopython.com/assets/images/2020/flower/result.png)
 
 ## 总结
 
-  樱花的实现过程主要就是看个人对知识点的理解以及应用，每学习一项技能都需要付出很多的努力，实践和运用并存才能运用得如鱼得水。
-今天分享的内容素材来源于周末和朋友出去看樱花的突发灵感，希望大家都能在疫情结束后与摘下口罩尽情赏花。
+至此，清风徐来，繁花已开！
+桃花细逐杨花落
+繁花似锦弄轻柔
+姹紫嫣红桃花笺
+繁花似锦为君妍
+今天的赏花序曲暂且落幕，望伙伴们幕后自行品鉴！
 
-
-> 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/chaoxi/cherry_tree>
+> 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/chaoxi/flower>
