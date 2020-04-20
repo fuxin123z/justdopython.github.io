@@ -9,11 +9,9 @@ tags:
 
 2019 年年底这场袭击全国的突发性疫情，让我们过了一个有史以来最长春节长假的同时，也给我们带来了不少的损失，与此同时我们也认识到在大自然面前人类的渺小。好在在政府的正确且有力的领导下，经过全国人民群众的不懈努力，我们终于将疫情给遏制住了，打赢了这场没有硝烟的战争。
 
-然而就在国内疫情已经明显好转，实现确诊病例零增长的时候，疫情开始在全球蔓延。截至目前，全球累计确诊病例已经超过两百二十万，死亡人数已经上升至十五万之多。
+然而就在国内疫情已经明显好转，实现确诊病例零增长的时候，疫情开始在全球蔓延。今天，我用 Python 做了一个全球疫情数据大屏，我们一起来看下整体的效果图。
 
 <!--more-->
-
-今天，我用 Python 做了一个全球疫情数据大屏，我们一起来看下整体的效果图。
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/04/2020-04-20-epidemic-big-screen/001.png)
 
@@ -25,7 +23,7 @@ tags:
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/04/2020-04-20-epidemic-big-screen/002.jpg)
 
-爬虫模块负责从腾讯新闻获取数据，之后存入 Redis。Flask 是一个 Web 框架，负责 URL 和后台函数的映射，以及数据的传输。换言之，也就是从 Redis 中获取到原始数据，然后整理成相应的格式之后传递给前端页面，在前端页面拿到数据之后，调用百度的 ECharts 来实现图表的展示即可。
+爬虫模块负责从腾讯新闻获取数据，之后存入 Redis。Flask 是一个 Web 框架，负责 URL 和后台函数的映射，以及数据的传输。换言之，也就是从 Redis 中获取到原始数据，然后整理成相应的格式之后传递给前端页面，前端页面在拿到数据之后，调用百度的 ECharts 来实现图表的展示即可。
 
 引入项目所需的全部模块。
 
@@ -40,18 +38,18 @@ import pandas as pd
 
 ## 数据获取
 
-开始操作之前，需要先梳理下我们都需要什么数据。关于国内，我们需要的是各个省详细数据、全国数据总和、最新动态、以及境外输入人数 TOP10 的省市。关于国外，我们需要的是各个国家详细数据、国外数据总和、最新动态、以及 24 小时新增人数 TOP10 的国家。
+开始操作之前，需要先梳理下我们都需要什么数据。关于国内，我们需要的是各个省详细数据、全国数据总和、最新动态、以及境外输入人数 TOP 10 的省市。关于国外，我们需要的是各个国家详细数据、国外数据总和、最新动态、以及 24 小时新增人数 TOP 10 的国家。
 
-本次我们的疫情数据是从腾讯新闻「全国新冠肺炎疫情」获取的，打开该网址（https://news.qq.com/zt2020/page/feiyan.htm#/?nojump=1）按 F12 将开发者工具调出来，然后切换到 Network 选项页，逐个接口分析之后，发现所有我们想要的数据都是接口返回的。各个数据接口如下：
+本次我们的疫情数据是从腾讯新闻获取的，打开该网址（https://news.qq.com/zt2020/page/feiyan.htm#/?nojump=1）按 F12 将开发者工具调出来，然后切换到 Network 选项页，逐个接口分析之后，发现所有我们想要的数据都是接口返回的。各个数据接口如下：
 
 + 国内统计数据（数据总和以及各省份详细数据）：`https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5`
 + 国外各国家详细数据：`https://api.inews.qq.com/newsqa/v1/automation/foreign/country/ranklist`
 + 国外数据总和：`https://api.inews.qq.com/newsqa/v1/automation/modules/list?modules=FAutoGlobalStatis`
 + 最新动态数据：`https://api.inews.qq.com/newsqa/v1/automation/modules/list?modules=FAutoNewsArticleList`
 
-找到了接口之后，接下来就是很简单了，直接调用接口将数据爬取下来即可。其中国内统计数据接口接口返回的 data 不是标准的 JSON 串，而是一个字符串，所以我们需要做下简单的转化。
+找到了接口之后，接下来就很简单了，直接调用接口将数据爬取下来即可。其中国内统计数据接口接口返回的 data 不是标准的 JSON 串，而是一个字符串，所以我们需要做下简单的转化。
 
-为了方便的获取数据，我们将调用 request 库爬取数据的操作封装起来，方便调用。
+为了方便h后续操作，我们将调用 request 库爬取数据的操作封装起来，方便调用。
 
 ```python
 def pull_data_from_web(url):
@@ -59,7 +57,7 @@ def pull_data_from_web(url):
     return json.loads(response.text) if response.status_code == 200 else None
 ```
 
-最新动态数据我们只去发布时间，标题以及链接地址。
+最新动态数据我们只取发布时间，标题以及链接地址。
 
 ```python
 # 获取最新动态数据
@@ -155,13 +153,13 @@ r.set('foreign_data', json.dumps(foreign_data))
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/04/2020-04-20-epidemic-big-screen/005.png)
 
-可以看的，现在湖北的确诊人数已经非常少了，而鸡头黑龙江则稳居第一，成为国内确诊人数 TOP 1。
+可以看的，现在湖北的确诊人数已经非常少了，而鸡头黑龙江则稳居第一，成为国内确诊人数 TOP 1 的省份。
 
 最后来看国外数据，统计数据比较规整，各个国家详细数据我们按照累计确诊人数倒序排序。
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/04/2020-04-20-epidemic-big-screen/006.png)
 
-最后，我们还需要处理下「境外输入省市 TOP10」和「24小时新增国家 TOP10」的数据。直接从省市详细数据和各国家详细数据中获取即可。
+最后，我们还需要处理下「境外输入省市 TOP 10」和「24小时新增国家 TOP 10」的数据。直接从省市详细数据和各国家详细数据中获取即可。
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/04/2020-04-20-epidemic-big-screen/007.png)
 
@@ -169,7 +167,7 @@ r.set('foreign_data', json.dumps(foreign_data))
 
 ## 图表展示
 
-我们先来简单看下 ECharts 的使用方法，首先要引入相应的 js 文件，然后写一个装载图表的 div 标签。
+我们先来简单看下 ECharts 的使用方法，首先要引入相应的 js 文件，然后写一个容纳图表的 div 标签。
 
 ```html
 <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
@@ -228,7 +226,7 @@ yAxis: {
 },
 ```
 
-现在我们已经完成了一个简单的图表，并且已经可以动态设置数据了。现在缺少的就是把大屏的各个图表拼接一下，然后将我们之前准备好的数据设置进去即可。
+现在我们已经完成了一个简单的图表，并且已经可以动态设置数据了。现在缺少的就是把大屏的各个图表拼接起来，并且将我们之前准备好的数据设置进去即可。
 
 首先我们初始化 Flask 并设置路由映射关系，然后将前端页面所需的统计数据一并返回。
 
@@ -245,7 +243,7 @@ def global_index():
     }
     return render_template('global.html', **context)
 ```
-其中地图数据以及 TOP10 的数据需要以接口的方式提供出去，前端页面直接通过 Ajax 技术调用。
+其中地图数据以及 TOP 10 的数据需要以接口的方式提供出去，前端页面直接通过 Ajax 技术调用。
 
 ```python
 @app.route('/global_top10')
@@ -280,14 +278,16 @@ def get_global_map():
 
 ## 总结
 
-今天我们完成了一个全球疫情数据大屏可视化程序，步骤清晰，难度不大，其中页面上各个图表组件的位置以及样式调试起来比较繁琐些，但这不是本文重点。
+今天我们完成了一个全球疫情数据大屏可视化程序，步骤清晰，难度不大，只是页面上各个图表组件的位置以及样式调试起来比较繁琐些，但这不是本文重点。
 
 你需要着重理解的是前端页面的 URL 是如何和后台函数做路由映射的，数据又是如何传递和绑定的，以及后台逻辑和数据的处理过程这才是 Web 开发的精髓。
+
+最后，你可以从公众号获取源码后，修改程序使之支持定时从数据源获取数据，更新前端图表，而无需手动操作。
 
 ## 代码地址
 
 > 示例代码：https://github.com/JustDoPython/python-examples/tree/master/doudou/2020-04-20-epidemic-big-screen
 
-## 参考地址
+## 参考资料
 
 https://news.qq.com/zt2020/page/feiyan.htm#/?nojump=1
