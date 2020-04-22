@@ -12,7 +12,7 @@ tags:
 
 ### psutil 是什么
 
-psutil 是一个跨平台库(http://pythonhosted.org/psutil)能够获取到系统运行的进程和系统利用率（包括CPU、内存、磁盘、网络等）信息。主要用来做系统监控，性能分析，进程管理。支持 Linux、Mac OS、Windows 系统。
+psutil 是一个跨平台库（http://pythonhosted.org/psutil）能够获取到系统运行的进程和系统利用率（包括CPU、内存、磁盘、网络等）信息。主要用来做系统监控，性能分析，进程管理。支持 Linux、Mac OS、Windows 系统。
 
 本文以 psutil 模块获取系统信息开发一个监控 Mac OS 系统的平台。
 <!--more-->
@@ -21,11 +21,12 @@ psutil 是一个跨平台库(http://pythonhosted.org/psutil)能够获取到系�
 ### 准备工作
 
 #### 技术选择
-1. 监控的系统是 Mac OS 系统
-2. 监控系统模块选择 psutil 模块
-3. Web 框架选择的是 Flask 框架
-4. 前端 UI 选择的是 Bootstrap UI
-5. 动态可视化图表选择 Pyecharts 模块
+
+* 监控的系统是 Mac OS 系统
+* 监控系统模块选择 psutil 模块
+* Web 框架选择的是 Flask 框架
+* 前端 UI 选择的是 Bootstrap UI
+* 动态可视化图表选择 Pyecharts 模块
 
 #### 安装 psutil
 
@@ -35,9 +36,9 @@ pip3 install psutil
 
 #### 安装 Flask、pyecharts、Bootstrap 
 
-Flask 的教程是在公众号文章：Web 开发 Flask 介绍
-Pyecharts 的教程在公众号文章：Python 图表利器 pyecharts，按照官网 (http://pyecharts.org/#/zh-cn/web_flask) 文档整合 Flask 框架，并使用定时全量更新图表。
-Bootstrap 是一个 前端的 Web UI，官网地址是 (https://v4.bootcss.com)
+* Flask 的教程是在公众号文章：Web 开发 Flask 介绍
+* Pyecharts 的教程在公众号文章：Python 图表利器 pyecharts，按照官网 (http://pyecharts.org/#/zh-cn/web_flask) 文档整合 Flask 框架，并使用定时全量更新图表。
+* Bootstrap 是一个 前端的 Web UI，官网地址是 (https://v4.bootcss.com)
 
 ![](http://www.justdopython.com/assets/images/2020/psutil-flask/flask.png)
 
@@ -170,7 +171,7 @@ sdiskusage(total=250790436864, used=10872418304, free=39636717568, percent=21.5)
 sdiskio(read_count=26404943, write_count=11097500, read_bytes=609467826688, write_bytes=464322912256, read_time=7030486, write_time=2681553)
 ```
 
-在监控平台上每2秒请求url获取磁盘信息，并动态显示图表
+在监控平台上每 2 秒请求 url 获取磁盘信息，并动态显示图表
 
 ```python
 disk_dict = {'disk_time':[], 'write_bytes': [], 'read_bytes': [], 'pre_write_bytes': 0, 'pre_read_bytes': 0, 'len': -1}
