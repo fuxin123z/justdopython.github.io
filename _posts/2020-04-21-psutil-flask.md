@@ -12,7 +12,7 @@ tags:
 
 ### psutil 是什么
 
-psutil 是一个跨平台库(http://pythonhosted.org/psutil)能够获取到系统运行的进程和系统利用率（包括CPU、内存、磁盘、网络等）信息。主要用来做系统监控，性能分析，进程管理。支持 Linux、Mac OS、Windows 系统。
+psutil 是一个跨平台库（http://pythonhosted.org/psutil）能够获取到系统运行的进程和系统利用率（包括CPU、内存、磁盘、网络等）信息。主要用来做系统监控，性能分析，进程管理。支持 Linux、Mac OS、Windows 系统。
 
 本文以 psutil 模块获取系统信息开发一个监控 Mac OS 系统的平台。
 <!--more-->
