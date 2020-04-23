@@ -22,7 +22,7 @@ pyecharts 功能很强大，只需要导入相应的模块就配置相应的选�
 
 先来个 2D 的瞅瞅~
 
-![世界地图](https://imgkr.cn-bj.ufileos.com/def408a5-f31e-4b94-a581-6345acb043e0.gif)
+![世界地图](http://www.justdopython.com/assets/images/2020/Earth_view/world_map.gif)
 
 实现代码如下：
 
@@ -51,7 +51,7 @@ c = (
 
 通过导入 Map3D 等实现中国地图的 3D 呈现：
 
-![中国地图](https://imgkr.cn-bj.ufileos.com/053fbabd-33b9-4ef4-b281-b01bf7be7574.gif)
+![中国地图](http://www.justdopython.com/assets/images/2020/Earth_view/china_map_3d.gif)
 
 
 实现代码如下：
@@ -103,7 +103,7 @@ c = (
 
 现在用另一种方式来实现我家乡的地图，一起来一睹为快~
 
-![贵州地图](https://imgkr.cn-bj.ufileos.com/67fafb1d-4280-4261-b91f-6b8c5c1c750b.gif)
+![贵州地图](http://www.justdopython.com/assets/images/2020/Earth_view/guizhou_map_3d.gif)
 
 
 **代码实现如下：**
@@ -164,7 +164,7 @@ c = (
 
 一起来看看旋转的地球吧^^
 
-![旋转的地球](https://imgkr.cn-bj.ufileos.com/d25afe28-beaf-4cb3-b7f1-95996360f5f5.gif)
+![旋转的地球](http://www.justdopython.com/assets/images/2020/Earth_view/world_map_3d.gif)
 
 **实现代码如下：**
 
