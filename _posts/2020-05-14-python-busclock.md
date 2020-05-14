@@ -359,7 +359,7 @@ lines = [{
     "PORT": "465",
     "USER": "tom",
     "PASS": "password",
-    "SSL": True
+    "SSL": true
   },
   "alertMail": "lily@example.com",
   "lines": [{
