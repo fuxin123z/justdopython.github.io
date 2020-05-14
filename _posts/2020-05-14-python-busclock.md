@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 公交闹钟 ———— 再也不用白等车了 
+title: 公交闹钟 —— 再也不用白等车了 
 tagline: by 太阳雪
 tags:
   - python100
