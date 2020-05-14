@@ -228,7 +228,7 @@ pyinstaller service.py
 
 > **注意:**
 > 打包好的程序，注册服务后，启动时可能会报 win32timezone 找不到的错误，这时需要加一个参数:
-> --hiddenimport win32timezone 
+> --hiddenimport win32timezone
 > 打包命令换成：`pyinstaller --hiddenimport win32timezone -F service.py`
 > 重新打包即可
 
@@ -407,8 +407,8 @@ with open(r"C:\config.json", "r", encoding='UTF-8') as config_file:
 
 ## 总结
 
-虽然解决了问题，不够要想很多 app 那样优雅，还需要做很多工作，不过通过这次实践，了解了 Python 打包，Windows 服务，简单爬虫，邮件发送 等功能，为日后做其他应用奠定了基础，比如基于这个框架，可以做一个打卡签到功能，让自己更自由
-很多时候舒适让我们懒于行动，而行动带来的惊喜远胜过一时的安逸……
+虽然解决了问题，不过想要同很多 app 那样优雅，还需要做很多工作。通过这次实践，可以了解了 Python 打包，Windows 服务，简单爬虫，邮件发送 等功能，为日后做其他应用奠定了基础，比如基于这个框架，可以做一个打卡签到功能，让自己更自由  
+很多时候舒适让我们懒于行动，而行动带来的惊喜远胜过一时的安逸……  
 感谢阅读，代码示例中有较为完整的代码，欢迎参考研究
 
 ## 参考
