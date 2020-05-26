@@ -143,7 +143,7 @@ VS Code 是个后起之秀，功能强大且具有丰富的插件资源，无疑
 
 同时按下 Ctrl+Shift+P, 在弹出的命令窗口中输入 "解析器"，然后在下拉列表中选择 "Python:选择解析器"，这里会缓存一些已经创建好的解析器，如果没有想要的，可以选择 "Enter interpreter path" 来选择解析器路径，即已经创建好的虚拟环境脚本文件夹中的 Python 程序，就可以创建一个新的解析器
 
-![选择 Python 解析器](http://www.justdopython.com/assets/images/2020/05/venv/02.png)
+![选择 Python 解析器](http://www.justdopython.com/assets/images/2020/05/venv/02.png)http://www.justdopython.com/assets/images/2020/05/venv/01.png
 
 如果编辑的是 Python 代码文件，在状态栏中也可以选择和切换解释器，更为方便
 
