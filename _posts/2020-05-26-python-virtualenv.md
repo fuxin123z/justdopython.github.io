@@ -8,6 +8,7 @@ tags:
 ---
 
 Python 之所以强大，除了语言本身的特性外，更重要的是拥有无所不及的第三方库。强大的软件库，让开发者将精力集中在业务上，而避免重复造轮子的浪费。但众多的软件库，形成了复杂的依赖关系，加上 Python2 和 Python3 旷日持久之争，对采用 Python 开发的项目造成了不少困扰，所以 Python 建议，通过`虚拟环境`工具为项目创建纯净的依赖环境，今天我们就来了解下 Python 虚拟环境
+<!--more-->
 
 ## 一些概念
 
@@ -143,7 +144,7 @@ VS Code 是个后起之秀，功能强大且具有丰富的插件资源，无疑
 
 同时按下 Ctrl+Shift+P, 在弹出的命令窗口中输入 "解析器"，然后在下拉列表中选择 "Python:选择解析器"，这里会缓存一些已经创建好的解析器，如果没有想要的，可以选择 "Enter interpreter path" 来选择解析器路径，即已经创建好的虚拟环境脚本文件夹中的 Python 程序，就可以创建一个新的解析器
 
-![选择 Python 解析器](http://www.justdopython.com/assets/images/2020/05/venv/02.png)http://www.justdopython.com/assets/images/2020/05/venv/01.png
+![选择 Python 解析器](http://www.justdopython.com/assets/images/2020/05/venv/02.png)
 
 如果编辑的是 Python 代码文件，在状态栏中也可以选择和切换解释器，更为方便
 
