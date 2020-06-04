@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 打造网红地摊
+title: 后浪派业余摊主的入门指导
 category: python
 tagline: by 闲欢
 tags: 
