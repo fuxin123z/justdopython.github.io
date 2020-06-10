@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 如何指数级提高阅读理解能力
+title: 如何指数级提高阅读能力
 category: python
 tagline: by 闲欢
 tags: 
