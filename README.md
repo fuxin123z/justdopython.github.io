@@ -4,7 +4,7 @@
 
 Python 极客技术由一群热爱 Python 的技术人组建，专业输出高质量、原创的 Python 系列文章，目前已经有十几名作者加入。
 
-现在已经有超过 10000+ 用户加入了 Python 技术，赶快扫码加入吧！
+现在已经有超过 30000+ 用户加入了 Python 技术，赶快扫码加入吧！
 
 ![](/assets/images/wechat-qcode.jpg)
 
@@ -42,7 +42,6 @@ Python 极客技术由一群热爱 Python 的技术人组建，专业输出高�
 ## 作者团队
 
 - 纯洁的微笑，一枚从业超过十年的一线老兵，目前在技术自媒体行业折腾。
-
 - others
 
 
@@ -50,3 +49,4 @@ Python 极客技术由一群热爱 Python 的技术人组建，专业输出高�
 ## 关键节点
 
 - 2019年02月21日 发一篇文章[《人生苦短，我用 Python》](https://mp.weixin.qq.com/s/6cv-9_oYhfycapRPTxmjmQ)
+- 故事还在继续...
