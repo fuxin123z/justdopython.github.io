@@ -104,6 +104,7 @@ numpy 特别擅长处理向量和矩阵的运算，例如乘法，即给向量�
 ### 矩阵幂运算
 
 向量、矩阵既然可以看成一个数，幂运算就很容易理解了，例如矩阵
+
 ![矩阵 m](http://www.justdopython.com/assets/images/2020/07/simplenumpy/01.png?2323)
 
 m 平方就可以写成  `m**2`, 结果为：
@@ -123,12 +124,14 @@ m 平方就可以写成  `m**2`, 结果为：
 ### 求和与连乘
 
 统计学公式中，求和运算很常见，例如对矩阵求和：
+
 ![矩阵求和](http://www.justdopython.com/assets/images/2020/07/simplenumpy/05.png)
 
 表示对矩阵 m 中所有元素进行求和，nunpy 通过 `sum` 完成计算：
 `m.sum()`
 
 连乘和求和类似，将矩阵中所有元素做乘积运算:
+
 ![矩阵连乘](http://www.justdopython.com/assets/images/2020/07/simplenumpy/06.png)
 
 numpy 通过 `prod` 完成计算，如矩阵 m 的连乘为 `m.prod()`
@@ -140,6 +143,7 @@ numpy 通过 `prod` 完成计算，如矩阵 m 的连乘为 `m.prod()`
 ### 计算均值
 
 向量均值公式为：
+
 ![向量均值公式](http://www.justdopython.com/assets/images/2020/07/simplenumpy/07.png)
 
 分析公式，其中 n 为向量 x 的元素数量，numpy 的向量，通过 size 获取，后面是向量求和，用 sum 完成，最后代码如下：
@@ -157,6 +161,7 @@ x.sum()/x.size
 ### 实现 Frobenius 范数
 
 现在来个复杂点的，Frobenius 范数，公式如下:
+
 ![Frobenius 范数公式](http://www.justdopython.com/assets/images/2020/07/simplenumpy/08.png)
 
 先不用纠结 Frobenius 公式的意义，我们只看如何用 python 实现，分析公式，可以看到，首先对矩阵的每个元素做平方运算，然后求和，最后对结果进行开方，那么就从里向外写
@@ -189,6 +194,7 @@ np.sqrt(((x-np.mean(x))**2).sum()/(x.size-1))
 
 上面公式实际上是样本标准差公式，对于标准差，numpy 提供了简便方法 std, 直接用 
 `np.std(x)` 就可以计算，当然现在我们根据标准差公式：
+
 ![标准差](http://www.justdopython.com/assets/images/2020/07/simplenumpy/11.png)
 
 很容易写出来 numpy 实现，赶紧试试吧。
