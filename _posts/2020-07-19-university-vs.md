@@ -6,7 +6,7 @@ tagline: by 太阳雪
 tags:
   - python100
 ---
-![标题图片](http://www.justdopython.com/assets/images/2020/07/university/00.png)
+![标题图片]( http://justdopython.github.io/assets/images/2020/07/university/00.png)
 高考刚刚结束，成绩陆续公布，接下来就要填报志愿了，如何挑选一个合适的大学几乎是每个考生面临的问题，多年前，为填报志愿通宵翻阅招生指南的情形还历历在目，今天我们从中国大学综合排名以及其他指标为视角，对大学进行分析对比，也许能对目标大学有更好的认识
 <!--more-->
 
@@ -119,7 +119,7 @@ config = {
 
 这里采用线性转换，公式是：
 
-$$\hat{x_i}=\frac{x_i-max(x)}{{max(x)}-min(x)}$$
+![线性转换](http://www.justdopython.com/assets/images/2020/07/university/03.png)
 
 用 pandas 实现代码为：
 
