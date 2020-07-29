@@ -137,12 +137,12 @@ if __name__ == '__main__':
 
 **发送结果如下：**
 
+![](https://imgkr.cn-bj.ufileos.com/37ff25e3-e983-4e3f-99c7-c02ce330ea4a.png)
 
-
-  
+ 
 ### 总结
 
-今天的文章主要是使用 Python 实现各大排序程序，以及排序算法实现思路的梳理，自己学习的同时给大家整理思路！
+今天的文章主要是使用 Python 爬虫和邮件发送功能两者结合使用的场景，如果学废的小伙伴请 扣 1，咱们明天见！
 
 
 > 示例代码 [Python 小技能之抓取天气信息发送给小姐姐 ](https://github.com/JustDoPython/python-examples/tree/master/chaoxi/send_weather)
