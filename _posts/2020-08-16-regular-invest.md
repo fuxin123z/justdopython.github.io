@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 定投到底好不好 —— python 告诉你答案
+title: 定投改变命运？python 帮你解答
 tagline: by 太阳雪
 tags:
   - python
@@ -10,6 +10,8 @@ tags:
 ---
 最近股市火热，有很多人跃跃欲试，面对琢磨不透的市场，除了随波逐流，勇当韭菜的命运外，还有没有其他选择呢？今天就用 Python，从定投的视角上重新认识下股市。
 <!--more-->
+
+> 投资有风险！决策需谨慎！
 
 ## 定投
 
@@ -125,15 +127,14 @@ fund('601600')
 ```python
 def dataFormat(code, type_='fund', cycleDays=5, begin='2001-01-01'):
     rawdf = pd.read_excel('%s_%s.xlsx' % (type_, code))
-    buydf = rawdf[rawdf.index % cycleDays==0] ## 选出定投时机
     # 选择对应的列
     if type_ == 'fund':
         buydf = buydf[['公布日期','单位净值']]
     else:
         buydf = buydf[['日期','收盘价']]
     buydf.columns = ["日期","单价"]
-
     buydf = buydf[buydf['日期']>=begin]
+    buydf = buydf[buydf.index % cycleDays==0] # 选出定投时机
     return buydf
 ```
 
@@ -142,9 +143,9 @@ def dataFormat(code, type_='fund', cycleDays=5, begin='2001-01-01'):
 - 参数 `cycleDays` 表示定投时间间隔，默认为 5 天，即一个星期(扣除周末)
 - 参数 `begin` 为开始定投日期，默认为 2001-01-01，这也是获取数据最早的日期
 - 根据 `code` 和 `type_` 用 pandas 读取数据文件，存入原始数据 `rawdf` 中
-- 再从 `rawdf` 中过滤出购买定投的数据，即从开始日期起，把每隔定投时间间隔的数据筛选出来，出入 `buydf`
 - 然后根据 `type_` 参数抽取需要的列，即 `日期` 和 `价格`，由于股票数据和基金数据的列名不同，需要更新为统一的列，`日期` 和 `单价`
-- 最后再筛选出开始日期及以后的数据，作为定投数据
+- 然后再筛选出开始日期及以后的数据，作为定投数据
+- 最后过滤出购买定投的数据，即从开始日期起，把每隔定投时间间隔的数据筛选出来，并返回
 
 ## 呈现
 
@@ -217,6 +218,12 @@ show(dataFormat('150124', begin='2015-05-26'))
 与大多数人认知不同的是，熊市是最终收益的基础，进一步证实了:
 
 > 市场中的熊市比牛市长很多很多，定投相当于在长期的熊市里积聚力量，最终在牛市中展现出投资的价值
+
+看来只要选对具有上升空间的标的，坚持长期定投，就能获得丰厚回报
+
+不过还得提醒：
+
+> 投资有风险！决策需谨慎！
 
 你怎么看的，跑下代码试试看
 
