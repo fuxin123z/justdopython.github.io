@@ -87,7 +87,7 @@ def crawler(driver):
 
 ### 图表
 
-我们已经把死亡公司数据放在了 csv 文件中，先解析到内存并使用 pyecharts 模块职称图表。
+我们已经把死亡公司数据放在了 csv 文件中，先解析到内存并使用 pyecharts 模块制成图表。
 
 ```python
 def parse_csv():
