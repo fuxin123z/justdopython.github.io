@@ -1,8 +1,19 @@
+---
+layout: post
+category: python
+title: Python少有人走过的坑
+tagline: by 轩辕御龙
+tags:
+  - python
+---
+
 # Python少有人走过的坑
 
 毫无疑问，`print`函数是我们日常最常用的函数，无论是格式化输出还是打印中间变量进行调试，几乎没有`print`接不了的活儿。
 
 但是上一次阿酱就差点被`print`给坑了。
+
+<!--more-->
 
 ## 坑从何来
 
