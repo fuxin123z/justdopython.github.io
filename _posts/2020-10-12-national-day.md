@@ -186,4 +186,4 @@ geo.render_notebook()
 
 ## 代码地址
 
-[](https://github.com/JustDoPython/python-examples/tree/master/doudou/2020-10-13-national-day)
+https://github.com/JustDoPython/python-examples/tree/master/doudou/2020-10-13-national-day
