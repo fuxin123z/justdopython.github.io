@@ -11,6 +11,8 @@ tags:
 
 恰逢国庆中秋两个节日重合，在家憋这么久的人们怎么能不出去看看祖国的大好河山。据新华网消息，整个国庆长假外出游玩人次达 6.37 亿人次，那么这么多人都到哪儿去玩了呢，今天我们就用 Python 做一个全国热门景区热点图。
 
+<!--more-->
+
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2020/10/national-day/001.png)
 
 ## 整体思路
@@ -184,6 +186,4 @@ geo.render_notebook()
 
 那么这个国庆节，你去哪浪了呢。
 
-## 代码地址
-
-https://github.com/JustDoPython/python-examples/tree/master/doudou/2020-10-13-national-day
+> 示例代码：https://github.com/JustDoPython/python-examples/tree/master/doudou/2020-10-13-national-day
