@@ -29,7 +29,16 @@ tags:
 
 因此我们可以定义一个获取评论详情的函数，该函数接收一个 URL 作为参数，然后返回评论列表。
 
+因为获取评论信息是需要登录的，所以务必要将自己的 cookid 添加到 headers 中，否则是爬取不到评论的。
+
 ```python
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36',
+    'Referer': 'https://movie.douban.com',
+    # 注意，这里需要加上你自己的 cookie
+    'Cookie': '.'
+}
+
 def get_comment_by_url(url):
     # 评论人，评论时间，评论星级以及评论内容
     users,, times, stars, content_list = [], [], [], []
