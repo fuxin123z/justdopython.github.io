@@ -29,7 +29,7 @@ tags:
 
 注意第一个字母是L的小写，而不是大写的I。实际上这个名字，就是“Let me Google that for you”（让我为你Google这玩意）的首字母缩写——阿酱注：又译“劳资替你Google吧”。
 
-> 另外还有一些类似的作品，比如
+> 另外还有一些类似的作品，比如http://letmegooglethat.com/
 
 ![03](http://www.justdopython.com/assets/images/2020/11/2020-11-23-let-me-google-that-for-you/03.jpg)
 
