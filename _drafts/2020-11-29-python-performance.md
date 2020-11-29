@@ -251,9 +251,9 @@ if __name__ == "__main__":
 
 ## 参考
 
-<https://www.tutorialdocs.com/article/7-habits-to-improve-python-programs.html>
-<https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance>
-<http://c.biancheng.net/view/2393.html>
-<https://www.cnblogs.com/nomorewzx/p/4203829.html>
-<https://book.douban.com/subject/3227098/>
-<https://baike.baidu.com/item/%E6%A3%89%E8%8A%B1%E7%B3%96%E5%AE%9E%E9%AA%8C/15659236>
+- <https://www.tutorialdocs.com/article/7-habits-to-improve-python-programs.html>
+- <https://stackoverflow.com/questions/1549801/what-are-the-differences-between-type-and-isinstance>
+- <http://c.biancheng.net/view/2393.html>
+- <https://www.cnblogs.com/nomorewzx/p/4203829.html>
+- <https://book.douban.com/subject/3227098/>
+- <https://baike.baidu.com/item/%E6%A3%89%E8%8A%B1%E7%B3%96%E5%AE%9E%E9%AA%8C/15659236>
