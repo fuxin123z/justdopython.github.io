@@ -7,7 +7,7 @@ tags:
   - python100
 ---
 
-![封面](http://www.justdopython.com/assets/images/2020/12/google/000.jpg)
+![封面](http://www.justdopython.com/assets/images/2020/12/google/000.png)
 
 搜索引擎基本上是我们每个人天天都要用的东西，但我们大部分人使用搜索引擎的时候多半是输入关键字之后直接回车，那么你是否遇到过在试了各种关键字
 之后依然没找到自己想要的答案的时候呢，搜索引擎是智能的，同时也不是智能的，比如我们输入关键字苹果价格，它怎么知道你是想找水果呢，还是想找苹果手机呢。
@@ -20,21 +20,21 @@ tags:
 
 当你在搜索引擎输入「北京故宫」，搜索结果如下所示，虽然可以命中大部分，但很显然排名第一的地图不是我们想要的答案。
 
-![](http://www.justdopython.com/assets/images/2020/12/google/001.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/001.png)
 
 那么如何做到精准匹配呢，答案是用双引号将关键字包起来。
 
-![](http://www.justdopython.com/assets/images/2020/12/google/002.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/002.png)
 
 ## 多个关键词
 
 当你想搜索多个关键字时可以用「关键词A +关键词B」的形式来搜索，比如「丁真 +家乡」，那么搜索结果就是同时包含丁真和家乡的内容。
 
-![](http://www.justdopython.com/assets/images/2020/12/google/003.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/003.png)
 
 如果我们想要的答案是中只要命中丁真或者家乡任意一个关键字即可，那么可以用 「丁真|家乡」来搜索。结果数量比两个关键字都包含的结果高一个数量级。
 
-![](http://www.justdopython.com/assets/images/2020/12/google/004.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/004.png)
 
 ## 模糊搜索
 
@@ -42,7 +42,7 @@ tags:
 
 比如你想搜索「咱也不知道咱也不敢问」，如果只记得不知道和不敢问，可以这么搜索：
 
-![](http://www.justdopython.com/assets/images/2020/12/google/005.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/005.png)
 
 ## 排除搜索
 
@@ -50,9 +50,9 @@ tags:
 
 我们用「苹果 -iPhone」来搜索，结果就全是水果苹果啦。
 
-![](http://www.justdopython.com/assets/images/2020/12/google/006.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/006.png)
 
-![](http://www.justdopython.com/assets/images/2020/12/google/007.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/007.png)
 
 ## 搜索特定文件
 
@@ -60,7 +60,7 @@ tags:
 
 比如我们输入关键字「平凡的世界 filetype:pdf」
 
-![](http://www.justdopython.com/assets/images/2020/12/google/008.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/008.png)
 
 ## 指定网站搜索
 
@@ -68,7 +68,7 @@ tags:
 
 你可以这么搜索「关键词 site:fmprc.gov.cn」
 
-![](http://www.justdopython.com/assets/images/2020/12/google/009.jpg)
+![](http://www.justdopython.com/assets/images/2020/12/google/009.png)
 
 ## 总结
 
