@@ -1,11 +1,11 @@
 ---
 layout: post
 category: python
-title: 2020 年 GitHub 上最火的 Python 项目，你用过哪一个
+title: 2020 年 GitHub 上十大最火 Python 项目，看完之后我裂开了
 tagline: by 豆豆
 tags: 
   - python100
----·    
+---
 
 ![封面](http://www.justdopython.com/assets/images/2021/01/GitHub-Python-Top10/000.png)
 
