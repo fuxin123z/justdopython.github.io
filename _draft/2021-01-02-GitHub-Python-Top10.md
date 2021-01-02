@@ -172,3 +172,5 @@ EasyOCR 就是一个识别图像中文字的库，且其是全语种的（目前
 ## 总结
 
 今天和大家介绍了 2020 年 GitHub 上最火的十个 Python 项目，小伙伴们用过哪几个呢。
+
+> 示例代码：https://github.com/JustDoPython/python-examples/tree/master/doudou/2021-01-02-GitHub-Python-Top10
