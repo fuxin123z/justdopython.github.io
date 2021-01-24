@@ -16,7 +16,7 @@ tags:
 
 首先我们要到 jetbrains 的官网 （https://www.jetbrains.com/zh-cn/idea/download/#section=mac）去下载，默认下载是 intel 版本的，点击这个下拉框可以看到 Apple Silicon 版本下载。
 
-![](http://www.justdopython.com/assets/images/2021/01/m1_idea/0.jpg)
+![](http://www.justdopython.com/assets/images/2021/01/m1_idea/0.png)
 
 好了，下载完成后安装就不用说了，跟以前一样。在这里为了比较两个版本的区别，我特意做了个比较，用实际数据看看这两个版本的效果差距有多大。
 
@@ -30,33 +30,33 @@ tags:
 
 首先来个执行前 CPU 的使用率截图：
 
-![](http://www.justdopython.com/assets/images/2021/01/m1_idea/5.jpg)
+![](http://www.justdopython.com/assets/images/2021/01/m1_idea/5.png)
 
 可以看到目前 CPU 大概闲置 91%，下面来启动 IDEA，然后我截了个还在初始化中的图：
 
-![](http://www.justdopython.com/assets/images/2021/01/m1_idea/6.jpg)
+![](http://www.justdopython.com/assets/images/2021/01/m1_idea/6.png)
 
 可以看到目前 CPU 闲置还剩39%， 其实最少时闲置有30%，也就最高时 CPU 使用率能达到70%左右，但只有很短的时间，截图手速慢了没截到。
 
 好了，下面这张就是 IDEA 初始化结束后的 CPU 占用率波动以及初始化运行时长的截图，看好这个图下面我们再看 Apple Silicon 的表现。
 
-![](http://www.justdopython.com/assets/images/2021/01/m1_idea/7.jpg)
+![](http://www.justdopython.com/assets/images/2021/01/m1_idea/7.png)
 
 ## Apple Silicon 版本
 
 现在来看 Apple Silicon 版本怎么样，运行之前还是先来一张当前的 CPU 占用率截图，可以看出闲置率大概93%的样子。
 
-![](http://www.justdopython.com/assets/images/2021/01/m1_idea/1.jpg)
+![](http://www.justdopython.com/assets/images/2021/01/m1_idea/1.png)
 
 下面我运行 IDEA，打开三个项目进行初始化，然后截一张初始化运行中的图。
 
-![](http://www.justdopython.com/assets/images/2021/01/m1_idea/2.jpg)
+![](http://www.justdopython.com/assets/images/2021/01/m1_idea/2.png)
 
 可以看到，截图时 CPU 占用率能达到70%，但并不是最高的时候，最高时占用率应该能达到80%以上，这说明 Apple Silicon 版对于 CPU 的利用率明显更高。
 
 最后我再放一张运行完成的截图，大家看了不要惊讶，没错这就是 M1 的真正实力，跟上面 intel 版本的相比，Apple Silicon 版本在执行初始化时可以用干净利落来形容，只用了之前 1/3 到 1/4 的时间，就完成了所有的初始化。
 
-![](http://www.justdopython.com/assets/images/2021/01/m1_idea/3.jpg)
+![](http://www.justdopython.com/assets/images/2021/01/m1_idea/3.png)
 
 虽然只是几张截图，但已经足够表明它的强悍，其实在实际使用中，能明显感觉 Apple Silicon 版本比原来快了很多，而且很稳定再也不会闪崩，开发效率提升明显。
 
