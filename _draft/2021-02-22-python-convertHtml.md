@@ -8,7 +8,7 @@ tags:
 ---
 
 在日常中有时需将 html 文件转换为 pdf、word 文件。网上免费的大多数不支持多个文件转换的情况，而且在转换几个后就开始收费了。
-
+<!--more-->
 ![](http://www.justdopython.com/assets/images/2021/02/convertHtml/-1.png)
 
 ### 转 pdf
@@ -71,7 +71,7 @@ pypandoc 是基于 pandoc 软件的库，所以要安装一下 pandoc (https://g
 
 #### 使用
 
-将 html 文件提前存储在本地，也可以用爬虫将需要转换的 html 文件在代码中抓取后使用。pypandoc 无法对 word 进行排版，所以需要小伙伴们进行 2 次排版。
+将 html 文件提前存储在本地，也可以用爬虫将需要转换的 html 文件在代码中抓取后使用。
 
 ```python
 import pypandoc
@@ -80,6 +80,7 @@ import pypandoc
 output = pypandoc.convert_file('/Users/xx/Desktop/html/baidu.html', 'docx', outputfile="baidu.doc")
 
 ```
+pypandoc 无法对 word 进行排版，所以需要小伙伴们进行 2 次排版。
 
 ![](http://www.justdopython.com/assets/images/2021/02/convertHtml/3.png)
 
