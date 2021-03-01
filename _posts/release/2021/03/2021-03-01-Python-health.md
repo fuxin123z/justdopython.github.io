@@ -8,6 +8,7 @@ tags:
  - 锻炼
  - 跑步
 ---
+![](http://www.justdopython.com/assets/images/2021/03/health/01.png)
 
 前两天刷到吴孟达(下称 达叔)因肝癌入院的文章，心头一惊，没想短短几天，达叔便离我们而去……
 
