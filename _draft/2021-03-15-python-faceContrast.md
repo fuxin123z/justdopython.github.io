@@ -118,4 +118,4 @@ while True:
 
 在上班可以摸鱼的时候好好摸鱼，该拼命奋斗的时候千万千万别摸鱼了。
 
-> 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/moumoubaimifan/faceContrast>
+> 示例代码：<https://github.com/JustDoPython/python-examples/tree/master/moumoubaimifan/face_contrast>
