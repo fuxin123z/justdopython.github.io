@@ -13,7 +13,7 @@ tags:
 
 #### 获取 API 秘钥
 
-第一步，在注册账号之后，打开API密钥管理页面(https://console.cloud.tencent.com/cam/capi)获取到 SecretId 和 SecretKey。
+第一步，在注册账号之后，打开 API 密钥管理页面(https://console.cloud.tencent.com/cam/capi)获取到 SecretId 和 SecretKey。
 
 ![](http://www.justdopython.com/assets/images/2021/04/changeOld/0.png)
 
@@ -86,7 +86,7 @@ except TencentCloudSDKException as err:
 
 ### 修改年龄
 
-在上面已经得到了各个人脸的X、Y、Width、Height 属性，加上变老的年龄 Age，就可以用 Post 请求年龄变化 API 了。
+在上面已经得到了各个人脸的 X、Y、Width、Height 属性，加上变老的年龄 Age，就可以请求年龄变化 API 了。
 
 这里需要注意的是 models 模块，人脸检测 models 模块是在 tencentcloud.iai.v20200303 包下，人脸年龄变化的 models 是在 tencentcloud.ft.v20200304 下，两个 models 模块并不兼容。
 
