@@ -1,14 +1,14 @@
 ---
 layout: post
 category: python
-title: 就知道这点还不够，咱们继续！
+title: 这样教都不会？还得我亲自出马！
 tagline: by 極光
 tags:
   - 
 ---
 
 
-上次说到了还有别的方法能找到搜索框吗？答案是当然有了。而且为了满足大部分场景，有很多方法可以定位元素。今天就来继续跟大家一起学习下 `Python` 如何使用 `Selenium` 进行自动化测试。
+上次说到了还有别的方法能找到搜索框吗？答案是当然有了。而且为了满足大部分场景，有很多方法可以定位元素。今天就来继续跟大家一起学习下 `Python` 如何使用 `Selenium` 进行自动化操控浏览器。
 
 <!--more-->
 
@@ -81,7 +81,65 @@ browser.find_element_by_id("su").click()
 
 - text()： 这个方法主要用来获取元素的文本内容。
 
+## 操作实例
+
+好了，上面介绍那么多，现在我们来看一个实际的例子：
+
+让浏览器自动输入 `https://www.jd.com/`，打开京东官网，然后搜索 `ps5国行`，并把搜索出来商品的名称和金额打印出来。
+
+例子不复杂，我们直接来看代码：
+
+```python
+# 导入库
+from selenium import webdriver
+import time
+
+# executable_path 用于指定driver存放路径
+browser = webdriver.Chrome(executable_path='/Users/xx/python/chromedriver')
+# 打开京东官网
+browser.get('https://www.jd.com/')
+
+# browser.find_element_by_id("kw").send_keys("python selenium")
+
+# 获取输入框对象
+search = browser.find_element_by_xpath('//*[@id="key"]')
+
+# 输入想要搜索的关键词,如"ps5国行"
+search.send_keys('ps5国行')
+
+# 获取搜索按钮对象并单击
+browser.find_element_by_xpath('//*[@id="search"]/div/div[2]/button').click()
+
+# 将滚动条移动到页面底部，用于加载所有信息
+javascript = "var q=document.documentElement.scrollTop=50000"
+# 执行 javascript 移动滚动条
+browser.execute_script(javascript)
+# 等待3秒，有些异步加载的数据加载慢
+time.sleep(3)
+
+# 通过查看页面源码得到金额的 xpath 路径，并获取金额 
+prices = browser.find_elements_by_xpath('//*[@id="J_goodsList"]/ul/li/div/div[2]/strong/i')
+# 通过查看页面源码得到商品标题的 xpath 路径，并获取商品标题
+names = browser.find_elements_by_xpath('//*[@id="J_goodsList"]/ul/li/div/div[3]/a/em')
+
+# 遍历打印出当前页所有标题和金额
+for name,price in zip(names,prices):
+    print(name.text.replace('\n',''),price.text)
+
+#退出浏览器
+browser.quit()
+
+```
+
+代码中我已经对每一行做了注释，让大家能看明白每一行都是做什么的。接下来我们直接运行代码 `python test.py`，可以看到浏览器自动启动后，执行相关操作，然后退出，下面是执行中的截图：
+
+![](http://www.justdopython.com/assets/images/2021/06/selenium/6.png)
+
+执行完成后，我们可以看到控制台已经打印出来相应信息：
+
+![](http://www.justdopython.com/assets/images/2021/06/selenium/5.png)
+
 
 ## 总结
 
-好了，今天我们又简单介绍了下 `selenium` 定位元素的多种方法，以及我们找到元素后，可以对它进行什么操作，后续还会为大家介绍更多。OK，今天就聊这些，如果你喜欢记得点 `在看`。
+好了，今天我们又介绍了下 `selenium` 定位元素的多种方法，以及我们找到元素后，可以对它进行什么操作。并写了一个自动化操作的简单例子，给大家学习参考，后续还会为大家介绍更多。OK，今天就聊这些，如果你喜欢记得点 `在看`。
