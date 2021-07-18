@@ -126,4 +126,4 @@ def draw_window(self):
 处理一个简单的需求，咱们就用到了正则、画界面，还可以使用浏览器模拟操作的 selenium ，可见平时的知识积累多重要。小伙伴们平时还是要有意识积累一些实用的技术，当需求来时方可信手拈来，而不是“书到用时方恨少”！
 
 
-> 示例代码：(https://github.com/JustDoPython/python-examples/tree/master/xianhuan/bosscoming)
+> 示例代码：(https://github.com/JustDoPython/python-examples/tree/master/xianhuan/panextract)
