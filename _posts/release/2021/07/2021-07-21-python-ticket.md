@@ -133,7 +133,7 @@ while success_flag == 'display: none;':
 
 ### 滑块
 
-登录之后又出现了滑块验证，这个问题不大 selenium 下的 ActionChains 可以完美解决。实验了几次之后居然一直不通过，一番 google 之后。才惊觉现在的滑块验证码是如此的狡猾，居然可以识别是不是用户滑动的。最后参考 《selenium篇之滑动验证码》 这篇文章可以模拟用户先快速滑动然后慢下来的滑动行为。
+登录之后又出现了滑块验证，这个问题不大 selenium 下的 ActionChains 可以完美解决。实验了几次之后居然一直不通过，一番 google 之后。才惊觉现在的滑块验证码是如此的狡猾，居然可以识别是不是用户滑动的。最后参考 《selenium篇之滑动验证码》<sup>①</sup> 这篇文章可以模拟用户先快速滑动然后慢下来的滑动行为。
 
 ![](http://www.justdopython.com/assets/images/2021/07/12306/5.png)
 
@@ -154,7 +154,7 @@ action.release().perform()
 
 ![](http://www.justdopython.com/assets/images/2021/07/12306/6.png)
 
-然后又又又出问题了，模拟用户滑块验证之后，居然还是没通过滑块验证。再次 google 一番，原来 selenium 容易被识别出来。参考 《最完美方案！模拟浏览器如何正确隐藏特征》 这篇文章。安装了 Node Js，生成 stealth.min.js（注：已经放在了 github 上），并在浏览器打开登录页面加载 stealth.min.js。
+然后又又又出问题了，模拟用户滑块验证之后，居然还是没通过滑块验证。再次 google 一番，原来 selenium 容易被识别出来。参考 《最完美方案！模拟浏览器如何正确隐藏特征》<sup>②</sup> 这篇文章。安装了 Node Js，生成 stealth.min.js（注：已经放在了 github 上），并在浏览器打开登录页面加载 stealth.min.js。
 
 ```python
 def login(self):
@@ -177,7 +177,7 @@ def login(self):
 
 ### 参考资料
 
-> selenium篇之滑动验证码  https://www.cnblogs.com/jackzz/p/11443193.html 
-> 最完美方案！模拟浏览器如何正确隐藏特征 https://cloud.tencent.com/developer/article/1755513
+- [1] [selenium篇之滑动验证码](https://www.cnblogs.com/jackzz/p/11443193.html)
+- [2] [最完美方案！模拟浏览器如何正确隐藏特征](https://cloud.tencent.com/developer/article/1755513)
 
 > 示例代码：(https://github.com/JustDoPython/python-examples/tree/master/moumoubaimifan/12306)
