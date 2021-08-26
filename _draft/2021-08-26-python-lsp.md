@@ -94,7 +94,7 @@ def get_images(video_path):
         cv2.imencode('.jpg', frame)[1].tofile(image_out_path + "\\" + str(frame_times) + ".jpg")
 
 if __name__ == '__main__':
-    get_images('D:\\vedio\\只予你的晴天【三杞】.mp4')
+    get_images('D:\\vedio\\✿温柔旗袍中国风✿ (P1. 【横屏】).mp4')
 ```
 
 ![](http://www.justdopython.com/assets/images/2021/08/lsp/4.png)
