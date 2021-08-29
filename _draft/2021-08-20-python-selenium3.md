@@ -30,7 +30,7 @@ from selenium import webdriver
 import time
 
 # executable_path 用于指定driver存放路径
-browser = webdriver.Chrome(executable_path='/Users/mjg/python/chromedriver')
+browser = webdriver.Chrome(executable_path='/Users/xx/python/chromedriver')
 # 打开京东官网
 browser.get('https://www.jd.com/')
 
@@ -92,7 +92,7 @@ from selenium import webdriver
 import time
 
 # executable_path 用于指定driver存放路径
-browser = webdriver.Chrome(executable_path='/Users/mjg/python/chromedriver')
+browser = webdriver.Chrome(executable_path='/Users/xx/python/chromedriver')
 
 # 隐性等待最长等20秒
 driver.implicitly_wait(20)  
@@ -140,7 +140,7 @@ from selenium.webdriver.common.by import By
 import time
 
 # executable_path 用于指定driver存放路径
-browser = webdriver.Chrome(executable_path='/Users/mjg/python/chromedriver')
+browser = webdriver.Chrome(executable_path='/Users/xx/python/chromedriver')
 
 # 打开京东官网
 browser.get('https://www.jd.com/')
