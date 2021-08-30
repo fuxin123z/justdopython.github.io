@@ -89,7 +89,7 @@ c = (
 print(hostname_dic)
 ```
 
-![这个是小编的历史记录](![](http://www.justdopython.com/assets/images/2021/08/history/4.png)
+![这个是小编的历史记录](http://www.justdopython.com/assets/images/2021/08/history/4.png)
 
 最后的最后这个小伙伴的女票一时忘记删除历史记录，让这个小脚本跑成功了，小伙伴也发现自己绿了。
 
