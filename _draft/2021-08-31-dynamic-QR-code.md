@@ -31,15 +31,16 @@ pip install MyQR
 
 俗话说掌握一项技能最快的方式就是实战，我们就先用 MyQR 制作几个简单的二维码吧。
 
-想要生成二维码，最常用的方法是调用 MyQR 库中的 myqr 模块的 run 函数。该函数有以下几个参数。
+想要生成二维码，最常用的方法是调用 MyQR 库中的 myqr 模块的 run 函数。该函数有以下几个常用参数：
 
 + words：二维码内容
++ version：二维码大小，范围为 [1,40]
 + picture：二维码背景图 .jpg，.png，.bmp，.gif，默认为黑白色
 + colorized：二维码背景颜色，默认 False，即黑白色
 + save_name：二维码名称，默认为 qrcode.png
 + save_dir：二维码路径，默认为程序当前路径
 
-下面先生成一个最简单的二维码。
+小试牛刀，先生成一个最简单的二维码。
 
 ```python
 from MyQR import myqr
@@ -54,7 +55,7 @@ myqr.run(
 
 ![](http://www.justdopython.com/assets/images/2021/08/dynamic-QR-code/001.png)
 
-黑白的有点不是很美观，加上背景图试试看。
+黑白的有点不是很美观，加上背景图整点颜色试试看。
 
 ```python
 from MyQR import myqr
@@ -63,7 +64,8 @@ words = 'Python'
 myqr.run(
     words,
     picture = './bg.png',
-    colorized = True
+    colorized = True,
+    version = 5
 )
 ```
 
@@ -71,13 +73,11 @@ myqr.run(
 
 ![](http://www.justdopython.com/assets/images/2021/08/dynamic-QR-code/002.png)
 
-
 最后咱们来生成动态的的酷炫二维码。
 
 首先要准备好我们的动图素材，我从网络上找了一个大土豆和章鱼小丸子的超可爱动图。
 
 ![](http://www.justdopython.com/assets/images/2021/08/dynamic-QR-code/003.gif)
-
 
 其实这一步和上一步很像，只是把静态图换成动态的就好了，代码如下：
 
@@ -87,8 +87,9 @@ from MyQR import myqr
 words = 'Python'
 myqr.run(
     words,
-    picture = './bg.png',
-    colorized = True
+    picture = './bg.gif',
+    colorized = True,
+    version = 5
 )
 ```
 
@@ -100,4 +101,4 @@ myqr.run(
 
 ## 总结
 
-今天带大家制作了一些比较有趣的二维码，大家可以发散下脑洞，看看还能做出什么更好玩更有趣的东西，欢迎在评论区互相探讨哦。
+今天带大家制作了一些比较有趣的二维码，既然二维码内容和背景图都是可以自定义的，那想做什么出来还不是你说了算么。大家可以发散下脑洞，看看还能做出什么更好玩更有趣的东西哇，欢迎在评论区互相讨论哦。
