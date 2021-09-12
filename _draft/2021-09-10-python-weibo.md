@@ -16,7 +16,7 @@ tags:
 
 ### 安装第三方库
 
-（1）这里我们不自己造轮子，使用 github 上拥有 4.3K 星星的 微博爬虫 weibo-spider 模块。weibo-spider 可以爬去用户信息和微博信息，可以下载用户发图片和视频。
+（1）这里我们不自己造轮子，使用 github 上拥有 4.3K 星星的 微博爬虫 weibo-spider 模块。weibo-spider 可以去爬用户信息和微博信息，可以下载用户发图片和视频。
 
 ```python
 python3 -m pip install weibo-spider
