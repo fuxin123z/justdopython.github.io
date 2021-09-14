@@ -7,6 +7,8 @@ tags:
   - python
 ---
 
+![封面](http://www.justdopython.com/assets/images/2021/09/airspider/fm.jpg)
+
 对于学习 Python 爬虫的人来说，Scrapy 这个框架是一个绕不过去的槛。它是一个非常重量级的 Python 爬虫框架，如果你想要做一些复杂的爬虫项目，可能就需要用到它。
 
 但是，由于 Scrapy 框架很复杂，它的学习成本也非常高，学习的道路上布满了很多坑，并且都很难找到解决办法。对于初学者来说，学习 Scrapy 框架需要极大的耐心和勇气，一般人很有可能在中途就放弃了。
