@@ -38,6 +38,7 @@ https://unsplash.com/
 ```python
 import urllib.request
 
+# 下载图片
 def download_img(img_url, file_name):
     print(F'downloading {file_name}, img_url = {img_url}')
     request = urllib.request.Request(img_url)
@@ -94,7 +95,7 @@ if __name__ == '__main__':
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/09/wallpaper/003.png)
 
-打开资源管理器看下结果。
+打开资源管理器看下运行结果。
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/09/wallpaper/004.png)
 
