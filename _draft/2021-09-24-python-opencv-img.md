@@ -1,9 +1,9 @@
 ---
 layout: post
 category: python
-title: 
+title: 惊艳！利用 Python 图像处理绘制专属头像
 tagline: by 潮汐
-tags:惊艳！利用 Python 图像处理绘制专属头像
+tags:
   - Python技巧
   - 编程
 ---
