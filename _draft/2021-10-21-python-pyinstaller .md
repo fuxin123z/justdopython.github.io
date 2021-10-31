@@ -44,7 +44,7 @@ pyinstaller 是一个命令行工具，下面是详细步骤：
 
 ![](http://www.justdopython.com/assets/images/2021/10/pyinstaller/2.png)
 
-3. 双击 exe 就可以运行成功了。
+3、双击 exe 就可以运行成功了。
 
 ### 详细参数
 
