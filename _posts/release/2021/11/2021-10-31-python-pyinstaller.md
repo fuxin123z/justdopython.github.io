@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 别再问我 Python 打包成 exe 了
+title: 一次学会两种方式将 python 打成 exe
 tagline: by 某某白米饭
 tags: 
   - python
