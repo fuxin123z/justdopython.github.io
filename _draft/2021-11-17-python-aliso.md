@@ -128,11 +128,6 @@ result_list.sort(key=lambda k: k.get('date'),reverse=True)
               table: ${elements}
             
           };
-        },
-        methods: {
-            onSubmit() {
-                
-            }
         }
       };
       const app = Vue.createApp(App);
