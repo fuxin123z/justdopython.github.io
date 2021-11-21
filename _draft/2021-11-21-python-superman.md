@@ -92,7 +92,7 @@ tags:
 
 ![处理结果](http://www.justdopython.com/assets/images/2021/11/superman/03.png)
 
-五十多万条数据，处理完毕需要 2 小时。
+六十多万条数据，处理完毕需要 2 小时。
 
 如果不用 Python，人工处理的话，几乎是不可能完成的工作。
 
