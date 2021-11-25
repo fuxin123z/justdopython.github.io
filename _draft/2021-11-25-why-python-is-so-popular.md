@@ -8,11 +8,13 @@ tags:
 ---
 
 ![封面](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/11/why-python-is-so-popular/logo.png)
+
 10 月 TIOBE 排行榜迎来历史性时刻：Python 成为继 C、Java 后又一榜首编程语言，而这个月，它再一次惊艳所有人，蝉联榜首！Java 和 C 长期霸占榜首的时代已经一去不复返了！
 
 <!--more-->
 
-![封面](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/11/why-python-is-so-popular/001.png)
+![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/11/why-python-is-so-popular/001.png)
+
 有的小伙伴可能对 TIOBE 不熟悉，先给大家科普一下。
 
 TIOBE 是世界著名软件质量评估机构，其名下的编程社区指数是编程语言流行程度的一个重要指标。
@@ -26,11 +28,13 @@ TIOBE 是世界著名软件质量评估机构，其名下的编程社区指数�
 再来看下 2002 至 2021 各大编程语言的流行程度曲线图。
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/11/why-python-is-so-popular/002.png)
+
 从图中可以看出，直到 2018 年以前 Python 都一直不温不火，2018 年之后才开始大肆崛起，一路高歌猛进，直到今年十月终于跃居榜首。
 
 ## Python 为何如此火
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/11/why-python-is-so-popular/003.png)
+
 #### 简单易学
 
 Python 是一门极易上手的脚本语言。它语法简单、功能强大、同时还拥有大量丰富的类库，从 1991 年发展至今 20 多年的时间已经非常成熟了。
@@ -59,7 +63,7 @@ Python 是在 30 多年前创建的，对于任何编程语言社区来说，这
 
 #### 库和框架
 
-由于世界名企的攒足以及庞大的社区支持，Python 拥有众多优秀的三方库和框架。使用这些库可以让你的开发周期大幅缩短，以此来节省你的时间和精力。
+由于世界名企的赞助以及庞大的社区支持，Python 拥有众多优秀的三方库和框架。使用这些库可以让你的开发周期大幅缩短，以此来节省你的时间和精力。
 
 例如用于自然语言处理的 nltk、用于机器学习应用程序的 scikit-learn、用于工程应用、科学和数学的 SciPy、用于科学计算的 NumPy、用于服务器端 Web 开发的 Django 等。
 
