@@ -58,8 +58,6 @@ tags:
 
 具体如何做的呢？通过李笑来的描述，首先从亚马逊上，购买需要翻译的电子书，然后用 PC 版 [Kindle app](https://www.amazon.cn/gp/browse.html%3Fnode=2331640071&ref=kcp_fd_hz 'Kindle app') 打开并下载，在转化为 [epub](https://zh.wikipedia.org/wiki/EPUB 'epub') 格式的电子书。
 
-![电子书](http://www.justdopython.com/assets/images/2021/11/superman/02.jpg)
-
 再用 [Calibre](https://calibre-ebook.com/ 'Calibre') 电子书转化工具，将 epub 格式的电子书转化为 html 格式。
 
 处理完原始资料，利用 Python 的 `open` 方法，打开 `html`格式的原始文件，简单处理格式后，逐行使用 `requests` 发送到 [Deep L](https://www.deepl.com/zh/translator 'Deep L') 进行翻译。
@@ -71,6 +69,8 @@ tags:
 读过《[黑客与画家](https://book.douban.com/subject/6021440/ '黑客与画家')》的读者，一定对其作者 [保罗·格雷厄姆 (Paul Graham)](https://zh.wikipedia.org/wiki/%E4%BF%9D%E7%BD%97%C2%B7%E6%A0%BC%E9%9B%B7%E5%8E%84%E5%A7%86 '保罗·格雷厄姆 (Paul Graham)') 印象深刻，他从一个程序员成长为导师，而且创作不断，影响了很多人。
 
 有位 保罗·格雷厄姆 的粉丝，将 保罗·格雷厄姆 发布的文集，利用爬虫和电子书转化工具，整理成了一本[电子书](https://github.com/evmn/Paul-Graham 'Paul-Graham 文集')，方便他随时查看，不受网络限制。
+
+![电子书](http://www.justdopython.com/assets/images/2021/11/superman/02.jpg)
 
 虽然，这个应用只是方便自己（也可能方便他人），但使用的工具一样简单。
 
