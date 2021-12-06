@@ -7,7 +7,7 @@ tags:
   - python100
 ---
 
-![封面](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/12/typora/logo2.png)
+![封面](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2021/12/typora/logo.png)
 
 对于程序员的我们来说，写文档是必不可少的日常工作之一，那么你肯定对 Typora 不陌生了。因为这是我迄今为止在 win 平台用过的最好用的 Markdown 编辑器。
 
