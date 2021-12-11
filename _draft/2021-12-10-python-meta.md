@@ -7,7 +7,7 @@ tags:
   - 技术
   - 元宇宙
 ---
-![封面](http://www.justdopython.com/assets/images/2021/12/superwomen/00.png)
+![封面](http://www.justdopython.com/assets/images/2021/12/meta/00.jpg)
 
 Facebook 改名为 meta，一下子点燃了 元宇宙 这个概念。
 
