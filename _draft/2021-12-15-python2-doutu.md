@@ -1,7 +1,7 @@
 ---
 layout: post
 category: python
-title: 用 pyton 助力斗图，做本群最靓的仔
+title: 用 python 助力斗图，做本群最靓的仔
 tagline: by 某某白米饭
 tags:
   - 爬虫
