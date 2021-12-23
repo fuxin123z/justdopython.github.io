@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 圣诞节不买礼物，准备给她画一棵精美圣诞树！
+title: 不买礼物，准备给她画一棵精美圣诞树！
 category: python
 tagline: by 闲欢
 tags: 
