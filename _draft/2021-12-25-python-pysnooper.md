@@ -74,7 +74,7 @@ def longestCommonPrefix(strs):
 
 示例结果:
 
-![](0.png)
+![](https://files.mdnice.com/user/15960/9144370f-259c-431f-b2ae-d98db194c73b.png)
 
 #### watch 和 watch_explode
 
