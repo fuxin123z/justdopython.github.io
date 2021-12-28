@@ -23,6 +23,21 @@ pip3 install pysnooper
 下面是道简单的力扣算法题作为一个简单的例子
 
 ```python
+import pysnooper
+
+@pysnooper.snoop()
+def longestCommonPrefix(strs):
+    res = ''
+    for i in zip(*strs):
+        print(i)
+        if len(set(i)) == 1:
+            res += i[0]
+        else
+            break
+    return res
+ 
+if __name__ == 'main':
+    longestCommonPrefix(["flower","flow","flight"])
 ```
 
 结果：
