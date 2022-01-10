@@ -6,6 +6,7 @@ tagline: by 豆豆
 tags: 
   - python100
 ---
+
 ![封面](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2022/01/img-compression/logo.png)
 
 前两天刷知乎热搜看到一篇帖子，某省会城市健康码连续两次崩溃，相关公司在之前的报道中还声称：用两天两夜，将 1M 图片优化到 100kb。
@@ -43,7 +44,7 @@ im.save("girl-out2.jpg", quality=10) # quality 是压缩比率
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2022/01/img-compression/003.png)
 
-从以上压缩结果来看，quality 设置为 10 时从 2.5MB 压缩到了 400KB，整体效果还是不错的。但整体来看图片是有一定的失真的，尤其是突然降图片放大之后，失真更明显，不信你看。
+从以上压缩结果来看，quality 设置为 10 时从 2.5MB 压缩到了 400KB，整体效果还是不错的。但整体来看图片是有一定的失真的，尤其是突然将图片放大之后，失真更明显，不信你看。
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2022/01/img-compression/004.png)
 
@@ -66,7 +67,7 @@ im.save("girl-out.jpg")
 
 由此可见，`thumbnail()` 的效果要比设定 quality 的效果要好一些。
 
-当然，PIL 还提供了 resize() 函数来对图片进行缩放，小伙伴们可以自行尝试下哦。
+当然，PIL 还提供了 `resize()` 函数来对图片进行缩放，小伙伴们可以自行尝试下哦。
 
 ## OpenCV
 
@@ -82,7 +83,7 @@ cv.imwrite('girl-out3.jpg', resize_img)
 
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2022/01/img-compression/006.png)
 
-在以上的代码中，我们先将原始图片读入进来，之后所缩放至原图的四分之一。从结果来看，效果还算可以。大小合适，图像没有明显的失真。
+在以上的代码中，我们先将原始图片读入进来，之后缩放至原图的四分之一。从结果来看，效果还算可以。大小合适，图像没有明显的失真。
 
 ## 总结
 
