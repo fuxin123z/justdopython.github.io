@@ -39,6 +39,8 @@ im = Image.open("girl.jpg")
 im.save("girl-out2.jpg", quality=10) # quality 是压缩比率
 ```
 
+来看下压缩之后的。
+
 ![](https://raw.githubusercontent.com/JustDoPython/justdopython.github.io/master/assets/images/2022/01/img-compression/003.png)
 
 从以上压缩结果来看，quality 设置为 10 时从 2.5MB 压缩到了 400KB，整体效果还是不错的。但整体来看图片是有一定的失真的，尤其是突然降图片放大之后，失真更明显，不信你看。
