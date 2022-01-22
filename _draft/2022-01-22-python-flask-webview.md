@@ -12,18 +12,24 @@ tags:
 
 如果说程序员有什么怕的，那我想可能就是 —— 需求又变了！
 
-这不，客户在我开发完一个基于浏览器的 Web 应用程序之后说，需要在内（无）部（网）环境中运行，而且还没有 Python 环境！
+这不，客户在笔者开发完一个基于浏览器的 Web 应用程序之后说：程序需要在内（无）部（网）环境中运行……
 
-谁叫咱是程序员呢，这个难不倒我，不就开发一个 GUI 版本吗，研究一下学就好了，可是听到给的时间后，就无法淡定了……
+这就意味着无法安装 Python 环境！
+
+谁叫咱是程序员呢，不就开发一个 GUI 版本吗，难不倒我……
+
+可是听到给的时间后，就不淡定了……
+
+为了不影响客户的评测，只能给出一周时间！
 
 <!--more-->
 ## 构思
 
-客户最多只能给出一周时间，不然就会影响评测，影响……
+GUI 虽然也不难，不过需要梳理一遍服务以及与用户的交互接口，弄不好就得为 GUI 单独编写接口，这点时间显然不够呀。
 
-GUI 虽然也不难，不过需要梳理一遍和服务以及用户的交互接口，弄不好就得为 GUI 单独编写接口，这点时间显然不够呀。
+不行，就在想想办法……
 
-不错，我和你想倒一起去了，不然直接将 Web 应用包装成一个可执行程序，哈哈，类似的框架很多，比如 Nodejs 中的 [Electron](https://www.electronjs.org/ 'Electron')，Python 中的 [Pywebview](https://pywebview.flowrl.com/ 'Pywebview')。
+不然直接将 Web 应用包装成一个可执行程序，拷贝到机器上就能运行，而且类似的框架很多，比如 Nodejs 中的 [Electron](https://www.electronjs.org/ 'Electron')，Python 中的 [Pywebview](https://pywebview.flowrl.com/ 'Pywebview')。
 
 只要将原来的 Web 程序包装一下就好了，那么说干就干！
 
@@ -31,15 +37,15 @@ GUI 虽然也不难，不过需要梳理一遍和服务以及用户的交互接�
 
 Web 程序是用 Flask 开发的，所以需要安装 Python 的 Pywebview 作为打包工具。
 
-建立[虚拟环境](http://ddd '虚拟环境') 或者在原来的 Web 项目环境中，执行：
+建立[虚拟环境](https://mp.weixin.qq.com/s/WflK5pOKhvPg8zrf_W5mfw '虚拟环境') 或者在原来的 Web 项目环境中，执行：
 
 ```bash
 pip install pywebview
 ```
 
-> 在 Windows 系统中，需要 .Net 4.0 以上的环境
+> 在 Windows 系统中，需要 .Net 4.0 以上
 
-试试小牛刀：
+小试牛刀：
 
 ```python
 import webview
