@@ -36,7 +36,7 @@ pip install ddddocr
 
 背景图是带小滑块坑位的 background.jpg。
 
-![background.jpg](https://files.mdnice.com/user/15960/22427f5b-4207-463f-a49a-cc798ad6310d.jpg)
+![background](https://files.mdnice.com/user/15960/ae505205-6eef-45de-b352-e3634c2f7747.jpg)
 
 
 ```python
