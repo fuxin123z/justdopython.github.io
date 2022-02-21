@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 用 Python 写最简单的摸鱼监控进程，你会吗？
+title: 用 Python 写摸鱼监控进程，用这个！
 category: python
 tagline: by 闲欢
 tags: 
