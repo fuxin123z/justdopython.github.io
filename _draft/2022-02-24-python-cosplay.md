@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 用 Python 下载好快的 coser 小姐姐
+title: 用 Python 下载好看的米哈游 coser 小姐姐
 category: python
 tagline: by 某某白米饭
 tags: 
