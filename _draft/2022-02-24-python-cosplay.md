@@ -109,6 +109,19 @@ def save_image(image_src):
 
 ![](https://files.mdnice.com/user/15960/ee4ebeff-2b5c-4c0b-84b3-cb9a23dc0909.png)
 
+最后将主函数加上。
+
+```python
+def main(last_id):
+    url = f"https://bbs-api.mihoyo.com/post/wapi/getForumPostList?forum_id=47&gids=5&is_good=false&last_id={last_id}&is_hot=false&page_size=20&sort_type=2"
+    res_json = request_get(url, "json")
+    if res_json["retcode"] == 0:
+        for item in res_json["data"]["list"]:
+            detail(item["post"]["post_id"])
+
+    if res_json["data"]["last_id"] != "":
+        return main(res_json["data"]["last_id"])
+```
 
 ### 总结
 
