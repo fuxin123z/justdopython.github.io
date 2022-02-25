@@ -42,12 +42,13 @@ debugger
 
 这个页面是没有翻页的，对比第二页的 `getTopicPostList` 请求地址，比第一个多了 `last_id` 参数，最终的参数为：
 
-* game_id: 5，可能就是那个右边的大别墅的意思
-* gids: 5，连大别墅在内一个是 5 个
+* gids: 5，未知
 * last_id: 18114983，最后一个的 id
-* list_type: 0，未知
+* is_good: false，未知
+* is_hot: false，是否热门
 * page_size: 20，每页条数
-* topic_id: 547，板块 id
+* forum_id: 47，板块 id
+* sort_type: 排序
 
 ```python
 import requests
@@ -71,13 +72,14 @@ def request_get(url, ret_type):
         return res.json()
 
 def main(last_id):
-    url = f"https://bbs-api.mihoyo.com/post/wapi/getForumPostList??game_id=5&gids=5&last_id={last_id}&list_type=0&page_size=20&topic_id=547"
+    url = f'https://bbs-api.mihoyo.com/post/wapi/getForumPostList?forum_id=47&gids=5&is_good=false&is_hot=false&last_id={last_id}&page_size=20&sort_type=2'
     res_json = request_get(url, "json")
     if res_json["retcode"] == 0:
         for item in res_json["data"]["list"]:
-            detail(item["post"]["post_id"])
-            
-     if res_json["data"]["last_id"] != "":
+            post_id = item["post"]["post_id"]
+            detail(post_id)
+                
+    if res_json["data"]["last_id"] != "":
         return main(res_json["data"]["last_id"])
 ```
 
